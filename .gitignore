@@ -16,3 +16,12 @@ wp-content/plugins/hello.php
 /readme.html
 /license.txt
 
+.DS_STORE
+.vagrant
+.swp
+adminer.css
+adminer.php
+mysqliConfig.ini
+mysqliConfig-remote.ini
+Thumbs.db
+.ini
