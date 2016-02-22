@@ -10,7 +10,7 @@
 folderRunFrom="$(dirname "$(bashRealpath "$0")")"
 
 # initzialize empty/default parameters 
-hostname="qlokare.local"
+hostname="qlokast.local"
 username=vagrant # to connect to the ssh server running on the vm, not the mysql server
 database=wordpress 
 outputFile="$folderRunFrom/sqlDump"-"$( date "+%y%m%d-%H%M%S" )".sql # /home/user/projects/project/folder/database-160220-133700.sql
