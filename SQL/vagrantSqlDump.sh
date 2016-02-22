@@ -3,7 +3,7 @@
 # script that logs on to a vagrant vm and dumps a sql database. 
 # it's ment to be run from withn a folder inside a vagrant structure.
 
-bashRealpath() {
+	bashRealpath() {
     [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
 }
 
