@@ -21,6 +21,7 @@
 </head>
 
 
+
 <?php echo '<body id="page-top" class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
@@ -57,6 +58,7 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+
 
 
 

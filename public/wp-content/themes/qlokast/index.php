@@ -14,6 +14,7 @@
 
 get_header(); ?>
 
+
 <?php
 get_template_part('template-parts/content', 'header'); 
 get_template_part('template-parts/content', 'about'); 
@@ -25,6 +26,7 @@ get_template_part('template-parts/content', 'contact');
 </body>
 
 </html>
+
 
 <?php
 get_sidebar();

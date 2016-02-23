@@ -114,6 +114,7 @@ add_action( 'widgets_init', 'qlokast_widgets_init' );
  * Enqueue scripts and styles.
  */
 
+
 function qlokast_styles(){
 	wp_enqueue_style( 'qlokast-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'qlokast-animate', get_template_directory_uri() . '/css/animate.min.css');
@@ -144,7 +145,6 @@ function qlokast_scripts() {
 	wp_enqueue_script( 'qlokast-classie', get_template_directory_uri() . '/js/classie.js', array(), '20151215', true );
 	wp_enqueue_script( 'qlokast-creative', get_template_directory_uri() . '/js/creative.js', array(), '20151215', true );
 	wp_enqueue_script( 'qlokast-wow-min', get_template_directory_uri() . '/js/wow.min.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'qlokast-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -152,6 +152,7 @@ function qlokast_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'qlokast_scripts' );
+
 
 // For WP Adminbar and Navbar conflict
 add_action('wp_head', 'navfix_wp_head');
@@ -170,6 +171,7 @@ function navfix_wp_head(){
     echo '<style> body{ padding-top: 70px !important; }
     body.logged-in .navbar-fixed-top{ top: 28px !important; }</style>';
 }
+
 
 
 /**

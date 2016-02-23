@@ -11,6 +11,7 @@
 
 ?>
 
+
 </div><!-- #content -->
 	<div class="row">
 		<div class="col-lg-10 col-lg-offset-1 text-center">
@@ -27,5 +28,6 @@
 
 <?php wp_footer(); ?>
 </div> <!--container-->
+
 </body>
 </html>
