@@ -1,0 +1,341 @@
+/* Add Multiple Users CSS Styles - version 2.0.0 */
+/* surround to protect styles from other admin pages */
+#amu{}
+#amu p.amu_error, #amu p.betanotice{
+	font-style:italic;
+	color:#C30;
+}
+#amu span.important {
+	font-size:11px;
+	font-style:italic;
+}
+#amu .infosection{
+	background:#fafafa;
+    border:1px solid #eee;
+    margin:20px 0 0;
+    padding:0 10px;
+    width:748px;
+	position:relative;
+	clear:both;
+}
+#amu .infowrap{
+	max-width:748px;
+	padding:0 10px;
+	margin:10px 0 0;
+	background:#fafafa;
+    border:1px solid #eee;
+}
+#amu p.informational{
+	max-width:720px;
+	padding:5px 5px 5px 50px;
+	background:#fefefe url(images/informational.png) 5px center no-repeat;
+	border:1px solid #eee;
+}
+#amu p.informational span{
+	display:block;
+	clear:both;
+	font-size:11px;
+}
+#amu form {
+	max-width:770px;
+	clear:both;
+}
+#amu form .toolintro{
+	width:100%;
+}
+#amu form .textfillbox {
+	width:100%;
+	font-size:12px;
+}
+#amu .genoptionwrap {
+	background:#fafafa;
+	padding:0 10px;
+	border:1px solid #eee;
+	max-width:748px;
+	margin:0 0 10px;
+}
+#amu .optionbox {
+	width:100%;
+	clear:both;
+	font-size:12px;
+	padding:10px 0;
+	border-bottom:1px solid #eee;
+}
+#amu .optionbox span{
+	display:inline-block;
+	clear:both;
+}
+#amu .metaoptionbox span{
+	clear:none;
+	display:inline-block;
+	padding:5px 15px 5px 0;
+}
+#amu .metaoptionbox span input{
+	margin-top:-1px;
+}
+#amu .optionbox span input{
+	float:none;
+}
+#amu .lastoption {
+	border-bottom:none;
+}
+#amu .optionbox label {
+	line-height:1.3em;
+}
+#amu .optionbox input, #amu .optionbox select {
+	float:right;
+}
+#amu #net_getcopies{
+	float:none;
+}
+#amu .optionbox input[type="text"]{
+	width:100%;
+	clear:both;
+	margin:10px 0;
+}
+#amu .optionbox input.custheadfield {
+	width:100%;
+	padding:3px;
+}
+#amu .optionbox label.custheadlabel {
+	width:100%;
+	display:block;
+	padding:0 0 5px;
+	font-weight:bold;
+}
+#amu .optionbox select{
+	font-size:11px;
+	margin-top:-3px;
+}
+#amu .buttonline {
+	width:100%;
+	margin:10px 0;
+}
+#amu .fieldsetwrap {
+	border:1px solid #eee;
+	width:100%;
+}
+#amu .formwrap {
+	padding:0 10px 10px;
+	position:relative;
+}
+#amu .wrapwhite {
+	background:#fff;
+}
+#amu .wrapgrey {
+	background:#f9f9f9;
+}
+#amu .formline {
+	padding:10px 0 0;
+	width:100%;
+	font-size:11px;
+}
+#amu .userline {
+	padding:10px 0;
+	width:100%;
+	font-size:11px;
+}
+#amu .checkallex{
+	display:none;
+}
+#amu span.countline {
+	font-size:11px;
+	position:absolute;
+	left:2px;
+	top:2px;
+	font-weight:bold;
+}
+#amu input.button-right{
+	float:right;
+	margin:0 0 10px 5px;
+}
+#amu .optioninstructions{
+	font-size:11px;
+}
+#amu .formline label {
+	display:inline-block;
+	overflow:hidden;
+	padding:4px 10px;
+	width:50px;
+}
+#amu .formline input {
+	font-size:11px;
+	width:110px;
+}
+/* add existing user line styles */
+#amu .userline input {
+	width:5%;
+	vertical-align:text-top;
+}
+#amu .userline label {
+	padding:0;
+	width:80%;
+	font-size:12px;
+	display:inline-block;
+	vertical-align:text-top;
+}
+#amu .userline label span{
+	display:inline-block;
+	overflow:hidden;
+}
+#amu .userline label span.eu_userid{
+	width:15%;
+}
+#amu .userline label span.eu_userlogin{
+	width:30%;
+}
+#amu .userline label span.eu_useremail{
+	width:54%;
+}
+#amu .userline select {
+	width:13%;
+}
+#amu .formline select {
+	width:110px;
+	font-size:11px;
+}
+#amu .validationtag {
+	float:left;
+	padding:4px 10px;
+}
+#amu .linevalid {
+	float:left;
+	padding:4px 0;
+	font-weight:bold;
+}
+#amu h3{
+	color:#21759B;
+}
+#amu h4{
+	color:#444;
+	font-style:italic;
+}
+#amu .regnotice{
+	background-color:#FFFFE0;
+    border:1px solid #E6DB55;
+	padding:0 10px 10px;
+	float:left;
+	width:748px;
+}
+#amu .regnotice p{
+	font-size:11px;
+	margin:5px 0;
+}
+#amu .stackwrap{
+    border-top:1px solid #ccc;
+	padding:10px;
+}
+input.amushort, input.amumatchuser, input.amuerror{
+	background-color:#ffc3c3;
+}
+input.amubad{
+	background-color:#ffdab6;
+}
+input.amugood{
+	background-color:#fff7b6;
+}
+input.amustrong, input.amuvalid{
+	background-color:#dfffd0;
+}
+.amutooltip{
+	display:none;
+	position:absolute;
+	z-index:999;
+	background-color:#21759B;
+	color:#eee;
+	line-height:1.15em;
+	padding:5px;
+	border:1px solid #444;
+	width: 150px;
+	border-radius:5px;
+	height:25px;
+}
+#amu #amuQuickRef p{
+	font-size:11px;
+}
+#amu #amuQuickRef ul{
+	list-style-type:disc;
+	font-size:11px;
+}
+#amu #amuQuickRef ul li{
+	margin-left:20px;
+}
+#amu p.amuQuickRefHint{
+	margin:10px 0 0;
+}
+
+/* new dynamic sorter */
+
+#amu #dynamicsorter{
+	background:#f9f9f9 none;
+    border: 1px solid #eee;
+    padding: 0 10px 15px;
+}
+#amu #dynamicsorter h2{
+	font-size: 14px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0.5em 0;
+}
+#amu #dynamicsorter h3{
+	font-size: 12px;
+    line-height: 1.3em;
+    margin: 10px 0 0;
+    padding: 0.5em 0;
+	color:#333;
+}
+#amu #dynamicsorter p{
+	font-size:11px;
+	margin:5px 0;
+	line-height:1em;
+}
+#amu #dynamicsorter #finalorder{
+	padding:10px 0;
+}
+#amu #dynamicsorter #finalorder #ordertitle{
+	font-weight:bold;
+	width:100%;
+	clear:both;
+}
+#amu #dynamicsorter #finalorder #orderfield{
+	background:#fff none;
+    border: 1px solid #eee;
+    margin: 10px 0 0;
+    min-height: 47px;
+}
+#amu #dynamicsorter #dyn_add_standard{
+	
+}
+#amu #dynamicsorter #dyn_add_standard ul{
+	margin:0;
+	list-style-type:none;
+}
+#amu #dynamicsorter #dyn_add_standard ul li{
+	display:inline-block;
+	padding:3px;
+	margin:0 10px 0 0;
+}
+
+#amu #dynamicsorter #dyn_add_custom{
+	
+}
+#amu #dynamicsorter #dyn_add_custom #customcolumn{
+	width:300px;
+}
+#amu #sorterlist{
+	margin:0;
+	list-style-type:none;
+	padding:10px;
+}
+#amu #sorterlist li{
+	display:inline-block;
+	margin:0;
+	padding:5px;
+	cursor:pointer;
+}
+#amu #sorterlist li:before{
+	content:'[';
+}
+#amu #sorterlist li:after{
+	content:']';
+}
