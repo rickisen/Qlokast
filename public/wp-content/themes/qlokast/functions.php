@@ -113,11 +113,38 @@ add_action( 'widgets_init', 'qlokast_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function qlokast_scripts() {
+
+
+function qlokast_styles(){
 	wp_enqueue_style( 'qlokast-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'qlokast-animate', get_template_directory_uri() . '/css/animate.min.css');
+	wp_enqueue_style( 'qlokast-boostrap-css', get_template_directory_uri() . '/css/bootstrap.css');
+	
+	wp_enqueue_style( 'qlokast-bootstrap-min-css', get_template_directory_uri() . '/css/bootstrap.min.css');
 
+	wp_enqueue_style( 'open-sans', 
+		'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
+
+    wp_enqueue_style( 'merriweather', 
+    	'http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic');
+
+    wp_enqueue_style( 'qlokast-creative-css', get_template_directory_uri() . '/css/creative.css');
+
+}
+
+add_action( 'wp_enqueue_scripts', 'qlokast_styles' );
+
+function qlokast_scripts() {
+	wp_enqueue_script( 'qlokast-jquery', get_template_directory_uri() . '/js/jquery.js', array(), '20151215', true );
+	wp_enqueue_script( 'qlokast-jquery-easing-min', get_template_directory_uri() . '/js/jquery.easing.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'qlokast-jquery-fittext', get_template_directory_uri() . '/js/jquery.fittext.js', array(), '20151215', true );
 	wp_enqueue_script( 'qlokast-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
+	wp_enqueue_script( 'qlokast-bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array(), '20151215', true );
+	wp_enqueue_script( 'qlokast-bootstrap-min', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'qlokast-cbpAnimatedHeader', get_template_directory_uri() . '/js/cbpAnimatedHeader.js', array(), '20151215', true );
+	wp_enqueue_script( 'qlokast-classie', get_template_directory_uri() . '/js/classie.js', array(), '20151215', true );
+	wp_enqueue_script( 'qlokast-creative', get_template_directory_uri() . '/js/creative.js', array(), '20151215', true );
+	wp_enqueue_script( 'qlokast-wow-min', get_template_directory_uri() . '/js/wow.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'qlokast-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -125,6 +152,27 @@ function qlokast_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'qlokast_scripts' );
+
+
+// For WP Adminbar and Navbar conflict
+add_action('wp_head', 'navfix_wp_head');
+
+// Fix for WP Adminbar and Navbar conflict
+function navfix_body_class($classes){
+    if(is_user_logged_in()){
+        $classes[] = 'body-logged-in';
+    } else{
+        $classes[] = 'body-logged-out';
+    }
+    return $classes;
+}
+
+function navfix_wp_head(){
+    echo '<style> body{ padding-top: 70px !important; }
+    body.logged-in .navbar-fixed-top{ top: 28px !important; }</style>';
+}
+
+
 
 /**
  * Implement the Custom Header feature.
