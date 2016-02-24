@@ -22,35 +22,7 @@ get_header(); ?>
 					?>
           
           <hr>
-          <h3> Lektioner </h3>
-
-          <?php
-            $args = array(
-              'meta_key'   => '_course_parrent',
-              'meta_value' => $post->ID,
-              'post_type'  => 'lession'
-            );
-            $the_query = new WP_Query( $args );
-          ?>
-
-          <?php if ( $the_query->have_posts() ) : ?>
-
-            <!-- a new the loop with lessions -->
-            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-              <a href="<?php the_permalink() ?>"><h5><?php the_title(); ?></h5></a>
-            <?php endwhile; ?>
-
-            <?php wp_reset_postdata(); ?>
-
-          <?php else : ?>
-            <p><?php _e( '
-                Det ser inte ut som att det 
-                finns några lektioner för den här kursen än.
-            ' ); ?></p>
-          <?php endif; ?>
-
-          <hr>
-          <h3> Kurs Övningar </h3>
+          <h3> Övningar </h3>
 
           <?php
             $args = array(
@@ -73,7 +45,7 @@ get_header(); ?>
           <?php else : ?>
             <p><?php _e( '
                 Det ser inte ut som att det 
-                finns några kurs övningar för den här kursen än.
+                finns några övningar för den här kursen än.
             ' ); ?></p>
           <?php endif; ?>
 

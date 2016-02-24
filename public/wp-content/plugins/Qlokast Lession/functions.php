@@ -54,6 +54,7 @@ function make_all_Lessions_private( $new_status, $old_status, $post ) {
 } 
 add_action( 'transition_post_status', 'make_all_Lessions_private', 10, 3 );
 
+/* metaboxes ==================== */
 function add_course_parrent_metaboxes(){
   add_meta_box('course-parrent-metabox', 'Parrent Course', 
     'course_parrent_callback', 'lession',
