@@ -46,7 +46,7 @@ get_header(); ?>
             <p><?php _e( '
                 Det ser inte ut som att det 
                 finns några övningar för den här kursen än.
-            ' ); ?></p>
+              ' ); ?></p>
           <?php endif; ?>
 
 				</main><!-- #main -->
