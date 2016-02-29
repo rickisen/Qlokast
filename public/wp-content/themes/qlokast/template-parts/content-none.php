@@ -9,9 +9,11 @@
 
 ?>
 
-<section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'qlokast' ); ?></h1>
+<section class="container-fluid no-results not-found">
+	<header class="row bg-primary">
+		<div class="col-xs-12">
+			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'qlokast' ); ?></h1>
+		</div>
 	</header><!-- .page-header -->
 
 	<div class="page-content">

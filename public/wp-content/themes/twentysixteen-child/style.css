@@ -1,0 +1,16 @@
+/*
+ Theme Name:     Qlokast Theme (Child Theme)
+ Description:    A Twentysixteen Child Theme
+ Author:         Qlokast Crew		
+ Template:       twentysixteen
+ Version:        0.0.1
+*/
+ 
+@import url("../twentysixteen/style.css");
+ 
+/* =Theme customization starts here
+------------------------------------------------------- */
+
+body {
+	background-color: green;
+}

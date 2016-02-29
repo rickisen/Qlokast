@@ -9,9 +9,9 @@
 
 ?>
 
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
+    <header class="container-fliud">
+        <div class="row header-content">
+            <div class="col-xs-12 text-center">
                 <h1>Bli qlokare med Qlokast!</h1>
                 <hr>
                 <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
