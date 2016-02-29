@@ -9,8 +9,9 @@
 
 <?php
 while ( $loop->have_posts() ) : $loop->the_post(); ?>
-  <a class="<?php echo "category-".get_the_category()[0]->name;?>" href="<?php the_permalink() ?>"><h4> <?php the_title(); echo " by ".the_author() ?></h4></a>
-
+  <div> <?php echo get_the_author() ?> : 
+    <a class="<?php echo "category-".get_the_category()[0]->name;?>" href="<?php the_permalink() ?>"> <?php the_title(); ?></a>
+  </div>
 <?php endwhile; wp_reset_postdata(); ?>
 
 <br>
