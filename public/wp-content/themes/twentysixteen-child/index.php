@@ -27,7 +27,7 @@ get_header(); ?>
       $postType = 'post'; $title = 'Nyhter'; 
       include(locate_template('template-parts/flowpart.php'));
 
-      /* get all assignments */
+      /* get all studentposts */
       $postType = 'studentposts'; $title = 'Senaste Student Raporter'; 
       include(locate_template('template-parts/flowpart.php'));
 
