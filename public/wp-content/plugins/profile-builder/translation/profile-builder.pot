@@ -1,0 +1,4497 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: profile-builder\n"
+"POT-Creation-Date: 2016-01-11 17:16+0200\n"
+"PO-Revision-Date: 2015-04-30 10:26+0200\n"
+"Last-Translator: \n"
+"Language-Team: Cozmoslabs\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: profile-builder-2.0\n"
+"X-Poedit-SearchPath-1: pb-add-on-woocommerce\n"
+
+#: pb-add-on-woocommerce/billing-fields.php:6
+#: pb-add-on-woocommerce/shipping-fields.php:6
+msgid "Country"
+msgstr ""
+
+#: pb-add-on-woocommerce/billing-fields.php:7
+#: pb-add-on-woocommerce/shipping-fields.php:7
+#: profile-builder-2.0/admin/manage-fields.php:160
+msgid "First Name"
+msgstr ""
+
+#: pb-add-on-woocommerce/billing-fields.php:8
+#: pb-add-on-woocommerce/shipping-fields.php:8
+#: profile-builder-2.0/admin/manage-fields.php:161
+msgid "Last Name"
+msgstr ""
+
+#: pb-add-on-woocommerce/billing-fields.php:9
+#: pb-add-on-woocommerce/shipping-fields.php:9
+msgid "Company Name"
+msgstr ""
+
+#: pb-add-on-woocommerce/billing-fields.php:10
+#: pb-add-on-woocommerce/shipping-fields.php:10
+msgid "Address"
+msgstr ""
+
+#: pb-add-on-woocommerce/billing-fields.php:12
+#: pb-add-on-woocommerce/shipping-fields.php:12
+msgid "Town / City"
+msgstr ""
+
+#: pb-add-on-woocommerce/billing-fields.php:13
+#: pb-add-on-woocommerce/shipping-fields.php:13
+msgid "State / County"
+msgstr ""
+
+#: pb-add-on-woocommerce/billing-fields.php:14
+#: pb-add-on-woocommerce/shipping-fields.php:14
+msgid "Postcode / Zip"
+msgstr ""
+
+#: pb-add-on-woocommerce/billing-fields.php:15
+msgid "Email Address"
+msgstr ""
+
+#: pb-add-on-woocommerce/billing-fields.php:16
+msgid "Phone"
+msgstr ""
+
+#: pb-add-on-woocommerce/billing-fields.php:126
+msgid "Ship to a different address?"
+msgstr ""
+
+#: pb-add-on-woocommerce/index.php:134
+msgid "Billing Address"
+msgstr ""
+
+#: pb-add-on-woocommerce/index.php:134
+msgid "Displays customer billing fields in front-end. "
+msgstr ""
+
+#: pb-add-on-woocommerce/index.php:138
+msgid "Shipping Address"
+msgstr ""
+
+#: pb-add-on-woocommerce/index.php:138
+msgid "Displays customer shipping fields in front-end. "
+msgstr ""
+
+#: pb-add-on-woocommerce/index.php:152
+#: profile-builder-2.0/front-end/default-fields/email/email.php:44
+msgid "The email you entered is not a valid email address."
+msgstr ""
+
+#: pb-add-on-woocommerce/index.php:296
+msgid "Display on WooCommerce Checkout"
+msgstr ""
+
+#: pb-add-on-woocommerce/index.php:296
+msgid ""
+"Whether the field should be added to the WooCommerce checkout form or not"
+msgstr ""
+
+#: pb-add-on-woocommerce/index.php:347
+msgid ""
+"WooCommerce needs to be installed and activated for Profile Builder - "
+"WooCommerce Sync Add-on to work!"
+msgstr ""
+
+#: pb-add-on-woocommerce/templates/myaccount-login-register.php:25
+#: profile-builder-2.0/admin/basic-info.php:36
+#: profile-builder-2.0/features/login-widget/login-widget.php:59
+msgid "Login"
+msgstr ""
+
+#: pb-add-on-woocommerce/templates/myaccount-login-register.php:36
+#: profile-builder-2.0/front-end/class-formbuilder.php:348
+#: profile-builder-2.0/front-end/login.php:205
+msgid "Register"
+msgstr ""
+
+#: pb-add-on-woocommerce/woosync-page.php:23
+#: pb-add-on-woocommerce/woosync-page.php:70
+msgid "WooCommerce Sync"
+msgstr ""
+
+#: pb-add-on-woocommerce/woosync-page.php:76
+msgid "Choose Register form to display on My Account page:"
+msgstr ""
+
+#: pb-add-on-woocommerce/woosync-page.php:80
+#: pb-add-on-woocommerce/woosync-page.php:114
+#: profile-builder-2.0/modules/user-listing/userlisting.php:442
+msgid "None"
+msgstr ""
+
+#: pb-add-on-woocommerce/woosync-page.php:81
+msgid "Default Register"
+msgstr ""
+
+#: pb-add-on-woocommerce/woosync-page.php:103
+msgid ""
+"Select which Profile Builder Register form to display on My Account page "
+"from WooCommerce. <br/> This will also add the Profile Builder Login form to "
+"MyAccount page."
+msgstr ""
+
+#: pb-add-on-woocommerce/woosync-page.php:110
+msgid "Choose Edit Profile form to display on My Account page:"
+msgstr ""
+
+#: pb-add-on-woocommerce/woosync-page.php:115
+msgid "Default Edit Profile"
+msgstr ""
+
+#: pb-add-on-woocommerce/woosync-page.php:137
+msgid ""
+"Select which Profile Builder Edit-profile form to display on My Account page "
+"from WooCommerce."
+msgstr ""
+
+#: pb-add-on-woocommerce/woosync-page.php:147
+#: profile-builder-2.0/admin/admin-bar.php:86
+#: profile-builder-2.0/admin/general-settings.php:208
+#: profile-builder-2.0/admin/register-version.php:95
+#: profile-builder-2.0/features/functions.php:633
+#: profile-builder-2.0/modules/modules.php:117
+msgid "Save Changes"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:10
+#: profile-builder-2.0/admin/add-ons.php:32
+msgid "Add-Ons"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:34
+#: profile-builder-2.0/admin/add-ons.php:124
+#: profile-builder-2.0/admin/add-ons.php:231
+#: profile-builder-2.0/admin/pms-cross-promotion.php:78
+#: profile-builder-2.0/admin/pms-cross-promotion.php:114
+#: profile-builder-2.0/admin/pms-cross-promotion.php:193
+msgid "Activate"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:36
+#: profile-builder-2.0/admin/pms-cross-promotion.php:80
+msgid "Downloading and installing..."
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:37
+#: profile-builder-2.0/admin/pms-cross-promotion.php:81
+msgid "Installation complete"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:39
+msgid "Add-On is Active"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:40
+msgid "Add-On has been activated"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:41
+#: profile-builder-2.0/admin/pms-cross-promotion.php:85
+msgid "Retry Install"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:43
+#: profile-builder-2.0/admin/add-ons.php:135
+msgid "Add-On is <strong>active</strong>"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:44
+#: profile-builder-2.0/admin/add-ons.php:133
+msgid "Add-On is <strong>inactive</strong>"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:46
+#: profile-builder-2.0/admin/add-ons.php:128
+#: profile-builder-2.0/admin/add-ons.php:235
+#: profile-builder-2.0/admin/pms-cross-promotion.php:90
+#: profile-builder-2.0/admin/pms-cross-promotion.php:118
+#: profile-builder-2.0/admin/pms-cross-promotion.php:197
+msgid "Deactivate"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:47
+msgid "Add-On has been deactivated."
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:59
+msgid ""
+"Something went wrong, we could not connect to the server. Please try again "
+"later."
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:144
+#: profile-builder-2.0/admin/add-ons.php:147
+msgid "Buy Now"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:144
+#: profile-builder-2.0/admin/add-ons.php:251
+#: profile-builder-2.0/admin/pms-cross-promotion.php:134
+#: profile-builder-2.0/admin/pms-cross-promotion.php:213
+msgid "Download Now"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:147
+#: profile-builder-2.0/admin/add-ons.php:254
+#: profile-builder-2.0/admin/pms-cross-promotion.php:137
+#: profile-builder-2.0/admin/pms-cross-promotion.php:216
+msgid "Install Now"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:153
+#: profile-builder-2.0/admin/add-ons.php:258
+#: profile-builder-2.0/admin/pms-cross-promotion.php:141
+#: profile-builder-2.0/admin/pms-cross-promotion.php:220
+msgid "Compatible with your version of Profile Builder."
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:162
+msgid "Upgrade Profile Builder"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:163
+msgid "Not compatible with Profile Builder"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:170
+#: profile-builder-2.0/front-end/class-formbuilder.php:351
+msgid "Update"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:171
+msgid "Not compatible with your version of Profile Builder."
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:172
+msgid "Minimum required Profile Builder version:"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:177
+#, php-format
+msgid ""
+"Could not install add-on. Retry or <a href=\"%s\" target=\"_blank\">install "
+"manually</a>."
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:190
+msgid "Recommended Plugins"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:219
+#: profile-builder-2.0/admin/pms-cross-promotion.php:102
+msgid "Free"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:221
+msgid ""
+"Accept user payments, create subscription plans and restrict content on your "
+"membership site."
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:222
+#: profile-builder-2.0/admin/pms-cross-promotion.php:105
+msgid "More Details"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:240
+#: profile-builder-2.0/admin/pms-cross-promotion.php:88
+#: profile-builder-2.0/admin/pms-cross-promotion.php:123
+#: profile-builder-2.0/admin/pms-cross-promotion.php:202
+msgid "Plugin is <strong>inactive</strong>"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:242
+#: profile-builder-2.0/admin/pms-cross-promotion.php:87
+#: profile-builder-2.0/admin/pms-cross-promotion.php:125
+#: profile-builder-2.0/admin/pms-cross-promotion.php:204
+msgid "Plugin is <strong>active</strong>"
+msgstr ""
+
+#: profile-builder-2.0/admin/add-ons.php:263
+#: profile-builder-2.0/admin/pms-cross-promotion.php:146
+#, php-format
+msgid ""
+"Could not install plugin. Retry or <a href=\"%s\" target=\"_blank\">install "
+"manually</a>."
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-bar.php:10
+msgid "Show/Hide the Admin Bar on the Front-End"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-bar.php:10
+#: profile-builder-2.0/admin/admin-bar.php:47
+msgid "Admin Bar Settings"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-bar.php:48
+msgid ""
+"Choose which user roles view the admin bar in the front-end of the website."
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-bar.php:57
+msgid "User-Role"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-bar.php:58
+msgid "Visibility"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-bar.php:73
+msgid "Default"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-bar.php:74
+msgid "Show"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-bar.php:75
+msgid "Hide"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-functions.php:34
+#, php-format
+msgid ""
+"Login is set to be done using the E-mail. This field will NOT appear in the "
+"front-end! ( you can change these settings under the \"%s\" tab )"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-functions.php:34
+#: profile-builder-2.0/admin/general-settings.php:10
+#: profile-builder-2.0/admin/general-settings.php:38
+msgid "General Settings"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-functions.php:40
+msgid "Display name publicly as - only appears on the Edit Profile page!"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-functions.php:128
+#, php-format
+msgid ""
+"<strong>ERROR</strong>: The password must have the minimum length of %s "
+"characters"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-functions.php:134
+#: profile-builder-2.0/admin/general-settings.php:194
+msgid "Very weak"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-functions.php:134
+#: profile-builder-2.0/admin/general-settings.php:195
+#: profile-builder-2.0/features/functions.php:525
+msgid "Weak"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-functions.php:134
+#: profile-builder-2.0/admin/general-settings.php:196
+#: profile-builder-2.0/features/functions.php:525
+msgid "Medium"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-functions.php:134
+#: profile-builder-2.0/admin/general-settings.php:197
+#: profile-builder-2.0/features/functions.php:525
+msgid "Strong"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-functions.php:145
+#, php-format
+msgid "<strong>ERROR</strong>: The password must have a minimum strength of %s"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-functions.php:184
+msgid "Add Field"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-functions.php:186
+#: profile-builder-2.0/modules/class-mustache-templates/class-mustache-templates.php:374
+msgid "Save Settings"
+msgstr ""
+
+#: profile-builder-2.0/admin/admin-functions.php:197
+#, php-format
+msgid ""
+"If you enjoy using <strong> %1$s </strong> please <a href=\"%2$s\" target="
+"\"_blank\">rate us on WordPress.org</a>. More happy users means more "
+"features, less bugs and better support for everyone. "
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:10
+msgid "Basic Information"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:29
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:30
+msgid "<strong>Profile Builder </strong>"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:31
+msgid ""
+"The best way to add front-end registration, edit profile and login forms."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:33
+msgid "For Modern User Interaction"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:37
+#, php-format
+msgid "Friction-less login using %s shortcode or a widget."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:40
+msgid "Registration"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:41
+#, php-format
+msgid "Beautiful registration forms fully customizable using the %s shortcode."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:44
+msgid "Edit Profile"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:45
+#, php-format
+msgid "Straight forward edit profile forms using %s shortcode."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:51
+msgid "Extra Features"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:52
+msgid ""
+"Features that give you more control over your users, increased security and "
+"help you fight user registration spam."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:53
+msgid "Enable extra features"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:57
+msgid "Recover Password"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:58
+#, php-format
+msgid "Allow users to recover their password in the front-end using the %s."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:61
+msgid "Admin Approval (*)"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:62
+msgid ""
+"You decide who is a user on your website. Get notified via email or approve "
+"multiple users at once from the WordPress UI."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:65
+msgid "Email Confirmation"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:66
+msgid ""
+"Make sure users sign up with genuine emails. On registration users will "
+"receive a notification to confirm their email address."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:69
+msgid "Minimum Password Length and Strength Meter"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:70
+msgid ""
+"Eliminate weak passwords altogether by setting a minimum password length and "
+"enforcing a certain password strength."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:73
+msgid "Login with Email or Username"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:74
+msgid ""
+"Allow users to log in with their email or username when accessing your site."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:87
+msgid "Customize Your Forms The Way You Want (*)"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:88
+msgid ""
+"With Extra Profile Fields you can create the exact registration form your "
+"project needs."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:90
+msgid "Extra Profile Fields are available in Hobbyist or PRO versions"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:92
+msgid "Get started with extra fields"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:95
+msgid "Avatar Upload"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:96
+msgid "Generic Uploads"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:97
+msgid "Agree To Terms Checkbox"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:98
+msgid "Datepicker"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:99
+msgid "reCAPTCHA"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:100
+msgid "Country Select"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:101
+msgid "Timezone Select"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:102
+msgid "Input / Hidden Input"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:103
+msgid "Checkbox"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:104
+msgid "Select"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:105
+msgid "Radio Buttons"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:106
+msgid "Textarea"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:115
+msgid "Powerful Modules (**)"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:116
+msgid ""
+"Everything you will need to manage your users is probably already available "
+"using the Pro Modules."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:118
+msgid "Enable your modules"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:121
+msgid "Find out more about PRO Modules"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:126
+#: profile-builder-2.0/modules/modules.php:86
+#: profile-builder-2.0/modules/user-listing/userlisting.php:11
+#: profile-builder-2.0/modules/user-listing/userlisting.php:12
+#: profile-builder-2.0/modules/user-listing/userlisting.php:17
+#: profile-builder-2.0/modules/user-listing/userlisting.php:23
+msgid "User Listing"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:128
+msgid ""
+"Easy to edit templates for listing your website users as well as creating "
+"single user pages. Shortcode based, offering many options to customize your "
+"listings."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:130
+#, php-format
+msgid ""
+"To create a page containing the users registered to this current site/blog, "
+"insert the following shortcode in a page of your chosing: %s."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:134
+msgid "Email Customizer"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:135
+msgid ""
+"Personalize all emails sent to your users or admins. On registration, email "
+"confirmation, admin approval / un-approval."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:138
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:32
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:33
+#: profile-builder-2.0/modules/modules.php:107
+msgid "Custom Redirects"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:139
+msgid ""
+"Keep your users out of the WordPress dashboard, redirect them to the front-"
+"page after login or registration, everything is just a few clicks away."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:144
+#: profile-builder-2.0/modules/modules.php:72
+msgid "Multiple Registration Forms"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:145
+msgid ""
+"Set up multiple registration forms with different fields for certain user "
+"roles. Capture different information from different types of users."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:148
+#: profile-builder-2.0/modules/modules.php:79
+msgid "Multiple Edit-profile Forms"
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:149
+msgid ""
+"Allow different user roles to edit their specific information. Set up "
+"multiple edit-profile forms with different fields for certain user roles."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:173
+#, php-format
+msgid " * only available in the %1$sHobbyist and Pro versions%2$s."
+msgstr ""
+
+#: profile-builder-2.0/admin/basic-info.php:174
+#, php-format
+msgid "** only available in the %1$sPro version%2$s."
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:42
+msgid "Load Profile Builder's own CSS file in the front-end:"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:45
+#: profile-builder-2.0/admin/general-settings.php:58
+#: profile-builder-2.0/admin/general-settings.php:107
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:225
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:226
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1304
+msgid "Yes"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:47
+#, php-format
+msgid "You can find the default file here: %1$s"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:54
+msgid "\"Email Confirmation\" Activated:"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:59
+#: profile-builder-2.0/admin/general-settings.php:108
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:225
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:226
+msgid "No"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:62
+msgid ""
+"This works with front-end forms only. Recommended to redirect WP default "
+"registration to a Profile Builder one using \"Custom Redirects\" addon."
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:64
+#, php-format
+msgid ""
+"You can find a list of unconfirmed email addresses %1$sUsers > All Users > "
+"Email Confirmation%2$s."
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:72
+msgid "\"Email Confirmation\" Landing Page:"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:77
+msgid "Existing Pages"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:92
+msgid ""
+"Specify the page where the users will be directed when confirming the email "
+"account. This page can differ from the register page(s) and can be changed "
+"at any time. If none selected, a simple confirmation page will be displayed "
+"for the user."
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:103
+msgid "\"Admin Approval\" Activated:"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:111
+#, php-format
+msgid ""
+"You can find a list of users at %1$sUsers > All Users > Admin Approval%2$s."
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:118
+msgid "\"Admin Approval\" on User Role:"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:137
+msgid "Select on what user roles to activate Admin Approval."
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:149
+msgid "\"Admin Approval\" Feature:"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:152
+#, php-format
+msgid ""
+"You decide who is a user on your website. Get notified via email or approve "
+"multiple users at once from the WordPress UI. Enable Admin Approval by "
+"upgrading to %1$sHobbyist or PRO versions%2$s."
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:159
+msgid "Allow Users to Log in With:"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:163
+msgid "Username and Email"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:164
+#: profile-builder-2.0/admin/manage-fields.php:159
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:177
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:167
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:56
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:28
+#: profile-builder-2.0/modules/user-listing/userlisting.php:92
+#: profile-builder-2.0/modules/user-listing/userlisting.php:248
+#: profile-builder-2.0/modules/user-listing/userlisting.php:611
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1259
+msgid "Username"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:165
+#: profile-builder-2.0/front-end/login.php:173
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:29
+#: profile-builder-2.0/modules/user-listing/userlisting.php:617
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1260
+msgid "Email"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:168
+msgid "\"Username and Email\" - users can Log In with both Username and Email."
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:169
+msgid "\"Username\" - users can Log In only with Username."
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:170
+msgid "\"Email\" - users can Log In only with Email."
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:177
+msgid "Minimum Password Length:"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:182
+msgid ""
+"Enter the minimum characters the password should have. Leave empty for no "
+"minimum limit"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:189
+msgid "Minimum Password Strength:"
+msgstr ""
+
+#: profile-builder-2.0/admin/general-settings.php:193
+msgid "Disabled"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:12
+msgid "Manage Fields"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:13
+msgid "Manage Default and Extra Fields"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:68
+msgid "Choose one of the supported field types"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:70
+#, php-format
+msgid ""
+". Extra Field Types are available in <a href=\"%s\">Hobbyist or PRO "
+"versions</a>."
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:94
+msgid "Field Title"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:94
+msgid "Title of the field"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:95
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:241
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:262
+msgid "Field"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:96
+msgid "Meta-name"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:96
+msgid ""
+"Use this in conjuction with WordPress functions to display the value in the "
+"page of your choosing<br/>Auto-completed but in some cases editable (in "
+"which case it must be uniqe)<br/>Changing this might take long in case of a "
+"very big user-count"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:97
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:65
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:95
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:114
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:139
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:242
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:263
+msgid "ID"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:97
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:242
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:263
+msgid ""
+"A unique, auto-generated ID for this particular field<br/>You can use this "
+"in conjuction with filters to target this element if needed<br/>Can't be "
+"edited"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:98
+msgid "Description"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:98
+msgid ""
+"Enter a (detailed) description of the option for end users to read<br/"
+">Optional"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:99
+msgid "Row Count"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:99
+msgid ""
+"Specify the number of rows for a 'Textarea' field<br/>If not specified, "
+"defaults to 5"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:100
+msgid "Allowed Image Extensions"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:100
+msgid ""
+"Specify the extension(s) you want to limit to upload<br/>Example: .ext1,."
+"ext2,.ext3<br/>If not specified, defaults to: .jpg,.jpeg,.gif,.png (.*)"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:101
+msgid "Allowed Upload Extensions"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:101
+msgid ""
+"Specify the extension(s) you want to limit to upload<br/>Example: .ext1,."
+"ext2,.ext3<br/>If not specified, defaults to all WordPress allowed file "
+"extensions (.*)"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:102
+msgid "Avatar Size"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:102
+msgid ""
+"Enter a value (between 20 and 200) for the size of the 'Avatar'<br/>If not "
+"specified, defaults to 100"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:103
+msgid "Date-format"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:103
+msgid ""
+"Specify the format of the date when using Datepicker<br/>Valid options: mm/"
+"dd/yy, mm/yy/dd, dd/yy/mm, dd/mm/yy, yy/dd/mm, yy/mm/dd<br/>If not "
+"specified, defaults to mm/dd/yy"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:104
+msgid "Terms of Agreement"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:104
+msgid ""
+"Enter a detailed description of the temrs of agreement for the user to read."
+"<br/>Links can be inserted by using standard HTML syntax: &lt;a href="
+"\"custom_url\"&gt;custom_text&lt;/a&gt;"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:105
+msgid "Options"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:105
+msgid ""
+"Enter a comma separated list of values<br/>This can be anything, as it is "
+"hidden from the user, but should not contain special characters or "
+"apostrophes"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:106
+msgid "Labels"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:106
+msgid "Enter a comma separated list of labels<br/>Visible for the user"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:107
+msgid "Site Key"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:107
+msgid ""
+"The site key from Google, <a href=\"http://www.google.com/recaptcha\" target="
+"\"_blank\">www.google.com/recaptcha</a>"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:108
+msgid "Secret Key"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:108
+msgid ""
+"The secret key from Google, <a href=\"http://www.google.com/recaptcha\" "
+"target=\"_blank\">www.google.com/recaptcha</a>"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:109
+msgid "Display on PB forms"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:109
+msgid "PB Login"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:109
+msgid "PB Register"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:109
+msgid "PB Recover Password"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:109
+msgid "Select on which Profile Builder forms to display reCAPTCHA"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:110
+msgid "Display on default WP forms"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:110
+msgid "Default WP Login"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:110
+msgid "Default WP Register"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:110
+msgid "Default WP Recover Password"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:110
+msgid "Select on which default WP forms to display reCAPTCHA"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:111
+msgid "User Roles"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:111
+msgid ""
+"Select which user roles to show to the user ( drag and drop to re-order )"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:112
+msgid "User Roles Order"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:112
+msgid "Save the user role order from the user roles checkboxes"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:113
+msgid "Default Value"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:113
+msgid "Default value of the field"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:114
+#: profile-builder-2.0/admin/manage-fields.php:116
+#: profile-builder-2.0/admin/manage-fields.php:117
+msgid "Default Option"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:114
+msgid "Specify the option which should be selected by default"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:115
+msgid "Default Option(s)"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:115
+msgid ""
+"Specify the option which should be checked by default<br/>If there are "
+"multiple values, separate them with a ',' (comma)"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:116
+#: profile-builder-2.0/admin/manage-fields.php:117
+msgid "Default option of the field"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:118
+msgid "Default Content"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:118
+msgid "Default value of the textarea"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:119
+msgid "Required"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:119
+msgid "Whether the field is required or not"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:120
+msgid "Overwrite Existing"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:120
+msgid ""
+"Selecting 'Yes' will add the field to the list, but will overwrite any other "
+"field in the database that has the same meta-name<br/>Use this at your own "
+"risk"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:126
+msgid "Field Properties"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:139
+msgid "Registration & Edit Profile"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:158
+msgid "Name"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:159
+msgid "Usernames cannot be changed."
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:162
+#: profile-builder-2.0/modules/user-listing/userlisting.php:650
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1267
+msgid "Nickname"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:163
+msgid "Display name publicly as"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:164
+msgid "Contact Info"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:165
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:180
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:168
+#: profile-builder-2.0/modules/user-listing/userlisting.php:98
+msgid "E-mail"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:166
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:32
+#: profile-builder-2.0/modules/user-listing/userlisting.php:101
+#: profile-builder-2.0/modules/user-listing/userlisting.php:632
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1261
+msgid "Website"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:170
+msgid "AIM"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:171
+msgid "Yahoo IM"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:172
+msgid "Jabber / Google Talk"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:175
+msgid "About Yourself"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:176
+#: profile-builder-2.0/modules/user-listing/userlisting.php:104
+#: profile-builder-2.0/modules/user-listing/userlisting.php:635
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1262
+msgid "Biographical Info"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:176
+msgid ""
+"Share a little biographical information to fill out your profile. This may "
+"be shown publicly."
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:177
+#: profile-builder-2.0/front-end/recover.php:75
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:30
+msgid "Password"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:177
+msgid "Type your password."
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:178
+#: profile-builder-2.0/front-end/recover.php:80
+msgid "Repeat Password"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:178
+msgid "Type your password again. "
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:237
+msgid "Afghanistan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:238
+msgid "Aland Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:239
+msgid "Albania"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:240
+msgid "Algeria"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:241
+msgid "American Samoa"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:242
+msgid "Andorra"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:243
+msgid "Angola"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:244
+msgid "Anguilla"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:245
+msgid "Antarctica"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:246
+msgid "Antigua and Barbuda"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:247
+msgid "Argentina"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:248
+msgid "Armenia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:249
+msgid "Aruba"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:250
+msgid "Australia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:251
+msgid "Austria"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:252
+msgid "Azerbaijan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:253
+msgid "Bahamas"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:254
+msgid "Bahrain"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:255
+msgid "Bangladesh"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:256
+msgid "Barbados"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:257
+msgid "Belarus"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:258
+msgid "Belgium"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:259
+msgid "Belize"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:260
+msgid "Benin"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:261
+msgid "Bermuda"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:262
+msgid "Bhutan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:263
+msgid "Bolivia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:264
+msgid "Bonaire, Saint Eustatius and Saba"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:265
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:266
+msgid "Botswana"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:267
+msgid "Bouvet Island"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:268
+msgid "Brazil"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:269
+msgid "British Indian Ocean Territory"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:270
+msgid "British Virgin Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:271
+msgid "Brunei"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:272
+msgid "Bulgaria"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:273
+msgid "Burkina Faso"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:274
+msgid "Burundi"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:275
+msgid "Cambodia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:276
+msgid "Cameroon"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:277
+msgid "Canada"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:278
+msgid "Cape Verde"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:279
+msgid "Cayman Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:280
+msgid "Central African Republic"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:281
+msgid "Chad"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:282
+msgid "Chile"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:283
+msgid "China"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:284
+msgid "Christmas Island"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:285
+msgid "Cocos Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:286
+msgid "Colombia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:287
+msgid "Comoros"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:288
+msgid "Cook Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:289
+msgid "Costa Rica"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:290
+msgid "Croatia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:291
+msgid "Cuba"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:292
+msgid "Curacao"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:293
+msgid "Cyprus"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:294
+msgid "Czech Republic"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:295
+msgid "Democratic Republic of the Congo"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:296
+msgid "Denmark"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:297
+msgid "Djibouti"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:298
+msgid "Dominica"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:299
+msgid "Dominican Republic"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:300
+msgid "East Timor"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:301
+msgid "Ecuador"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:302
+msgid "Egypt"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:303
+msgid "El Salvador"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:304
+msgid "Equatorial Guinea"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:305
+msgid "Eritrea"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:306
+msgid "Estonia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:307
+msgid "Ethiopia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:308
+msgid "Falkland Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:309
+msgid "Faroe Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:310
+msgid "Fiji"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:311
+msgid "Finland"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:312
+msgid "France"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:313
+msgid "French Guiana"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:314
+msgid "French Polynesia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:315
+msgid "French Southern Territories"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:316
+msgid "Gabon"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:317
+msgid "Gambia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:318
+msgid "Georgia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:319
+msgid "Germany"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:320
+msgid "Ghana"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:321
+msgid "Gibraltar"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:322
+msgid "Greece"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:323
+msgid "Greenland"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:324
+msgid "Grenada"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:325
+msgid "Guadeloupe"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:326
+msgid "Guam"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:327
+msgid "Guatemala"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:328
+msgid "Guernsey"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:329
+msgid "Guinea"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:330
+msgid "Guinea-Bissau"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:331
+msgid "Guyana"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:332
+msgid "Haiti"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:333
+msgid "Heard Island and McDonald Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:334
+msgid "Honduras"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:335
+msgid "Hong Kong"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:336
+msgid "Hungary"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:337
+msgid "Iceland"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:338
+msgid "India"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:339
+msgid "Indonesia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:340
+msgid "Iran"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:341
+msgid "Iraq"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:342
+msgid "Ireland"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:343
+msgid "Isle of Man"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:344
+msgid "Israel"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:345
+msgid "Italy"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:346
+msgid "Ivory Coast"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:347
+msgid "Jamaica"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:348
+msgid "Japan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:349
+msgid "Jersey"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:350
+msgid "Jordan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:351
+msgid "Kazakhstan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:352
+msgid "Kenya"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:353
+msgid "Kiribati"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:354
+msgid "Kosovo"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:355
+msgid "Kuwait"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:356
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:357
+msgid "Laos"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:358
+msgid "Latvia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:359
+msgid "Lebanon"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:360
+msgid "Lesotho"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:361
+msgid "Liberia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:362
+msgid "Libya"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:363
+msgid "Liechtenstein"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:364
+msgid "Lithuania"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:365
+msgid "Luxembourg"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:366
+msgid "Macao"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:367
+msgid "Macedonia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:368
+msgid "Madagascar"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:369
+msgid "Malawi"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:370
+msgid "Malaysia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:371
+msgid "Maldives"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:372
+msgid "Mali"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:373
+msgid "Malta"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:374
+msgid "Marshall Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:375
+msgid "Martinique"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:376
+msgid "Mauritania"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:377
+msgid "Mauritius"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:378
+msgid "Mayotte"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:379
+msgid "Mexico"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:380
+msgid "Micronesia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:381
+msgid "Moldova"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:382
+msgid "Monaco"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:383
+msgid "Mongolia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:384
+msgid "Montenegro"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:385
+msgid "Montserrat"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:386
+msgid "Morocco"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:387
+msgid "Mozambique"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:388
+msgid "Myanmar"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:389
+msgid "Namibia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:390
+msgid "Nauru"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:391
+msgid "Nepal"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:392
+msgid "Netherlands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:393
+msgid "New Caledonia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:394
+msgid "New Zealand"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:395
+msgid "Nicaragua"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:396
+msgid "Niger"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:397
+msgid "Nigeria"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:398
+msgid "Niue"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:399
+msgid "Norfolk Island"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:400
+msgid "North Korea"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:401
+msgid "Northern Mariana Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:402
+msgid "Norway"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:403
+msgid "Oman"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:404
+msgid "Pakistan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:405
+msgid "Palau"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:406
+msgid "Palestinian Territory"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:407
+msgid "Panama"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:408
+msgid "Papua New Guinea"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:409
+msgid "Paraguay"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:410
+msgid "Peru"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:411
+msgid "Philippines"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:412
+msgid "Pitcairn"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:413
+msgid "Poland"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:414
+msgid "Portugal"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:415
+msgid "Puerto Rico"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:416
+msgid "Qatar"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:417
+msgid "Republic of the Congo"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:418
+msgid "Reunion"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:419
+msgid "Romania"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:420
+msgid "Russia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:421
+msgid "Rwanda"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:422
+msgid "Saint Barthelemy"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:423
+msgid "Saint Helena"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:424
+msgid "Saint Kitts and Nevis"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:425
+msgid "Saint Lucia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:426
+msgid "Saint Martin"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:427
+msgid "Saint Pierre and Miquelon"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:428
+msgid "Saint Vincent and the Grenadines"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:429
+msgid "Samoa"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:430
+msgid "San Marino"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:431
+msgid "Sao Tome and Principe"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:432
+msgid "Saudi Arabia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:433
+msgid "Senegal"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:434
+msgid "Serbia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:435
+msgid "Seychelles"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:436
+msgid "Sierra Leone"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:437
+msgid "Singapore"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:438
+msgid "Sint Maarten"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:439
+msgid "Slovakia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:440
+msgid "Slovenia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:441
+msgid "Solomon Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:442
+msgid "Somalia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:443
+msgid "South Africa"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:444
+msgid "South Georgia and the South Sandwich Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:445
+msgid "South Korea"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:446
+msgid "South Sudan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:447
+msgid "Spain"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:448
+msgid "Sri Lanka"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:449
+msgid "Sudan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:450
+msgid "Suriname"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:451
+msgid "Svalbard and Jan Mayen"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:452
+msgid "Swaziland"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:453
+msgid "Sweden"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:454
+msgid "Switzerland"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:455
+msgid "Syria"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:456
+msgid "Taiwan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:457
+msgid "Tajikistan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:458
+msgid "Tanzania"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:459
+msgid "Thailand"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:460
+msgid "Togo"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:461
+msgid "Tokelau"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:462
+msgid "Tonga"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:463
+msgid "Trinidad and Tobago"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:464
+msgid "Tunisia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:465
+msgid "Turkey"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:466
+msgid "Turkmenistan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:467
+msgid "Turks and Caicos Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:468
+msgid "Tuvalu"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:469
+msgid "U.S. Virgin Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:470
+msgid "Uganda"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:471
+msgid "Ukraine"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:472
+msgid "United Arab Emirates"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:473
+msgid "United Kingdom"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:474
+msgid "United States"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:475
+msgid "United States Minor Outlying Islands"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:476
+msgid "Uruguay"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:477
+msgid "Uzbekistan"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:478
+msgid "Vanuatu"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:479
+msgid "Vatican"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:480
+msgid "Venezuela"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:481
+msgid "Vietnam"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:482
+msgid "Wallis and Futuna"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:483
+msgid "Western Sahara"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:484
+msgid "Yemen"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:485
+msgid "Zambia"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:486
+msgid "Zimbabwe"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:617
+#: profile-builder-2.0/admin/manage-fields.php:761
+msgid "You must select a field\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:627
+msgid ""
+"Please choose a different field type as this one already exists in your form "
+"(must be unique)\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:638
+msgid "The entered avatar size is not between 20 and 200\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:641
+msgid "The entered avatar size is not numerical\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:649
+msgid "The entered row number is not numerical\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:652
+msgid "You must enter a value for the row number\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:660
+msgid "You must enter the site key\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:662
+msgid "You must enter the secret key\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:670
+msgid "The entered value for the Datepicker is not a valid date-format\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:673
+msgid "You must enter a value for the date-format\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:689
+msgid "The meta-name cannot be empty\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:701
+#: profile-builder-2.0/admin/manage-fields.php:709
+#: profile-builder-2.0/admin/manage-fields.php:719
+msgid "That meta-name is already in use\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:741
+#, php-format
+msgid ""
+"The following option(s) did not coincide with the ones in the options list: "
+"%s\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:745
+#, php-format
+msgid ""
+"The following option did not coincide with the ones in the options list: %s\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:752
+msgid "Please select at least one user role\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:768
+msgid "That field is already added in this form\n"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:817
+msgid ""
+"<pre>Title</pre><pre>Type</pre><pre>Meta Name</pre><pre class=\"wppb-mb-head-"
+"required\">Required</pre>"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:817
+#: profile-builder-2.0/assets/lib/wck-api/wordpress-creation-kit.php:440
+#: profile-builder-2.0/assets/lib/wck-api/wordpress-creation-kit.php:531
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:119
+#: profile-builder-2.0/features/functions.php:654
+#: profile-builder-2.0/features/functions.php:661
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:179
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:193
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:207
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:221
+#: profile-builder-2.0/modules/multiple-forms/multiple-forms.php:399
+msgid "Edit"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:817
+#: profile-builder-2.0/assets/lib/wck-api/wordpress-creation-kit.php:440
+#: profile-builder-2.0/assets/lib/wck-api/wordpress-creation-kit.php:532
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:124
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:235
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:120
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:217
+#: profile-builder-2.0/features/functions.php:647
+#: profile-builder-2.0/features/functions.php:661
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:179
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:193
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:207
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:221
+msgid "Delete"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:832
+msgid "Use these shortcodes on the pages you want the forms to be displayed:"
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:841
+msgid ""
+"If you're interested in displaying different fields in the registration and "
+"edit profile forms, please use the Multiple Registration & Edit Profile "
+"Forms Addon."
+msgstr ""
+
+#: profile-builder-2.0/admin/manage-fields.php:843
+msgid ""
+"With Profile Builder Pro v2 you can display different fields in the "
+"registration and edit profile forms, using the Multiple Registration & Edit "
+"Profile Forms module."
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:10
+msgid "Paid Accounts"
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:33
+msgid "Paid Member Subscriptions - a free WordPress plugin"
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:37
+msgid ""
+"With the new Subscriptions Field in Profile Builder, your registration forms "
+"will allow your users to sign up for paid accounts."
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:40
+msgid "Paid & Free Subscriptions"
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:41
+msgid "Restrict Content"
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:42
+msgid "Member Management"
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:43
+msgid "Email Templates"
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:44
+msgid "Account Management"
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:45
+msgid "Subscription Management"
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:46
+msgid "Payment Management"
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:83
+msgid "Plugin is Active"
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:84
+msgid "Plugin has been activated"
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:91
+msgid "Plugin has been deactivated."
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:104
+msgid ""
+"Accept user payments, create subscription plans and restrict content on your "
+"website."
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:155
+msgid "Step by Step Quick Setup"
+msgstr ""
+
+#: profile-builder-2.0/admin/pms-cross-promotion.php:239
+#, php-format
+msgid ""
+"Allow your users to have <strong>paid accounts with Profile Builder</"
+"strong>. %1$sFind out how >%2$s. %3$sDismiss%4$s"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:14
+msgid "Register Your Version"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:14
+msgid "Register Version"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:22
+msgid "Profile Builder Register"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:69
+#, php-format
+msgid ""
+"Now that you acquired a copy of %s, you should take the time and register it "
+"with the serial number you received"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:70
+msgid ""
+"If you register this version of Profile Builder, you'll receive information "
+"regarding upgrades, patches, and technical support."
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:72
+msgid " Serial Number:"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:77
+msgid "The serial number was successfully validated!"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:79
+msgid "The serial number entered couldn't be validated!"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:81
+msgid "The serial number is about to expire soon!"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:81
+#, php-format
+msgid ""
+" Your serial number is about to expire, please %1$s Renew Your License%2$s."
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:83
+msgid "The serial number couldn't be validated because it expired!"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:83
+#, php-format
+msgid " Your serial number is expired, please %1$s Renew Your License%2$s."
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:85
+msgid ""
+"The serial number couldn't be validated because process timed out. This is "
+"possible due to the server being down. Please try again later!"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:87
+msgid "(e.g. RMPB-15-SN-253a55baa4fbe7bf595b2aabb8d72985)"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:243
+#, php-format
+msgid ""
+"<p>Your <strong>Profile Builder</strong> serial number is invalid or "
+"missing. <br/>Please %1$sregister your copy%2$s to receive access to "
+"automatic updates and support. Need a license key? %3$sPurchase one now%4$s</"
+"p>"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:246
+#, php-format
+msgid ""
+"<p>Your <strong>Profile Builder</strong> license has expired. <br/>Please "
+"%1$sRenew Your Licence%2$s to continue receiving access to product "
+"downloads, automatic updates and support. %3$sRenew now and get 50&#37; off "
+"%4$s %5$sDismiss%6$s</p>"
+msgstr ""
+
+#: profile-builder-2.0/admin/register-version.php:251
+#, php-format
+msgid ""
+"<p>Your <strong>Profile Builder</strong> license is about to expire on %5$s. "
+"<br/>Please %1$sRenew Your Licence%2$s to continue receiving access to "
+"product downloads, automatic updates and support. %3$sRenew now and get "
+"50&#37; off %4$s %6$sDismiss%7$s</p>"
+msgstr ""
+
+#: profile-builder-2.0/assets/lib/wck-api/fields/country select.php:14
+#: profile-builder-2.0/assets/lib/wck-api/fields/cpt select.php:17
+#: profile-builder-2.0/assets/lib/wck-api/fields/select.php:14
+#: profile-builder-2.0/assets/lib/wck-api/fields/user select.php:15
+msgid "...Choose"
+msgstr ""
+
+#: profile-builder-2.0/assets/lib/wck-api/fields/nested repeater.php:8
+#, php-format
+msgid "You can add the information for the %s after you add a entry"
+msgstr ""
+
+#: profile-builder-2.0/assets/lib/wck-api/fields/upload.php:43
+#: profile-builder-2.0/front-end/extra-fields/upload/upload.php:112
+msgid "Remove"
+msgstr ""
+
+#: profile-builder-2.0/assets/lib/wck-api/fields/upload.php:75
+#: profile-builder-2.0/front-end/extra-fields/upload/upload.php:128
+msgid "Upload "
+msgstr ""
+
+#: profile-builder-2.0/assets/lib/wck-api/wordpress-creation-kit.php:337
+#: profile-builder-2.0/modules/class-mustache-templates/class-mustache-templates.php:242
+msgid "Save"
+msgstr ""
+
+#: profile-builder-2.0/assets/lib/wck-api/wordpress-creation-kit.php:337
+msgid "Add Entry"
+msgstr ""
+
+#: profile-builder-2.0/assets/lib/wck-api/wordpress-creation-kit.php:440
+#: profile-builder-2.0/features/functions.php:661
+msgid "Content"
+msgstr ""
+
+#: profile-builder-2.0/assets/lib/wck-api/wordpress-creation-kit.php:531
+msgid "Edit this item"
+msgstr ""
+
+#: profile-builder-2.0/assets/lib/wck-api/wordpress-creation-kit.php:532
+msgid "Delete this item"
+msgstr ""
+
+#: profile-builder-2.0/assets/lib/wck-api/wordpress-creation-kit.php:700
+msgid "Please enter a value for the required field "
+msgstr ""
+
+#: profile-builder-2.0/assets/lib/wck-api/wordpress-creation-kit.php:1179
+msgid "Syncronize WCK"
+msgstr ""
+
+#: profile-builder-2.0/assets/lib/wck-api/wordpress-creation-kit.php:1191
+msgid "Syncronize WCK Translation"
+msgstr ""
+
+#: profile-builder-2.0/assets/misc/plugin-compatibilities.php:241
+msgid ""
+"Your account has to be confirmed by an administrator before you can log in."
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:7
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:458
+msgid "Admin Approval"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:21
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:58
+msgid "Do you want to"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:44
+msgid "Your session has expired! Please refresh the page and try again"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:55
+msgid "User successfully approved!"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:63
+msgid "User successfully unapproved!"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:69
+msgid "User successfully deleted!"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:74
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:118
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:135
+msgid "You either don't have permission for that action or there was an error!"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:85
+msgid "Your session has expired! Please refresh the page and try again."
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:97
+msgid "Users successfully approved!"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:106
+msgid "Users successfully unapproved!"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:114
+msgid "Users successfully deleted!"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:134
+#, php-format
+msgid "Your account on %1$s has been approved!"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:135
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:138
+msgid "approved"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:137
+#, php-format
+msgid "An administrator has just approved your account on %1$s (%2$s)."
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:142
+#, php-format
+msgid "Your account on %1$s has been unapproved!"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:143
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:146
+msgid "unapproved"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:145
+#, php-format
+msgid "An administrator has just unapproved your account on %1$s (%2$s)."
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:164
+msgid ""
+"<strong>ERROR</strong>: Your account has to be confirmed by an administrator "
+"before you can log in."
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:176
+msgid ""
+"Your account has to be confirmed by an administrator before you can use the "
+"\"Password Recovery\" feature."
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/admin-approval.php:203
+msgid "Your account has been successfully created!"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:124
+msgid "delete this user?"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:127
+msgid "unapprove this user?"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:127
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:234
+msgid "Unapprove"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:129
+msgid "approve this user?"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:129
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:233
+msgid "Approve"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:178
+#: profile-builder-2.0/modules/user-listing/userlisting.php:249
+#: profile-builder-2.0/modules/user-listing/userlisting.php:623
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1264
+msgid "Firstname"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:179
+#: profile-builder-2.0/modules/user-listing/userlisting.php:626
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1265
+msgid "Lastname"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:181
+#: profile-builder-2.0/modules/user-listing/userlisting.php:124
+#: profile-builder-2.0/modules/user-listing/userlisting.php:250
+#: profile-builder-2.0/modules/user-listing/userlisting.php:653
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1269
+msgid "Role"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:182
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:169
+msgid "Registered"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:183
+msgid "User-status"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:263
+msgid "Do you want to bulk approve the selected users?"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:271
+msgid "Do you want to bulk unapprove the selected users?"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:277
+msgid "Do you want to bulk delete the selected users?"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:285
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:278
+msgid "Sorry, but you don't have permission to do that!"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:341
+msgid "Approved"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:343
+msgid "Unapproved"
+msgstr ""
+
+#: profile-builder-2.0/features/admin-approval/class-admin-approval.php:461
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:465
+msgid "All Users"
+msgstr ""
+
+#: profile-builder-2.0/features/class-list-table.php:184
+msgid "No items found."
+msgstr ""
+
+#: profile-builder-2.0/features/class-list-table.php:308
+msgid "Bulk Actions"
+msgstr ""
+
+#: profile-builder-2.0/features/class-list-table.php:318
+msgid "Apply"
+msgstr ""
+
+#: profile-builder-2.0/features/class-list-table.php:402
+msgid "Show all dates"
+msgstr ""
+
+#: profile-builder-2.0/features/class-list-table.php:415
+#, php-format
+msgid "%1$s %2$d"
+msgstr ""
+
+#: profile-builder-2.0/features/class-list-table.php:431
+msgid "List View"
+msgstr ""
+
+#: profile-builder-2.0/features/class-list-table.php:432
+msgid "Excerpt View"
+msgstr ""
+
+#: profile-builder-2.0/features/class-list-table.php:458
+#, php-format
+msgid "%s pending"
+msgstr ""
+
+#: profile-builder-2.0/features/class-list-table.php:526
+#: profile-builder-2.0/features/class-list-table.php:941
+msgid "1 item"
+msgstr ""
+
+#: profile-builder-2.0/features/class-list-table.php:566
+#, php-format
+msgid "%1$s of %2$s"
+msgstr ""
+
+#: profile-builder-2.0/features/class-list-table.php:713
+msgid "Select All"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:91
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:170
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:11
+msgid "User Meta"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:91
+msgid "show"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:120
+msgid "delete this user from the _signups table?"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:121
+msgid "confirm this email yourself?"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:121
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:218
+msgid "Confirm Email"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:122
+msgid "resend the activation link?"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:122
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:219
+msgid "Resend Activation Email"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:249
+#, php-format
+msgid "%s couldn't be deleted"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:253
+msgid "All users have been successfully deleted"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:263
+msgid "The selected users have been activated"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:274
+msgid "The selected users have had their activation emails resent"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/class-email-confirmation.php:462
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:47
+msgid "Users with Unconfirmed Email Address"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:110
+msgid "There was an error performing that action!"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:118
+msgid "The selected user couldn't be deleted"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:129
+msgid "Email notification resent to user"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:398
+#, php-format
+msgid "[%1$s] Activate %2$s"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:401
+#, php-format
+msgid ""
+"To activate your user, please click the following link:<br><br>%s%s"
+"%s<br><br>After you activate it you will receive yet *another email* with "
+"your login."
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:442
+#: profile-builder-2.0/front-end/register.php:68
+msgid "Could not create user!"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:445
+msgid "That username is already activated!"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:466
+msgid "There was an error while trying to activate the user"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:514
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:73
+msgid "A new subscriber has (been) registered!"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:517
+#, php-format
+msgid "New subscriber on %1$s.<br/><br/>Username:%2$s<br/>E-mail:%3$s<br/>"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:566
+#, php-format
+msgid "[%1$s] Your new account information"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:570
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:573
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:413
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:420
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:434
+msgid "Your selected password at signup"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:572
+#, php-format
+msgid "Welcome to %1$s!<br/><br/><br/>Your username is:%2$s and password:%3$s"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:624
+msgid ""
+"The \"Admin Approval\" feature was activated at the time of registration, so "
+"please remember that you need to approve this user before he/she can log in!"
+msgstr ""
+
+#: profile-builder-2.0/features/email-confirmation/email-confirmation.php:632
+#: profile-builder-2.0/front-end/register.php:127
+msgid ""
+"Before you can access your account, an administrator needs to approve it. "
+"You will be notified via email."
+msgstr ""
+
+#: profile-builder-2.0/features/functions.php:297
+msgid "The user-validation has failed - the avatar was not deleted!"
+msgstr ""
+
+#: profile-builder-2.0/features/functions.php:308
+msgid "The user-validation has failed - the attachment was not deleted!"
+msgstr ""
+
+#: profile-builder-2.0/features/functions.php:500
+msgid "Strength indicator"
+msgstr ""
+
+#: profile-builder-2.0/features/functions.php:525
+msgid "Very Weak"
+msgstr ""
+
+#: profile-builder-2.0/features/functions.php:539
+#, php-format
+msgid "Minimum length of %d characters"
+msgstr ""
+
+#: profile-builder-2.0/features/functions.php:613
+msgid "This field is required"
+msgstr ""
+
+#: profile-builder-2.0/features/functions.php:620
+#: profile-builder-2.0/front-end/extra-fields/recaptcha/recaptcha.php:374
+#: profile-builder-2.0/front-end/extra-fields/recaptcha/recaptcha.php:379
+#: profile-builder-2.0/front-end/extra-fields/recaptcha/recaptcha.php:421
+#: profile-builder-2.0/front-end/extra-fields/recaptcha/recaptcha.php:458
+msgid "Please enter a (valid) reCAPTCHA value"
+msgstr ""
+
+#: profile-builder-2.0/features/functions.php:640
+msgid "Cancel"
+msgstr ""
+
+#: profile-builder-2.0/features/functions.php:672
+#, php-format
+msgid ""
+"To allow users to register for your website via Profile Builder, you first "
+"must enable user registration. Go to %1$sNetwork Settings%2$s, and under "
+"Registration Settings make sure to check “User accounts may be registered”. "
+"%3$sDismiss%4$s"
+msgstr ""
+
+#: profile-builder-2.0/features/functions.php:676
+#, php-format
+msgid ""
+"To allow users to register for your website via Profile Builder, you first "
+"must enable user registration. Go to %1$sSettings -> General%2$s tab, and "
+"under Membership make sure to check “Anyone can register”. %3$sDismiss%4$s"
+msgstr ""
+
+#: profile-builder-2.0/features/login-widget/login-widget.php:10
+msgid "This login widget lets you add a login form in the sidebar."
+msgstr ""
+
+#: profile-builder-2.0/features/login-widget/login-widget.php:15
+msgid "Profile Builder Login Widget"
+msgstr ""
+
+#: profile-builder-2.0/features/login-widget/login-widget.php:63
+msgid "Title:"
+msgstr ""
+
+#: profile-builder-2.0/features/login-widget/login-widget.php:68
+msgid "After login redirect URL (optional):"
+msgstr ""
+
+#: profile-builder-2.0/features/login-widget/login-widget.php:73
+msgid "Register page URL (optional):"
+msgstr ""
+
+#: profile-builder-2.0/features/login-widget/login-widget.php:78
+msgid "Password Recovery page URL (optional):"
+msgstr ""
+
+#: profile-builder-2.0/features/upgrades/upgrades-functions.php:91
+#: profile-builder-2.0/features/upgrades/upgrades-functions.php:134
+msgid "The usernames cannot be changed."
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:132
+msgid "Only an administrator can add new users."
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:142
+msgid "Users can register themselves or you can manually create users here."
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:142
+#: profile-builder-2.0/front-end/class-formbuilder.php:145
+msgid "This message is only visible by administrators"
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:145
+msgid ""
+"Users cannot currently register themselves, but you can manually create "
+"users here."
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:167
+#, php-format
+msgid "You are currently logged in as %1s. You don't need another account. %2s"
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:167
+msgid "Log out of this account."
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:167
+msgid "Logout"
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:174
+msgid "You must be logged in to edit your profile."
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:203
+msgid "here"
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:205
+#, php-format
+msgid ""
+"You will soon be redirected automatically. If you see this page for more "
+"than %1$d seconds, please click %2$s.%3$s"
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:293
+#: profile-builder-2.0/front-end/class-formbuilder.php:300
+#, php-format
+msgid "The account %1s has been successfully created!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:296
+#: profile-builder-2.0/front-end/class-formbuilder.php:306
+#, php-format
+msgid ""
+"Before you can access your account %1s, you need to confirm your email "
+"address. Please check your inbox and click the activation link."
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:302
+#, php-format
+msgid ""
+"Before you can access your account %1s, an administrator has to approve it. "
+"You will be notified via email."
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:316
+msgid "Your profile has been successfully updated!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:326
+msgid "There was an error in the submitted form"
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:348
+msgid "Add User"
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:401
+#: profile-builder-2.0/front-end/extra-fields/extra-fields.php:35
+msgid "The avatar was successfully deleted!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:401
+#: profile-builder-2.0/front-end/extra-fields/extra-fields.php:37
+msgid "The following attachment was successfully deleted:"
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:413
+msgid "Send these credentials via email."
+msgstr ""
+
+#: profile-builder-2.0/front-end/class-formbuilder.php:571
+msgid "User to edit:"
+msgstr ""
+
+#: profile-builder-2.0/front-end/default-fields/email/email.php:48
+msgid "You must enter a valid email address."
+msgstr ""
+
+#: profile-builder-2.0/front-end/default-fields/email/email.php:57
+#: profile-builder-2.0/front-end/default-fields/email/email.php:64
+msgid "This email is already reserved to be used soon."
+msgstr ""
+
+#: profile-builder-2.0/front-end/default-fields/email/email.php:57
+#: profile-builder-2.0/front-end/default-fields/email/email.php:64
+#: profile-builder-2.0/front-end/default-fields/email/email.php:73
+#: profile-builder-2.0/front-end/default-fields/email/email.php:84
+#: profile-builder-2.0/front-end/default-fields/username/username.php:50
+#: profile-builder-2.0/front-end/default-fields/username/username.php:65
+msgid "Please try a different one!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/default-fields/email/email.php:73
+#: profile-builder-2.0/front-end/default-fields/email/email.php:84
+msgid "This email is already in use."
+msgstr ""
+
+#: profile-builder-2.0/front-end/default-fields/password-repeat/password-repeat.php:37
+#: profile-builder-2.0/front-end/default-fields/password-repeat/password-repeat.php:41
+msgid "The passwords do not match"
+msgstr ""
+
+#: profile-builder-2.0/front-end/default-fields/password/password.php:46
+#: profile-builder-2.0/front-end/recover.php:245
+#, php-format
+msgid "The password must have the minimum length of %s characters"
+msgstr ""
+
+#: profile-builder-2.0/front-end/default-fields/password/password.php:50
+#: profile-builder-2.0/front-end/recover.php:249
+#, php-format
+msgid "The password must have a minimum strength of %s"
+msgstr ""
+
+#: profile-builder-2.0/front-end/default-fields/username/username.php:50
+msgid "This username already exists."
+msgstr ""
+
+#: profile-builder-2.0/front-end/default-fields/username/username.php:53
+#: profile-builder-2.0/front-end/default-fields/username/username.php:60
+msgid "This username is invalid because it uses illegal characters."
+msgstr ""
+
+#: profile-builder-2.0/front-end/default-fields/username/username.php:53
+#: profile-builder-2.0/front-end/default-fields/username/username.php:60
+msgid "Please enter a valid username."
+msgstr ""
+
+#: profile-builder-2.0/front-end/default-fields/username/username.php:65
+msgid "This username is already reserved to be used soon."
+msgstr ""
+
+#: profile-builder-2.0/front-end/extra-fields/avatar/avatar.php:72
+#: profile-builder-2.0/front-end/extra-fields/checkbox/checkbox.php:45
+#: profile-builder-2.0/front-end/extra-fields/datepicker/datepicker.php:40
+#: profile-builder-2.0/front-end/extra-fields/input-hidden/input-hidden.php:34
+#: profile-builder-2.0/front-end/extra-fields/input/input.php:30
+#: profile-builder-2.0/front-end/extra-fields/radio/radio.php:44
+#: profile-builder-2.0/front-end/extra-fields/select-multiple/select-multiple.php:46
+#: profile-builder-2.0/front-end/extra-fields/select-timezone/select-timezone.php:44
+#: profile-builder-2.0/front-end/extra-fields/select/select.php:46
+#: profile-builder-2.0/front-end/extra-fields/textarea/textarea.php:30
+#: profile-builder-2.0/front-end/extra-fields/upload/upload.php:70
+#: profile-builder-2.0/front-end/extra-fields/wysiwyg/wysiwyg.php:33
+msgid "required"
+msgstr ""
+
+#: profile-builder-2.0/front-end/extra-fields/extra-fields.php:99
+#: profile-builder-2.0/front-end/login.php:92
+#: profile-builder-2.0/front-end/login.php:99
+#: profile-builder-2.0/front-end/login.php:113
+#: profile-builder-2.0/front-end/recover.php:17
+#: profile-builder-2.0/front-end/recover.php:228
+msgid "ERROR"
+msgstr ""
+
+#: profile-builder-2.0/front-end/extra-fields/recaptcha/recaptcha.php:48
+msgid "To use reCAPTCHA you must get an API key from"
+msgstr ""
+
+#: profile-builder-2.0/front-end/extra-fields/recaptcha/recaptcha.php:131
+msgid "For security reasons, you must pass the remote ip to reCAPTCHA!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/extra-fields/recaptcha/recaptcha.php:192
+msgid "To use reCAPTCHA you must get an API public key from:"
+msgstr ""
+
+#: profile-builder-2.0/front-end/extra-fields/recaptcha/recaptcha.php:421
+msgid "Click the BACK button on your browser, and try again."
+msgstr ""
+
+#: profile-builder-2.0/front-end/extra-fields/upload/upload.php:122
+msgid "Select File"
+msgstr ""
+
+#: profile-builder-2.0/front-end/extra-fields/upload/upload_helper_functions.php:78
+#: profile-builder-2.0/front-end/extra-fields/upload/upload_helper_functions.php:87
+msgid "Sorry, you cannot upload this file type for this field."
+msgstr ""
+
+#: profile-builder-2.0/front-end/extra-fields/upload/upload_helper_functions.php:94
+msgid "An error occurred, please try again later."
+msgstr ""
+
+#: profile-builder-2.0/front-end/extra-fields/user-role/user-role.php:67
+#: profile-builder-2.0/front-end/extra-fields/user-role/user-role.php:80
+msgid "Only administrators can see this field on edit profile forms."
+msgstr ""
+
+#: profile-builder-2.0/front-end/extra-fields/user-role/user-role.php:76
+msgid "As an administrator you cannot change your role."
+msgstr ""
+
+#: profile-builder-2.0/front-end/extra-fields/user-role/user-role.php:112
+msgid "You cannot register this user role"
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:92
+msgid "The password you entered is incorrect."
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:93
+#: profile-builder-2.0/front-end/login.php:100
+msgid "Password Lost and Found."
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:93
+#: profile-builder-2.0/front-end/login.php:100
+msgid "Lost your password"
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:99
+msgid "Invalid username."
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:104
+#: profile-builder-2.0/front-end/login.php:108
+msgid "username"
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:104
+msgid "email"
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:108
+msgid "username or email"
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:113
+msgid "Both fields are empty."
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:177
+msgid "Username or Email"
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:211
+msgid "Lost your password?"
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:253
+#: profile-builder-2.0/front-end/logout.php:26
+msgid "Log out of this account"
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:253
+msgid "Log out"
+msgstr ""
+
+#: profile-builder-2.0/front-end/login.php:254
+#, php-format
+msgid "You are currently logged in as %1$s. %2$s"
+msgstr ""
+
+#: profile-builder-2.0/front-end/logout.php:15
+#, php-format
+msgid "You are currently logged in as %s. "
+msgstr ""
+
+#: profile-builder-2.0/front-end/logout.php:15
+msgid "Log out &raquo;"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:17
+msgid ""
+"Your account has to be confirmed by an administrator before you can use the "
+"\"Password Reset\" feature."
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:91
+msgid "Reset Password"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:111
+msgid "Please enter your username or email address."
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:112
+msgid "You will receive a link to create a new password via email."
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:119
+msgid "Username or E-mail"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:125
+msgid "Get New Password"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:166
+msgid "The username entered wasn't found in the database!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:166
+msgid "Please check that you entered the correct username."
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:181
+msgid "Check your e-mail for the confirmation link."
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:188
+msgid "The email address entered wasn't found in the database!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:188
+msgid "Please check that you entered the correct email address."
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:216
+#, php-format
+msgid ""
+"Someone requested that the password be reset for the following account: <b>"
+"%1$s</b><br/>If this was a mistake, just ignore this email and nothing will "
+"happen.<br/>To reset your password, visit the following link:%2$s"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:219
+#, php-format
+msgid "Password Reset from \"%1$s\""
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:228
+#, php-format
+msgid "There was an error while trying to send the activation link to %1$s!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:256
+msgid "Your password has been successfully changed!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:275
+#, php-format
+msgid "You have successfully reset your password to: %1$s"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:278
+#: profile-builder-2.0/front-end/recover.php:292
+#, php-format
+msgid "Password Successfully Reset for %1$s on \"%2$s\""
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:289
+#, php-format
+msgid ""
+"%1$s has requested a password change via the password reset feature.<br/>His/"
+"her new password is:%2$s"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:308
+msgid "The entered passwords don't match!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:375
+msgid "ERROR:"
+msgstr ""
+
+#: profile-builder-2.0/front-end/recover.php:375
+msgid "Invalid key!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/register.php:46
+msgid "Invalid activation key!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/register.php:50
+msgid "This username is now active!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/register.php:71
+msgid "This username is already activated!"
+msgstr ""
+
+#: profile-builder-2.0/front-end/register.php:126
+msgid "Your email was successfully confirmed."
+msgstr ""
+
+#: profile-builder-2.0/front-end/register.php:130
+msgid "You will soon be redirected automatically."
+msgstr ""
+
+#: profile-builder-2.0/front-end/register.php:159
+msgid "There was an error while trying to activate the user."
+msgstr ""
+
+#: profile-builder-2.0/index.php:34
+msgid ""
+" is also activated. You need to deactivate it before activating this version "
+"of the plugin."
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:45
+msgid "After Login"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:46
+msgid "After Logout"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:47
+msgid "After Registration"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:48
+msgid "After Edit Profile"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:49
+msgid "After Successful Email Confirmation"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:50
+msgid "After Successful Password Reset"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:51
+msgid "Dashboard (redirect users from accessing the dashboard)"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:55
+msgid "User ID"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:61
+msgid "User ID or Username"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:62
+msgid "User ID / Username"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:62
+msgid "Please select and enter the ID or username of your user."
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:63
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:93
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:112
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:131
+msgid "Redirect Type"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:64
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:94
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:113
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:138
+msgid "Redirect URL"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:64
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:94
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:113
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:138
+msgid ""
+"Can contain the following dynamic tags:{{homeurl}}, {{siteurl}}, "
+"{{user_id}}, {{user_nicename}}, {{http_referer}}"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:71
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:240
+msgid "Individual User Redirects"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:84
+msgid "... Choose"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:92
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:31
+msgid "User Role"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:92
+msgid "Select a user role."
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:101
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:241
+msgid "User Role based Redirects"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:120
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:242
+msgid "Global Redirects"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:133
+msgid "Login ( wp_login.php )"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:134
+msgid "Register ( wp-login.php?action=register )"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:135
+msgid "Lost Password ( wp-login.php?action=lostpassword )"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:136
+msgid "Author Archive ( http://sitename.com/author/admin )"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:145
+msgid "Redirect Default WordPress Forms and Pages"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:157
+msgid "How does this work?"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:179
+msgid "<pre>User ID / Username</pre><pre>Redirect</pre><pre>URL</pre>"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:193
+msgid "<pre>User Role</pre><pre>Redirect</pre><pre>URL</pre>"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:207
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:221
+msgid "<pre>Redirect</pre><pre>URL</pre>"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:236
+msgid ""
+"These redirects happen after a successful action, like registration or after "
+"a successful login."
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:238
+msgid "Which redirect happens depends on the following priority:"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:243
+msgid ""
+"Individual redirects defined in shortcodes or in the Multiple Registration "
+"and Edit Profile form settings. (<strong><em>redirect_priority=\"top\"</em></"
+"strong> parameter can be added in any shortcode, then that shortcode "
+"redirect will have priority over all other redirects)"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:246
+msgid "Redirect Default WordPress forms and pages"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:247
+msgid ""
+"With these you can redirect various WordPress forms and pages to pages "
+"created with profile builder."
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:249
+msgid "Available tags for dynamic URLs"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:250
+msgid ""
+"You use the following tags in your URLs to redirect users to various pages."
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:252
+msgid "generates a url of the current website homepage."
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:253
+msgid ""
+"in WordPress the <a target='_blank' href='https://codex.wordpress.org/"
+"Function_Reference/site_url'>site url</a> can be different then the home url"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:254
+msgid "the ID of the user"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:255
+msgid ""
+"the URL sanitized version of the username, the user nicename can be safely "
+"used in URLs since it can't contain special characters or spaces."
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:256
+msgid "the URL of the previously visited page"
+msgstr ""
+
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:339
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:345
+#: profile-builder-2.0/modules/custom-redirects/custom_redirects_admin.php:351
+msgid "You can't add duplicate redirects!"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:11
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:12
+#: profile-builder-2.0/modules/modules.php:93
+msgid "Admin Email Customizer"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:38
+msgid ""
+"These settings are also replicated in the \"User Email Customizer\" settings-"
+"page upon save."
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:38
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:38
+msgid "Valid tags {{reply_to}} and {{site_name}}"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:41
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:41
+msgid "From (name)"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:49
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:49
+msgid "From (reply-to email)"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:54
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:54
+msgid ""
+"Must be a valid email address or the tag {{reply_to}} which defaults to the "
+"administrator email"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:57
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:57
+msgid "Common Settings"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:60
+msgid ""
+"\n"
+"<p>New subscriber on {{site_name}}.</p>\n"
+"<p>Username:{{username}}</p>\n"
+"<p>E-mail:{{user_email}}</p>\n"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:69
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:99
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:126
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:71
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:99
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:128
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:155
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:183
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:214
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:241
+msgid "Email Subject"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:84
+msgid "Default Registration & Registration with Email Confirmation"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:87
+msgid ""
+"\n"
+"<p>New subscriber on {{site_name}}.</p>\n"
+"<p>Username:{{username}}</p>\n"
+"<p>E-mail:{{user_email}}</p>\n"
+"<p>The Admin Approval feature was activated at the time of registration,\n"
+"so please remember that you need to approve this user before he/she can log "
+"in!</p>\n"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:114
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:143
+msgid "Registration with Admin Approval"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:117
+msgid ""
+"\n"
+"<p>{{username}} has requested a password change via the password reset "
+"feature.</p>\n"
+"<p>His/her new password is: {{password}}</p>\n"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/admin-email-customizer.php:141
+msgid "Admin Notification for User Password Reset"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:7
+msgid "Available Tags"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:21
+msgid "Site Url"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:22
+msgid "Site Name"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:25
+#: profile-builder-2.0/modules/user-listing/userlisting.php:133
+msgid "User Id"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:33
+msgid "Reply To"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:36
+msgid "Activation Key"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:37
+msgid "Activation Url"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:38
+msgid "Activation Link"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:42
+msgid "Reset Key"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:43
+msgid "Reset Url"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/email-customizer.php:44
+msgid "Reset Link"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:11
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:12
+#: profile-builder-2.0/modules/modules.php:100
+msgid "User Email Customizer"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:38
+msgid ""
+"These settings are also replicated in the \"Admin Email Customizer\" "
+"settings-page upon save."
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:64
+msgid ""
+"\n"
+"<h3>Welcome to {{site_name}}!</h3>\n"
+"<p>Your username is:{{username}} and password:{{password}}</p>\n"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:85
+msgid "Default Registration"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:91
+msgid ""
+"\n"
+"<p>To activate your user, please click the following link:<br/>\n"
+"{{{activation_link}}}</p>\n"
+"<p>After you activate, you will receive another email with your credentials."
+"</p>\n"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:103
+msgid "[{{site_name}}] Activate {{username}}"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:114
+msgid "Registration with Email Confirmation"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:120
+msgid ""
+"\n"
+"<h3>Welcome to {{site_name}}!</h3>\n"
+"<p>Your username is:{{username}} and password:{{password}}</p>\n"
+"<p>Before you can access your account, an administrator needs to approve it. "
+"You will be notified via email.</p>\n"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:132
+msgid "A new account has been created for you on {{site_name}}"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:148
+msgid ""
+"\n"
+"<h3>Good News!</h3>\n"
+"<p>An administrator has just approved your account: {{username}} on "
+"{{site_name}}.</p>\n"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:159
+msgid "Your account on {{site_name}} has been approved!"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:170
+msgid "User Approval Notification"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:175
+msgid ""
+"\n"
+"<h3>Hello,</h3>\n"
+"<p>Unfortunatelly an administrator has just unapproved your account: "
+"{{username}} on {{site_name}}.</p>\n"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:187
+msgid "Your account on {{site_name}} has been unapproved!"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:198
+msgid "Unapproved User Notification"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:204
+msgid ""
+"\n"
+"<p>Someone requested that the password be reset for the following account: "
+"{{site_name}}<br/>\n"
+"Username: {{username}}</p>\n"
+"<p>If this was a mistake, just ignore this email and nothing will happen.</"
+"p>\n"
+"<p>To reset your password, visit the following address:<br/>\n"
+"{{{reset_link}}}</p>\n"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:218
+msgid "[{{site_name}}] Password Reset"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:229
+msgid "Password Reset Email"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:235
+msgid ""
+"\n"
+"<p>You have successfully reset your password to: {{password}}</p>\n"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:245
+msgid "[{{site_name}}] Password Reset Successfully"
+msgstr ""
+
+#: profile-builder-2.0/modules/email-customizer/user-email-customizer.php:256
+msgid "Password Reset Success Email"
+msgstr ""
+
+#: profile-builder-2.0/modules/modules.php:11
+#: profile-builder-2.0/modules/modules.php:55
+msgid "Modules"
+msgstr ""
+
+#: profile-builder-2.0/modules/modules.php:56
+msgid ""
+"Here you can activate / deactivate available modules for Profile Builder."
+msgstr ""
+
+#: profile-builder-2.0/modules/modules.php:66
+msgid "Name/Description"
+msgstr ""
+
+#: profile-builder-2.0/modules/modules.php:67
+msgid "Status"
+msgstr ""
+
+#: profile-builder-2.0/modules/modules.php:74
+#: profile-builder-2.0/modules/modules.php:81
+#: profile-builder-2.0/modules/modules.php:88
+#: profile-builder-2.0/modules/modules.php:95
+#: profile-builder-2.0/modules/modules.php:102
+#: profile-builder-2.0/modules/modules.php:109
+msgid "Active"
+msgstr ""
+
+#: profile-builder-2.0/modules/modules.php:75
+#: profile-builder-2.0/modules/modules.php:82
+#: profile-builder-2.0/modules/modules.php:89
+#: profile-builder-2.0/modules/modules.php:96
+#: profile-builder-2.0/modules/modules.php:103
+#: profile-builder-2.0/modules/modules.php:110
+msgid "Inactive"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:11
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:12
+msgid "Edit-profile Form"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:13
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:13
+#: profile-builder-2.0/modules/user-listing/userlisting.php:13
+msgid "Add New"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:14
+msgid "Add new Edit-profile Form"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:15
+msgid "Edit the Edit-profile Forms"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:16
+msgid "New Edit-profile Form"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:17
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:23
+msgid "Edit-profile Forms"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:18
+msgid "View the Edit-profile Form"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:19
+msgid "Search the Edit-profile Forms"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:20
+msgid "No Edit-profile Form found"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:21
+msgid "No Edit-profile Forms found in trash"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:131
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:134
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1155
+msgid "Shortcode"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:151
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:155
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1176
+msgid "(no title)"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:171
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:174
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1196
+msgid "The shortcode will be available after you publish this form."
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:173
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:176
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1198
+msgid "Use this shortcode on the page you want the form to be displayed:"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:177
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:180
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1202
+msgid ""
+"<span style=\"color:red;\">Note:</span> changing the form title also changes "
+"the shortcode!"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:183
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:186
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1235
+msgid "Form Shortcode"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:202
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:226
+msgid "Redirect"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:202
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:226
+msgid "Whether to redirect the user to a specific page or not"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:203
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:227
+msgid "Display Messages"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:203
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:227
+msgid "Allowed time to display any success messages (in seconds)"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:204
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:228
+msgid "URL"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:204
+msgid ""
+"Specify the URL of the page users will be redirected once they updated their "
+"profile using this form<br/>Use the following format: http://www.mysite.com"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:211
+msgid "After Profile Update..."
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:237
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:258
+msgid "Add New Field to the List"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:241
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:262
+msgid "Choose one of the supported fields you manage <a href=\""
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/edit-profile-forms.php:270
+msgid "This form is empty."
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/multiple-forms.php:215
+msgid "You need to specify the title of the form before creating it"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/multiple-forms.php:399
+msgid "<pre>Title (Type)</pre>"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/multiple-forms.php:399
+msgid "Delete all items"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/multiple-forms.php:399
+msgid "Delete all"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:11
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:12
+msgid "Registration Form"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:14
+msgid "Add new Registration Form"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:15
+msgid "Edit the Registration Forms"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:16
+msgid "New Registration Form"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:17
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:23
+msgid "Registration Forms"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:18
+msgid "View the Registration Form"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:19
+msgid "Search the Registration Forms"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:20
+msgid "No Registration Form found"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:21
+msgid "No Registration Forms found in trash"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:215
+msgid "Default Role"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:224
+msgid "Set Role"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:224
+msgid ""
+"Choose what role the user will have after (s)he registered<br/>If not "
+"specified, defaults to the role set in the WordPress settings"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:225
+msgid "Automatically Log In"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:225
+msgid ""
+"Whether to automatically log in the newly registered user or not<br/>Only "
+"works on single-sites without \"Admin Approval\" and \"Email Confirmation\" "
+"features activated<br/>WARNING: Caching the registration form will make "
+"automatic login not work"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:226
+msgid "Choose..."
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:228
+msgid ""
+"Specify the URL of the page users will be redirected once registered using "
+"this form<br/>Use the following format: http://www.mysite.com"
+msgstr ""
+
+#: profile-builder-2.0/modules/multiple-forms/register-forms.php:234
+msgid "After Registration..."
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/class-userlisting.php:470
+#: profile-builder-2.0/modules/user-listing/userlisting.php:724
+#: profile-builder-2.0/modules/user-listing/userlisting.php:968
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1011
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1356
+msgid "Search Users by All Fields"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:14
+msgid "Add new User Listing"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:15
+msgid "Edit the User Listing"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:16
+msgid "New User Listing"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:18
+msgid "View the User Listing"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:19
+msgid "Search the User Listing"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:20
+msgid "No User Listing found"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:21
+msgid "No User Listing found in trash"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:95
+msgid "Display name as"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:125
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1263
+msgid "Registration Date"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:126
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1268
+msgid "Number of Posts"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:130
+msgid "More Info"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:131
+msgid "More Info Url"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:132
+msgid "Avatar or Gravatar"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:134
+msgid "User Nicename"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:161
+msgid "Meta Variables"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:167
+msgid "Sort Variables"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:171
+#: profile-builder-2.0/modules/user-listing/userlisting.php:198
+msgid "Extra Functions"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:173
+msgid "Pagination"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:174
+msgid "Search all Fields"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:200
+msgid "Go Back Link"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:218
+msgid "All-userlisting Template"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:221
+msgid "Single-userlisting Template"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:247
+msgid "Avatar"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:251
+#: profile-builder-2.0/modules/user-listing/userlisting.php:638
+msgid "Posts"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:252
+#: profile-builder-2.0/modules/user-listing/userlisting.php:620
+msgid "Sign-up Date"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:253
+msgid "More"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:338
+msgid "You do not have permission to view this user list."
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:351
+msgid "You do not have the required user role to view this user list."
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:364
+msgid "User not found"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:614
+msgid "First/Lastname"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:629
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1266
+msgid "Display Name"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:641
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1273
+msgid "Aim"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:644
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1274
+msgid "Yim"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:647
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1275
+msgid "Jabber"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:827
+msgid "Click here to see more information about this user"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:827
+msgid "More..."
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:830
+msgid "Click here to see more information about this user."
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:922
+#: profile-builder-2.0/modules/user-listing/userlisting.php:925
+msgid "Click here to go back"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:922
+msgid "Back"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:955
+msgid "&laquo;&laquo; First"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:956
+msgid "&laquo; Prev"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:957
+msgid "Next &raquo; "
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:958
+msgid "Last &raquo;&raquo;"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:987
+msgid "You don't have any pagination settings on this userlisting!"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1028
+msgid "Search"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1029
+msgid "Clear Results"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1205
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1209
+msgid "Extra shortcode parameters"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1207
+msgid "View all extra shortcode parameters"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1212
+msgid ""
+"displays users having a certain meta-value within a certain (extra) meta-"
+"field"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1213
+msgid "Example:"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1215
+msgid ""
+"Remember though, that the field-value combination must exist in the database."
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1221
+msgid "displays only the users that you specified the user_id for"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1227
+msgid "displays all users except the ones you specified the user_id for"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1285
+msgid "Random (very slow on large databases > 10K user)"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1288
+msgid "Ascending"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1289
+msgid "Descending"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1298
+msgid "Roles to Display"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1298
+msgid ""
+"Restrict the userlisting to these selected roles only<br/>If not specified, "
+"defaults to all existing roles"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1299
+msgid "Number of Users/Page"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1299
+msgid ""
+"Set the number of users to be displayed on every paginated part of the all-"
+"userlisting"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1300
+msgid "Default Sorting Criteria"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1300
+msgid ""
+"Set the default sorting criteria<br/>This can temporarily be changed for "
+"each new session"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1301
+msgid "Default Sorting Order"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1301
+msgid ""
+"Set the default sorting order<br/>This can temporarily be changed for each "
+"new session"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1302
+msgid "Avatar Size (All-userlisting)"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1302
+msgid "Set the avatar size on the all-userlisting only"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1303
+msgid "Avatar Size (Single-userlisting)"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1303
+msgid "Set the avatar size on the single-userlisting only"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1304
+msgid "Visible only to logged in users?"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1304
+msgid "The userlisting will only be visible only to the logged in users"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1305
+msgid "Visible to following Roles"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1305
+msgid "The userlisting will only be visible to the following roles"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1311
+msgid "Userlisting Settings"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1332
+msgid ""
+"You need to activate the Userlisting feature from within the \"Modules\" tab!"
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1332
+msgid "You can find it in the Profile Builder menu."
+msgstr ""
+
+#: profile-builder-2.0/modules/user-listing/userlisting.php:1495
+msgid "No results found!"
+msgstr ""
