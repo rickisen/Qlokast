@@ -37,7 +37,7 @@ function post_type_course_init(){
         'hierarchical'         => false,
         'menu_position'        => null,
         'taxonomies'           => array('category'),
-        'supports'             => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt'),
+        'supports'             => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
         'register_metabox_cb'  => 'add_yearclass_metaboxes',
     );
 
