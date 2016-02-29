@@ -28,15 +28,15 @@ get_header(); ?>
       include(locate_template('template-parts/flowpart.php'));
 
       /* get all assignments */
-      $postType = 'studentposts'; $title = 'Student Raporter'; 
+      $postType = 'studentposts'; $title = 'Senaste Student Raporter'; 
       include(locate_template('template-parts/flowpart.php'));
 
       /* get all assignments */
-      $postType = 'assignments'; $title = 'Uppgifter'; 
+      $postType = 'assignments'; $title = 'Dina Senaste Uppgifter'; 
       include(locate_template('template-parts/flowpart.php'));
 
       /* get all lessions */
-      $postType = 'lession'; $title = 'Lektioner'; 
+      $postType = 'lession'; $title = 'Dina Senaste Lektioner'; 
       include(locate_template('template-parts/flowpart.php'));
 
 		endif;
