@@ -37,14 +37,46 @@ get_header(); ?>
       include(locate_template('template-parts/flowpart.php'));
   ?>
 
-  <?php
-    /* Print tha Form */
-    if ($current_user->ID == $curauth->ID){
-      echo "<h2>Lämmna in Studieplan:</h2>";
-      echo do_shortcode('[wpuf_form id="92"]');
+  <?php 
+    /* List reports*/
+    if ( $current_user->ID == $curauth->ID ) {
+      echo addStudentReportForm(); // outputs Form for studentreport
+    }
+    if ( $current_user->ID == $curauth->ID || $current_user->has_cap( 'read_private_studentposts' ) ) {
+      $loop = new WP_Query( array( 'post_type' => 'studentposts' , 'category_name' => 'studentrapport', 'author' => $curauth->ID ) );
+      if ( $loop->have_posts() ) {
+        echo "<h3>".$curauth->first_name."s studentrapporter: </h3>";
+      }
+      while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <div> <?php echo get_the_author() ?> : 
+          <a class="<?php echo "category-".get_the_category()[0]->name;?>" href="<?php the_permalink() ?>"> <?php the_title(); ?></a>
+        </div>
+      <?php endwhile; wp_reset_postdata();
     }
   ?>
 
+  <?php
+    /* Check for studieplan */
+    if ($current_user->ID == $curauth->ID || $current_user->has_cap( 'read_private_studentposts' ) ){
+      $loop = new WP_Query( array( 'post_type' => 'studentposts' , 'category_name' => 'studieplan', 'author' => $curauth->ID ) );
+      if ( $loop->have_posts() ) {
+        echo "<h3>".$curauth->first_name."s studieplan: </h3>";
+      }
+      if ( $loop -> have_posts() ) {
+        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+          <div> <?php echo get_the_author() ?> : 
+            <a class="<?php echo "category-".get_the_category()[0]->name;?>" href="<?php the_permalink() ?>"> <?php the_title(); ?></a>
+          </div>
+        <?php endwhile; wp_reset_postdata();
+      }elseif ( $current_user->ID == $curauth->ID ) {
+        echo addStudyplanForm(); // outputs Form for studyplan
+      }else{
+        echo $curauth->display_name." har inte lämnat in sin studieplan!";
+      }
+    }
+  ?>
+
+  <?php ?>
   <!-- printar ut alla nyheter som denna person gjort, om hen nu gjort nagra -->
   <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>

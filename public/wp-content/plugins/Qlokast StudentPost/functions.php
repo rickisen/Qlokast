@@ -52,3 +52,73 @@ function make_all_studentposts_private( $new_status, $old_status, $post ) {
     }
 } 
 add_action( 'transition_post_status', 'make_all_studentposts_private', 10, 3 );
+
+//Inserts custom post in CPT-Reports
+function prefix_createStudyplan(){
+    global $current_user; get_currentuserinfo();
+
+    $user_id = get_current_user_id();
+
+    $post_id = wp_insert_post( array (
+    'post_type' => 'studentposts',
+    'post_title' => 'Studyplan for '.$current_user->user_firstname.' '.$current_user->user_lastname ,
+    'post_content' => wp_strip_all_tags( $_POST['submitStudyplan'] ), 
+    'post_author' => $user_id,
+    'post_category' => array("2"),
+    'post_status' => 'private', /* Secret studyplan! */
+    'comment_status' => 'open',   // if you prefer
+    'ping_status' => 'closed',      // if you prefer
+    ) );
+
+    header( "location: /author/".$current_user->user_nicename );
+}
+add_action( 'admin_post_createStudyplan', 'prefix_createStudyplan');
+
+function prefix_createStudentReport(){
+    global $current_user; get_currentuserinfo();
+
+    $user_id = get_current_user_id();
+
+    $post_id = wp_insert_post( array (
+    'post_type' => 'studentposts',
+    'post_title' => 'Studentreport for '.$current_user->user_firstname.' '.$current_user->user_lastname.' week #'.date('W').".",
+    'post_content' => wp_strip_all_tags( $_POST['submitStudentReport'] ), 
+    'post_author' => $user_id,
+    'post_category' => array("1"),
+    'post_status' => 'private', /* Secret studentreport! */
+    'comment_status' => 'open',   // if you prefer
+    'ping_status' => 'closed',      // if you prefer
+    'meta_input' => array(
+      'status' => $_POST['studentReportStatus']
+      )
+    ) );
+
+    header( "location: /author/".$current_user->user_nicename );
+}
+
+add_action( 'admin_post_createStudentReport', 'prefix_createStudentReport');
+
+function addStudyplanForm($title = "Enter your studyplan:", $placeholder = "Write here..."){
+    return '
+      <h2>'.$title.'</h2>
+      <form method="post" action="/wp-admin/admin-post.php" >
+        <input type="hidden" name="action" value="createStudyplan">
+        <textarea rows="6" cols="30" name="submitStudyplan" placeholder=" '.$placeholder.' " ></textarea>
+        <button type="submit" >Skicka in!</button> 
+      </form>
+    ';
+}
+
+function addStudentReportForm($title = "Enter your studentreport:", $question = "Do you feel up to speed?", $placeholder = "Write here..."){
+    return '
+      <h2>'.$title.'</h2>
+      <form method="post" action="/wp-admin/admin-post.php" >
+        <input type="hidden" name="action" value="createStudentReport">
+        <textarea rows="6" cols="30" name="submitStudentReport" placeholder=" '.$placeholder.' " ></textarea>
+        <p>'.$question.'</p>
+        <p>Yes! <input type="radio" name="studentReportStatus" value="yes" checked ></p>
+        <p>No! <input type="radio" name="studentReportStatus" value="no" ></p>
+        <button type="submit" >Skicka in!</button> 
+      </form>
+    ';
+}

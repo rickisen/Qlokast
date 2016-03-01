@@ -1,5 +1,5 @@
 <?php 
-  $loop = new WP_Query( array( 'post_type' => $postType ) );
+  $loop = new WP_Query( array( 'post_type' => $postType , 'category_name' => $categoryName ) );
 ?>
 
 <?php if ( $loop->have_posts()): ?>
@@ -10,7 +10,7 @@
 <?php
 while ( $loop->have_posts() ) : $loop->the_post(); ?>
   <div> <?php echo get_the_author() ?> : 
-    <a class="<?php echo "category-".get_the_category()[0]->name;?>" href="<?php the_permalink() ?>"> <?php the_title(); ?></a>
+    <a class="<?php echo "studentReportStatus-".get_post_meta( get_the_ID(), 'status', true );?>" href="<?php the_permalink() ?>"> <?php the_title(); ?></a>
   </div>
 <?php endwhile; wp_reset_postdata(); ?>
 
@@ -18,3 +18,8 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 <?php endif; ?>
 
+<?php 
+$title = "";
+$postType = "";
+$categoryName = "";
+?>
