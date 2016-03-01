@@ -23,12 +23,13 @@ get_header(); ?>
 
 			<?php
 
+
       /* get all news */
       $postType = 'post'; $title = 'Nyhter'; 
       include(locate_template('template-parts/flowpart.php'));
 
-      /* get all studentposts */
-      $postType = 'studentposts'; $title = 'Senaste Student Raporter'; 
+      /* get all studentreports */
+      $postType = 'studentposts'; $title = 'Senaste Studentrapporter'; $categoryName = 'Studentrapport'; 
       include(locate_template('template-parts/flowpart.php'));
 
       /* get all assignments */
@@ -37,6 +38,10 @@ get_header(); ?>
 
       /* get all lessions */
       $postType = 'lession'; $title = 'Dina Senaste Lektioner'; 
+      include(locate_template('template-parts/flowpart.php'));
+
+      /* get student report */
+      $postType = 'studentposts'; $title = 'Min studieplan'; $categoryName = 'Studieplan'; 
       include(locate_template('template-parts/flowpart.php'));
 
 		endif;
