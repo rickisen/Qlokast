@@ -15,8 +15,8 @@
 			    	<ul>
 			    		<li>
 			    			<?php 
-							  $loop2 = new WP_Query( array( 'post_type' => 'lession', 'meta_key'=> '_course_parrent', 'meta_value'=> get_the_ID()) );
-							?>
+                  $loop2 = new WP_Query( array( 'post_type' => 'lession', 'meta_key'=> '_course_parrent', 'meta_value'=> get_the_ID()) );
+                ?>
 
 			    			<?php if ($loop2-> have_posts() ) : ?>
 							    <?php while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
@@ -33,7 +33,7 @@
 		<!--If user is logged in show "Min sida" link -->
 		<li>
 			<?php if (is_user_logged_in()): ?>
-				<a href="<?php echo '/author/'.$current_user->user_login ?>"> Min sida</a>
+				<a href="<?php echo '/author/'.$current_user->user_nicename ;?>"> Min sida</a>
 			<?php endif ?>
 		</li>
 
