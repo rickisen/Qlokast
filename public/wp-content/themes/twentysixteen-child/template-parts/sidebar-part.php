@@ -8,8 +8,10 @@
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			  <div> 
 			    <li>
-			    	<h3><a href="<?php the_permalink() ?>"> <?php asv_the_title(); ?></a></h3>
+			    <!--Drop down list header -->
+			    	<a href="<?php the_permalink() ?>"> <?php asv_the_title(); ?></a>
 
+			    <!--Drop down list items -->
 			    	<ul>
 			    		<li>
 			    			<?php 
@@ -27,6 +29,14 @@
 			    </li>
 			  </div>
 		<?php endwhile; wp_reset_postdata(); ?>
+
+		<!--If user is logged in show "Min sida" link -->
+		<li>
+			<?php if (is_user_logged_in()): ?>
+				<a href="<?php echo '/author/'.$current_user->user_login ?>"> Min sida</a>
+			<?php endif ?>
+		</li>
+
 	</ul>
 <br>
 
