@@ -42,23 +42,52 @@ class Qlokast_Side_menu extends WP_Widget {
 	 * @param array $instance Saved values from database.
 	 */
 	public function widget( $args, $instance ) {
-	
-     	echo $args['before_widget'];
+
+    echo $args['before_widget'];
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
 		}
-		
-		$postType = 'courses'; 
-      		include(locate_template('template-parts/sidebar-part.php'));
-      	?>
 
-		<?php 
-		  	$loop = new WP_Query( array( 'post_type' => $postType ) );
-		?>
+    $loop = new WP_Query( array( 'post_type' => 'courses' ) ); ?>
+      <ul class="menu">
 
-		
+        <!--If user is logged in show "Min sida" link -->
+        <li>
+          <?php if (is_user_logged_in()): ?>
+            <?php global $current_user; ?>
+            <?php get_currentuserinfo(); ?>
+            <a href="/"> Mitt Flow </a>
+            <a href="<?php echo '/author/'.$current_user->user_nicename ;?>"> Min sida</a>
+            <br>
+          <?php endif ?>
+        </li>
 
-		<?php echo $args['after_widget'];
+        <?php if ( $loop->have_posts()): ?>
+        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+          <li>
+            <!--Drop down list header -->
+            <a href="<?php the_permalink() ?>"> <?php asv_the_title(); ?></a>
+            <!--Drop down list items -->
+            <ul>
+              <li>
+                <?php $loop2 = new WP_Query( array( 'post_type' => 'lession', 'meta_key'=> '_course_parrent', 'meta_value'=> get_the_ID()) ); ?>
+                <?php if ($loop2-> have_posts() ) : ?>
+                  <?php while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
+                      <a href="<?php the_permalink() ?>"> <?php asv_the_title(); ?></a>
+                  <?php endwhile; ?>
+              <?php endif; ?>
+              </li>
+            </ul>
+          </li>
+        <?php endwhile; wp_reset_postdata(); ?>
+        <?php endif; ?>
+
+      </ul> <!-- end menu -->
+    <br>
+
+<?php
+
+		echo $args['after_widget'];
 	}
 
 	/**
