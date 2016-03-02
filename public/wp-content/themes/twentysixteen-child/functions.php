@@ -13,7 +13,7 @@ function asv_the_title($before = '', $after = '', $echo = true) {
 }
 
 function asv_get_the_title($id = 0) {
-	$post = &get_post($id);
+	$post = get_post($id);
 
 	$title = $post->post_title;
 
