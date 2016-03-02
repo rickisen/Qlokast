@@ -30,6 +30,9 @@ get_header(); ?>
             } 
           ?>
 
+          <?php echo recieveAssignmentForm( get_the_ID() ); ?>
+
+
 				</main><!-- #main -->
 			</div><!-- #primary -->
 		</div><!--col-->
