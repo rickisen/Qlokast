@@ -123,6 +123,43 @@ function addStudentReportForm($title = "Enter your studentreport:", $question = 
     ';
 }
 
+// Hand in Assignments
+function prefix_submitAssignment(){
+    global $current_user; get_currentuserinfo();
+
+    //$user_id = get_current_user_id();
+    $assignmentParent = get_post( $_POST['parrent'] );
+
+    $post_id = wp_insert_post( array (
+    'post_type' => 'studentposts',
+    'post_title' => $assignmentParent->post_title.' Student '.$current_user->ID.' '.date("Y-m-d"),
+    'post_content' => wp_strip_all_tags( $_POST['submitAssignmentContent'] ), 
+    'post_author' => $current_user->ID, //$user_id,
+    'post_category' => array("3"),
+    'post_status' => 'private', /* Secret studentreport! */
+    'comment_status' => 'open',   // if you prefer
+    'ping_status' => 'closed',      // if you prefer
+    'meta_input' => array(
+      'parrent' => $_POST['parrent']
+      )
+    ) );
+
+    header( "location: /assignments/".$assignmentParent->post_name );
+}
+
+add_action( 'admin_post_submitAssignment', 'prefix_submitAssignment');
+
+function recieveAssignmentForm($parrent ,$title = "Hand in your assignment:", $placeholder = "What have you done?"){
+    return '
+      <h2>'.$title.'</h2>
+      <form method="post" action="/wp-admin/admin-post.php" >
+        <input type="hidden" name="action" value="submitAssignment">
+        <input type="hidden" name="parrent" value="'.$parrent.'">
+        <textarea rows="6" cols="30" name="submitAssignmentContent" placeholder=" '.$placeholder.' " ></textarea>
+        <button type="submit" >Skicka in!</button> 
+      </form>
+    ';
+}
 
 //======GRADING=====
 
