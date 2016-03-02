@@ -19,7 +19,7 @@ get_header(); ?>
 			<?php the_content(); ?>
 
 			<hr>
-			<h4>Skriven av <i><?php echo get_the_author('display_name') ?></i> den <i><?php the_time("Y-m-d H:i"); ?></i></h4>
+			<h4>Skriven av <i><?php echo get_the_author() ?></i> den <i><?php the_time("Y-m-d H:i"); ?></i></h4>
 			<br>
 		</div>
 
