@@ -19,6 +19,10 @@ body {
   color:red;
 }
 
+.grade {
+  text-transform: uppercase;
+}
+
 .menu {
   margin: 0 auto;
   padding: 0;

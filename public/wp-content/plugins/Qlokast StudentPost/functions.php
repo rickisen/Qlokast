@@ -122,3 +122,36 @@ function addStudentReportForm($title = "Enter your studentreport:", $question = 
       </form>
     ';
 }
+
+
+//======GRADING=====
+
+function prefix_gradingSystem(){
+    global $current_user; get_currentuserinfo();
+
+    if(!$current_user->has_cap( 'read_private_studentposts' )){
+      die();
+    }
+    update_metadata('post', $_POST['post_ID'], 'grade', $_POST['assignmentGrade']);
+
+    header( "location: /author/".$current_user->user_nicename );
+
+}
+
+add_action( 'admin_post_gradingSystem', 'prefix_gradingSystem');
+
+function addGradingSystemForm( $question = "Välj betyg:"){
+     $post_ID= get_the_ID();
+    return '
+      <h2>'.$title.'</h2>
+      <form method="post" action="/wp-admin/admin-post.php" >
+        <input type="hidden" name="action" value="gradingSystem">
+        <input type="hidden" name="post_ID" value="'.$post_ID.'">
+        <p>'.$question.'</p>
+        <p>VG <input type="radio" name="assignmentGrade" value="vg" checked ></p>
+        <p>G <input type="radio" name="assignmentGrade" value="g" ></p>
+        <p>IG <input type="radio" name="assignmentGrade" value="ig" ></p>
+        <button type="submit">Skicka in!</button> 
+      </form>
+    ';
+}
