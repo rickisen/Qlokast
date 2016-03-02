@@ -27,10 +27,23 @@ get_header(); ?>
 		// If comments are open or we have at least one comment, load up the comment template.
 		if ( comments_open() || get_comments_number() ) {
 		  comments_template();
+		  
 		} 
 		?>
-	</main><!-- #main -->
-</div><!-- #primary -->
+
+		<?php
+			if($current_user->has_cap( 'read_private_studentposts' ) ){
+		  	$post = $wp_query->post;
+
+		 	if (in_category('inlamning')) {
+
+		  		echo addGradingSystemForm();
+		  	}
+
+		}?>
+
+			</main><!-- #main -->
+		</div><!-- #primary -->
 
 <?php
 get_sidebar();
