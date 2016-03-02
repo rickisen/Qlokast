@@ -44,6 +44,9 @@ get_header(); ?>
       $postType = 'studentposts'; $title = 'Min studieplan'; $categoryName = 'Studieplan'; 
       include(locate_template('template-parts/flowpart.php'));
 
+      $postType = 'studentposts'; $title = 'Inlämningar'; $categoryName = 'Inlämning'; 
+      include(locate_template('template-parts/flowpart.php'));
+
 		endif;
 		?>
 

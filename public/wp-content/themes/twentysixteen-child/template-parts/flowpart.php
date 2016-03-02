@@ -10,7 +10,7 @@
 <?php
 while ( $loop->have_posts() ) : $loop->the_post(); ?>
   <div> <?php echo get_the_author() ?> : 
-    <a class="<?php echo "studentReportStatus-".get_post_meta( get_the_ID(), 'status', true );?>" href="<?php the_permalink() ?>"> <?php the_title(); ?></a>
+    <a class="<?php echo "studentReportStatus-".get_post_meta( get_the_ID(), 'status', true );?>" href="<?php the_permalink() ?>"> <?php asv_the_title(); ?>  </a> <span class="grade"><?php echo get_post_meta( get_the_ID(), 'grade', true) ?></span>
   </div>
 <?php endwhile; wp_reset_postdata(); ?>
 
