@@ -1,5 +1,9 @@
 <?php 
+if (isset($categoryName)){
   $loop = new WP_Query( array( 'post_type' => $postType , 'category_name' => $categoryName ) );
+}else{
+  $loop = new WP_Query( array( 'post_type' => $postType ) );
+}
 ?>
 
 <?php if ( $loop->have_posts()): ?>
