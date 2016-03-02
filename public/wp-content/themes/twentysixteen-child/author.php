@@ -7,12 +7,16 @@ get_header(); ?>
 
   <!-- get info for the displayed user -->
   <?php $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); ?>
+
+  <!-- get picture for the displayed user -->
+  <?php echo get_avatar($curauth->ID, "500") ?>
   <h1><?php echo $curauth->first_name." ".$curauth->last_name; ?></h1>
   <dl>
       <dt>Profile</dt>
       <dd><?php echo $curauth->user_description; ?></dd>
       <dt>Website</dt>
       <dd><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></dd>
+      
     <?php
         /* $curauth->aim; */
         /* $curauth->description; */
@@ -31,6 +35,7 @@ get_header(); ?>
     ?>
   </dl>
 
+
   <?php
       /* get all studentposts */
       $postType = 'studentposts'; $title = 'Senast Inlämnat Material '; 
@@ -39,7 +44,7 @@ get_header(); ?>
 
   <?php 
     /* List reports*/
-    if ( $current_user->ID == $curauth->ID ) {
+    if ( $current_user->ID == $curauth->ID && in_array('Student',$current_user->roles)) {
       echo addStudentReportForm(); // outputs Form for studentreport
     }
     if ( $current_user->ID == $curauth->ID || $current_user->has_cap( 'read_private_studentposts' ) ) {
@@ -59,18 +64,16 @@ get_header(); ?>
     /* Check for studieplan */
     if ($current_user->ID == $curauth->ID || $current_user->has_cap( 'read_private_studentposts' ) ){
       $loop = new WP_Query( array( 'post_type' => 'studentposts' , 'category_name' => 'studieplan', 'author' => $curauth->ID ) );
-      if ( $loop->have_posts() ) {
-        echo "<h3>".$curauth->first_name."s studieplan: </h3>";
-      }
       if ( $loop -> have_posts() ) {
+        echo "<h3>".$curauth->first_name."s studieplan: </h3>";
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
           <div> <?php echo get_the_author() ?> : 
             <a class="<?php echo "category-".get_the_category()[0]->name;?>" href="<?php the_permalink() ?>"> <?php the_title(); ?></a>
           </div>
         <?php endwhile; wp_reset_postdata();
-      }elseif ( $current_user->ID == $curauth->ID ) {
+      }elseif ( $current_user->ID == $curauth->ID && in_array('Student', $current_user->roles)) {
         echo addStudyplanForm(); // outputs Form for studyplan
-      }else{
+      }elseif (in_array('Student',$current_user->roles)){
         echo $curauth->display_name." har inte lämnat in sin studieplan!";
       }
     }
@@ -82,6 +85,14 @@ get_header(); ?>
     <?php while ( have_posts() ) : the_post(); ?>
       <p><a href="<?php	the_permalink() ?>" > <?php	the_title() ?></a></p>
     <?php	endwhile ?>
+  <?php	endif ?>
+
+  <?php if ( is_user_logged_in() && $current_user->ID == $curauth->ID ) : ?>
+  <?php	echo add_profile_edit_form('Uppdatera din prifil här', array(
+    'first_name' => $curauth->first_name,
+    'last_name' => $curauth->last_name,
+    'description' => $curauth->user_description
+    )); ?>
   <?php	endif ?>
 
   </main><!-- .site-main -->
