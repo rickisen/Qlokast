@@ -57,17 +57,22 @@ add_action( 'transition_post_status', 'make_all_studentposts_private', 10, 3 );
 function prefix_createStudyplan(){
     global $current_user; get_currentuserinfo();
 
+    /* verify permissions */
+    if(!$current_user->has_cap( 'publish_studentpost' )){
+      die();
+    }
+
     $user_id = get_current_user_id();
 
-    $post_id = wp_insert_post( array (
-    'post_type' => 'studentposts',
-    'post_title' => 'Studyplan for '.$current_user->user_firstname.' '.$current_user->user_lastname ,
-    'post_content' => wp_strip_all_tags( $_POST['submitStudyplan'] ), 
-    'post_author' => $user_id,
-    'post_category' => array("2"),
-    'post_status' => 'private', /* Secret studyplan! */
+    $post_id  = wp_insert_post( array (
+    'post_type'      => 'studentposts',
+    'post_title'     => 'Studyplan for '.$current_user->user_firstname.' '.$current_user->user_lastname ,
+    'post_content'   => wp_strip_all_tags( $_POST['submitStudyplan'] ),
+    'post_author'    => $user_id,
+    'post_category'  => array("2"),
+    'post_status'    => 'private', /* Secret studyplan! */
     'comment_status' => 'open',   // if you prefer
-    'ping_status' => 'closed',      // if you prefer
+    'ping_status'    => 'closed',      // if you prefer
     ) );
 
     header( "location: /author/".$current_user->user_nicename );
@@ -77,19 +82,24 @@ add_action( 'admin_post_createStudyplan', 'prefix_createStudyplan');
 function prefix_createStudentReport(){
     global $current_user; get_currentuserinfo();
 
+    /* verify permissions */
+    if(!$current_user->has_cap( 'publish_studentpost' )){
+      die();
+    }
+
     $user_id = get_current_user_id();
 
-    $post_id = wp_insert_post( array (
-    'post_type' => 'studentposts',
-    'post_title' => 'Studentreport for '.$current_user->user_firstname.' '.$current_user->user_lastname.' week #'.date('W').".",
-    'post_content' => wp_strip_all_tags( $_POST['submitStudentReport'] ), 
-    'post_author' => $user_id,
-    'post_category' => array("1"),
-    'post_status' => 'private', /* Secret studentreport! */
+    $post_id  = wp_insert_post( array (
+    'post_type'      => 'studentposts',
+    'post_title'     => 'Studentreport for '.$current_user->user_firstname.' '.$current_user->user_lastname.' week #'.date('W').".",
+    'post_content'   => wp_strip_all_tags( $_POST['submitStudentReport'] ),
+    'post_author'    => $user_id,
+    'post_category'  => array("1"),
+    'post_status'    => 'private', /* Secret studentreport! */
     'comment_status' => 'open',   // if you prefer
-    'ping_status' => 'closed',      // if you prefer
-    'meta_input' => array(
-      'status' => $_POST['studentReportStatus']
+    'ping_status'    => 'closed',      // if you prefer
+    'meta_input'     => array(
+      'status'       => $_POST['studentReportStatus']
       )
     ) );
 
@@ -127,22 +137,49 @@ function addStudentReportForm($title = "Enter your studentreport:", $question = 
 function prefix_submitAssignment(){
     global $current_user; get_currentuserinfo();
 
+    /* verify permissions */
+    if(!$current_user->has_cap( 'publish_studentpost' )){
+      die();
+    }
+
     //$user_id = get_current_user_id();
     $assignmentParent = get_post( $_POST['parrent'] );
 
     $post_id = wp_insert_post( array (
-    'post_type' => 'studentposts',
-    'post_title' => $assignmentParent->post_title.' Student '.$current_user->ID.' '.date("Y-m-d"),
-    'post_content' => wp_strip_all_tags( $_POST['submitAssignmentContent'] ), 
-    'post_author' => $current_user->ID, //$user_id,
-    'post_category' => array("3"),
-    'post_status' => 'private', /* Secret studentreport! */
+    'post_type'      => 'studentposts',
+    'post_title'     => $assignmentParent->post_title.' Student '.$current_user->ID.' '.date("Y-m-d"),
+    'post_content'   => wp_strip_all_tags( $_POST['submitAssignmentContent'] ),
+    'post_author'    => $current_user->ID, //$user_id,
+    'post_category'  => array("3"),
+    'post_status'    => 'private', /* Secret studentreport! */
     'comment_status' => 'open',   // if you prefer
-    'ping_status' => 'closed',      // if you prefer
-    'meta_input' => array(
+    'ping_status'    => 'closed',      // if you prefer
+    'meta_input'     => array(
       'parrent' => $_POST['parrent']
       )
     ) );
+   
+    if ( $_FILES['studentFile']['size'] > 0 ){
+
+      if (!function_exists('wp_generate_attachment_metadata')){
+          require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+          require_once(ABSPATH . "wp-admin" . '/includes/file.php');
+          require_once(ABSPATH . "wp-admin" . '/includes/media.php');
+      }
+
+      foreach ($_FILES as $file => $array) {
+          if ($_FILES[$file]['error'] !== UPLOAD_ERR_OK) {
+              return "upload error : " . $_FILES[$file]['error'];
+          }
+          $attach_id = media_handle_upload( $file, $post_id );
+      }   
+
+      if ($attach_id > 0){
+          update_post_meta($post_id, 'studentFile', $attach_id);
+          /* update_user_meta( $current_user->ID, 'user_picture', $attach_id); */
+      }
+
+    }
 
     header( "location: /assignments/".$assignmentParent->post_name );
 }
@@ -152,10 +189,13 @@ add_action( 'admin_post_submitAssignment', 'prefix_submitAssignment');
 function recieveAssignmentForm($parrent ,$title = "Hand in your assignment:", $placeholder = "What have you done?"){
     return '
       <h2>'.$title.'</h2>
-      <form method="post" action="/wp-admin/admin-post.php" >
+      <form method="post" enctype="multipart/form-data" action="/wp-admin/admin-post.php" >
         <input type="hidden" name="action" value="submitAssignment">
         <input type="hidden" name="parrent" value="'.$parrent.'">
         <textarea rows="6" cols="30" name="submitAssignmentContent" placeholder=" '.$placeholder.' " ></textarea>
+        <br>
+        <input type="file" name="studentFile" id="studentFile">
+        <br>
         <button type="submit" >Skicka in!</button> 
       </form>
     ';
@@ -169,6 +209,7 @@ function prefix_gradingSystem(){
     if(!$current_user->has_cap( 'read_private_studentposts' )){
       die();
     }
+
     update_metadata('post', $_POST['post_ID'], 'grade', $_POST['assignmentGrade']);
 
     header( "location: /author/".$current_user->user_nicename );
@@ -177,7 +218,7 @@ function prefix_gradingSystem(){
 
 add_action( 'admin_post_gradingSystem', 'prefix_gradingSystem');
 
-function addGradingSystemForm( $question = "Välj betyg:"){
+function addGradingSystemForm($title = 'Grade', $question = "Choose Grade:"){
      $post_ID= get_the_ID();
     return '
       <h2>'.$title.'</h2>
