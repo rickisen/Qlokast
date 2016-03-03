@@ -82,8 +82,15 @@ function lession_course_parrent_callback(){
     echo '<option value="">None</option>';
   }
 
-  echo '<option value=""> --- Lessions: </option>';
+  echo '<option value=""> --- Courses: </option>';
+  // and now get the courses, in case the user wants to add this as an exam
+  $args = array( 'post_type' => 'courses');
+  $loop = new WP_Query( $args );
+  while ( $loop->have_posts() ) : $loop->the_post();
+    echo '<option value="'.get_the_ID().'">'.get_the_title().'</option>';
+  endwhile;
 
+  echo '<option value=""> --- Lessions: </option>';
   // get the available courses or lessions that this lession could choose as a parrent
   $args = array( 'post_type' => 'lession');
   $loop = new WP_Query( $args );
@@ -91,15 +98,6 @@ function lession_course_parrent_callback(){
     echo '<option value="'.get_the_ID().'">'.get_the_title().'</option>';
   endwhile;
   wp_reset_postdata(); 
-
-  echo '<option value=""> --- Courses: </option>';
-
-  // and now get the courses, in case the user wants to add this as an exam
-  $args = array( 'post_type' => 'courses');
-  $loop = new WP_Query( $args );
-  while ( $loop->have_posts() ) : $loop->the_post();
-    echo '<option value="'.get_the_ID().'">'.get_the_title().'</option>';
-  endwhile;
 
   echo '</select>';
   wp_reset_postdata(); // so we don't affect anyone elses queries
