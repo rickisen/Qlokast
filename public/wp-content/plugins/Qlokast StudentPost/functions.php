@@ -155,3 +155,4 @@ function addGradingSystemForm( $question = "Välj betyg:"){
       </form>
     ';
 }
+

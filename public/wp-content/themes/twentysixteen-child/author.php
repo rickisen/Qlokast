@@ -39,7 +39,7 @@ get_header(); ?>
 
   <?php 
     /* List reports*/
-    if ( $current_user->ID == $curauth->ID ) {
+    if ( $current_user->ID == $curauth->ID && !$current_user->has_cap( 'read_private_studentposts' )) {
       echo addStudentReportForm(); // outputs Form for studentreport
     }
     if ( $current_user->ID == $curauth->ID || $current_user->has_cap( 'read_private_studentposts' ) ) {
@@ -68,9 +68,9 @@ get_header(); ?>
             <a class="<?php echo "category-".get_the_category()[0]->name;?>" href="<?php the_permalink() ?>"> <?php the_title(); ?></a>
           </div>
         <?php endwhile; wp_reset_postdata();
-      }elseif ( $current_user->ID == $curauth->ID ) {
+      }elseif ( $current_user->ID == $curauth->ID && !$current_user->has_cap( 'read_private_studentposts' )) {
         echo addStudyplanForm(); // outputs Form for studyplan
-      }else{
+      }elseif ( $current_user->ID == $curauth->ID && !$current_user->has_cap( 'read_private_studentposts' )){
         echo $curauth->display_name." har inte lämnat in sin studieplan!";
       }
     }
