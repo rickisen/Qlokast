@@ -33,7 +33,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <!-- gets the handed in assignment if it exits -->
         <?php $subLoop = new WP_Query( array( 
           'post_type'     => 'studentposts' ,
-          'category_name' => 'inlamningar',
+          'category_name' => 'assignment',
           'meta_key'      => 'parrent',
           'meta_value'    => get_the_ID(),
         ))?>
