@@ -186,6 +186,17 @@ function prefix_submitAssignment(){
 
 add_action( 'admin_post_submitAssignment', 'prefix_submitAssignment');
 
+function recieveAssignmentMiniForm($parrent){
+    return '
+      <form method="post" style="display:inline;"enctype="multipart/form-data" action="/wp-admin/admin-post.php" >
+        <input type="hidden" name="action" value="submitAssignment">
+        <input type="hidden" name="parrent" value="'.$parrent.'">
+        <input type="file" name="studentFile" id="studentFile">
+        <button type="submit" >Skicka in!</button> 
+      </form>
+    ';
+}
+
 function recieveAssignmentForm($parrent ,$title = "Hand in your assignment:", $placeholder = "What have you done?"){
     return '
       <h2>'.$title.'</h2>
