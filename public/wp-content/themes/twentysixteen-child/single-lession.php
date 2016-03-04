@@ -23,9 +23,6 @@ get_header(); ?>
             <?php the_content(); ?>
           </div>
 
-          <hr>
-          <h3> Övningar </h3>
-
           <!-- Find all assignments belonging to this lession -->
           <?php
             $args = array(
@@ -37,6 +34,8 @@ get_header(); ?>
           ?>
 
           <?php if ( $the_query->have_posts() ) : ?>
+            <hr>
+            <h3> Övningar </h3>
 
             <!-- a new the loop with lessions -->
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -44,12 +43,6 @@ get_header(); ?>
             <?php endwhile; ?>
 
             <?php wp_reset_postdata(); ?>
-
-          <?php else : ?>
-            <p><?php _e( '
-                Det ser inte ut som att det 
-                finns några övningar för den här lektionen än.
-              ' ); ?></p>
           <?php endif; ?>
 
           <?php 

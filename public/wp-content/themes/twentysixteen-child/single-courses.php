@@ -22,9 +22,6 @@ get_header(); ?>
             <p>Publicerad <?php the_time("Y-m-d H:i"); ?> av <?php the_author_posts_link(); ?></p>
             <?php the_content(); ?>
           </div>
-          
-          <hr>
-          <h3> Lektioner </h3>
 
           <!-- look for lessions conencted to this course -->
           <?php
@@ -37,21 +34,17 @@ get_header(); ?>
           ?>
 
           <?php if ( $the_query->have_posts() ) : ?>
+            <hr>
+            <h3> Lektioner </h3>
+
             <!-- a new the loop with lessions -->
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
               <a href="<?php the_permalink() ?>"><h5><?php the_title(); ?></h5></a>
             <?php endwhile; ?>
             <br>
             <?php wp_reset_postdata(); ?>
-          <?php else : ?>
-            <p><?php _e( '
-                Det ser inte ut som att det 
-                finns några lektioner för den här kursen än.
-            ' ); ?></p>
           <?php endif; ?>
 
-          <hr>
-          <h3> Kurs Övningar </h3>
           <!-- a new the loop with lessions -->
           <?php
             $args = array(
@@ -63,6 +56,8 @@ get_header(); ?>
           ?>
 
           <?php if ( $the_query->have_posts() ) : ?>
+            <hr>
+            <h3> Kurs Övningar </h3>
 
             <!-- a new the loop with lessions -->
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -70,12 +65,6 @@ get_header(); ?>
             <?php endwhile; ?>
 
             <?php wp_reset_postdata(); ?>
-
-          <?php else : ?>
-            <p><?php _e( '
-                Det ser inte ut som att det 
-                finns några kurs övningar för den här kursen än.
-            ' ); ?></p>
           <?php endif; ?>
 
           <?php 
