@@ -29,7 +29,7 @@ get_header(); ?>
       include(locate_template('template-parts/flowpart.php'));
 
       /* get all studentreports */
-      $postType = 'studentposts'; $title = 'Senaste Studentrapporter'; $categoryName = 'Studentrapport'; 
+      $postType = 'studentposts'; $title = 'Senaste Studentrapporter'; $categoryName = 'studentrapport'; 
       include(locate_template('template-parts/flowpart.php'));
 
       /* get all assignments */
