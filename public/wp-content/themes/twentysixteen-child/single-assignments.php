@@ -27,8 +27,27 @@ get_header(); ?>
       } 
     ?>
 
-    <?php echo recieveAssignmentForm( get_the_ID() ); ?>
 
+  <?php if ( !empty($grade = get_post_meta( get_the_ID(), 'grade', true))) : ?>
+    <span class="grade"> <?php echo $grade ?> </span>
+  <?php else : ?>
+
+    <!-- gets the handed in assignment if it exits -->
+    <?php $subLoop = new WP_Query( array( 
+      'post_type'     => 'studentposts' ,
+      'category_name' => 'assignment',
+      'meta_key'      => 'parrent',
+      'meta_value'    => get_the_ID(),
+    ))?>
+
+    <?php if ( $subLoop->have_posts() ) : ?>
+      <?php $subLoop->the_post() ?>
+      <span> Du har redan lämnat in denna uppgift: <a href="<?php the_permalink() ?>"><?php asv_the_title();?></a> </span>
+    <?php else : ?>
+      <?php echo recieveAssignmentForm(get_the_ID()); ?>
+    <?php endif; ?>
+
+  <?php endif; ?>
 
   </main><!-- #main -->
 </div><!-- #primary -->
