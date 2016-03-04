@@ -13,42 +13,53 @@
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
-
 get_header(); ?>
+
+<!-- remember what role we have -->
+<?php if ( in_array('student', $current_user->roles) ){
+    $role = 'student';
+  } else {
+    $role = 'other';
+  }
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+      <?php 
+        if ( have_posts() ) {
+          /* get all news */
+          $postType = 'post'; $title = 'Nyheter'; 
+          include(locate_template('template-parts/flowpart.php'));
 
-			<?php
+          if ($role == 'student'){ // show this stuff only for students
 
+            /* get all assignments */
+            $postType = 'assignments'; $title = 'Senaste Uppgifter'; 
+            include(locate_template('template-parts/flowpart.php'));
 
-      /* get all news */
-      $postType = 'post'; $title = 'Nyhter'; 
-      include(locate_template('template-parts/flowpart.php'));
+            /* get all lessions */
+            $postType = 'lession'; $title = 'Senaste Lektioner'; 
+            include(locate_template('template-parts/flowpart.php'));
 
-      /* get all studentreports */
-      $postType = 'studentposts'; $title = 'Senaste Studentrapporter'; $categoryName = 'studentrapport'; 
-      include(locate_template('template-parts/flowpart.php'));
+          } else { // show this stuff only for teachers and others
 
-      /* get all assignments */
-      $postType = 'assignments'; $title = 'Dina Senaste Uppgifter'; 
-      include(locate_template('template-parts/flowpart.php'));
+            /* get assignment answers */
+            $postType = 'studentposts'; $title = 'Inkommna Inlämningar'; $categoryName = 'assignment'; 
+            include(locate_template('template-parts/flowpart.php'));
 
-      /* get all lessions */
-      $postType = 'lession'; $title = 'Dina Senaste Lektioner'; 
-      include(locate_template('template-parts/flowpart.php'));
+            /* get all studentreports */
+            $postType = 'studentposts'; $title = 'Senaste Studentrapporter'; $categoryName = 'studentrapport'; 
+            include(locate_template('template-parts/flowpart.php'));
 
-      /* get student report */
-      $postType = 'studentposts'; $title = 'Min studieplan'; $categoryName = 'Studieplan'; 
-      include(locate_template('template-parts/flowpart.php'));
+            /* get student plans */
+            $postType = 'studentposts'; $title = 'Studieplaner'; $categoryName = 'Studieplan'; 
+            include(locate_template('template-parts/flowpart.php'));
 
-      $postType = 'studentposts'; $title = 'Inlämningar'; $categoryName = 'Inlämning'; 
-      include(locate_template('template-parts/flowpart.php'));
+          }
 
-		endif;
-		?>
+        }
+      ?>
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->

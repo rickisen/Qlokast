@@ -1,0 +1,53 @@
+#wrapper {
+	width:500px;
+	margin:0 auto;
+}
+.fatText{
+	font-weight: 600;
+}
+span {
+display:inline-block;
+min-width:25px;
+border: 2px solid orange;
+}
+
+select[name=grade1] {
+		color: red;
+}
+
+[text-themes~=matprat]{
+		color:red;
+		text-shadow:3px 3px 10px #b8b008;
+}
+
+h3[id^=last]{
+		color:red;
+}
+
+img[src$=".jpg"] {
+		border: 5px solid red ;
+}
+
+select[name*=grade] {
+		font-size:18px;
+}
+
+#wrapper > h3 {
+		font-family:sans;
+}
+
+#wrapper > p > img {
+		border-color:blue;
+}
+
+#goodStuff li:first-child {
+		font-weight:bold;
+}
+
+#goodStuff li:last-child {
+		font-style:italic;
+}
+
+#goodStuff li:nth-child(2n) {
+		color:brown;
+}

@@ -31,11 +31,15 @@ get_header(); ?>
 			<br>
 		</div>
 
+		<?php if ( !empty($grade = get_post_meta( get_the_ID(), 'grade', true))) : ?>
+      <span class="grade"> Satt Betyg: <?php echo $grade ?> </span>
+    <?php endif ?>
+     
 		<?php
 			if($current_user->has_cap( 'read_private_studentposts' ) ){
 		  	$post = $wp_query->post;
 
-		 	if (in_category('inlamning')) {
+		 	if (in_category('assignment')) {
 		  		echo addGradingSystemForm();
 		  	}
 		}?>

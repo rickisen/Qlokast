@@ -147,7 +147,7 @@ function prefix_submitAssignment(){
 
     $post_id = wp_insert_post( array (
     'post_type'      => 'studentposts',
-    'post_title'     => $assignmentParent->post_title.' Student '.$current_user->ID.' '.date("Y-m-d"),
+    'post_title'     => $assignmentParent->post_title.' '.$current_user->user_login.' '.date("Y-m-d"),
     'post_content'   => wp_strip_all_tags( $_POST['submitAssignmentContent'] ),
     'post_author'    => $current_user->ID, //$user_id,
     'post_category'  => array("3"),
@@ -223,7 +223,7 @@ function prefix_gradingSystem(){
 
     update_metadata('post', $_POST['post_ID'], 'grade', $_POST['assignmentGrade']);
 
-    header( "location: /author/".$current_user->user_nicename );
+    header( "location: ".get_permalink($_POST['post_ID']) );
 
 }
 
