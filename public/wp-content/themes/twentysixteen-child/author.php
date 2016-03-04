@@ -36,10 +36,28 @@ get_header(); ?>
   </dl>
 
 
+
   <?php
   /*     /1* get all studentposts *1/ */
   /*     $postType = 'studentposts'; $title = 'Senast Inlämnat Material '; */ 
   /*     include(locate_template('template-parts/flowpart.php')); */
+ 
+    /* List reports*/
+    if ( $current_user->ID == $curauth->ID && !$current_user->has_cap( 'read_private_studentposts' )) {
+      echo addStudentReportForm(); // outputs Form for studentreport
+    }
+    if ( $current_user->ID == $curauth->ID || $current_user->has_cap( 'read_private_studentposts' ) ) {
+      $loop = new WP_Query( array( 'post_type' => 'studentposts' , 'category_name' => 'studentrapport', 'author' => $curauth->ID ) );
+      if ( $loop->have_posts() ) {
+        echo "<h3>".$curauth->first_name."s studentrapporter: </h3>";
+      }
+      while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <div> <?php echo get_the_author() ?> : 
+          <a class="<?php echo "category-".get_the_category()[0]->name;?>" href="<?php the_permalink() ?>"> <?php the_title(); ?></a>
+        </div>
+      <?php endwhile; wp_reset_postdata();
+    }
+
   ?>
 
   <?php /* Check for studieplan */
@@ -56,12 +74,16 @@ get_header(); ?>
 
         <?php endwhile; wp_reset_postdata();
 
+
       } elseif ( $current_user->ID == $curauth->ID && in_array('student', $current_user->roles) ) {
         echo addStudyplanForm(); // outputs Form for studyplan
 
       } elseif (in_array('student',$current_user->roles)){
-        echo $curauth->display_name." har inte lämnat in sin studieplan!";
 
+      } elseif ( $current_user->ID == $curauth->ID && !$current_user->has_cap( 'read_private_studentposts' )) {
+        echo addStudyplanForm(); // outputs Form for studyplan
+      } elseif ( $current_user->ID == $curauth->ID && !$current_user->has_cap( 'read_private_studentposts' )){
+        echo $curauth->display_name." har inte lämnat in sin studieplan!";
       }
     }
   ?>
