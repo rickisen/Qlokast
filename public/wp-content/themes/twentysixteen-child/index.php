@@ -25,7 +25,7 @@ get_header(); ?>
 
 
       /* get all news */
-      $postType = 'post'; $title = 'Nyhter'; 
+      $postType = 'news'; $title = 'Nyheter'; 
       include(locate_template('template-parts/flowpart.php'));
 
       /* get all studentreports */
