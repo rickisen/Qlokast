@@ -10,36 +10,48 @@ Author URI:
 
 function post_type_studentposts_init(){
   $labels = array(
-        'name'                  => 'Student Posts',
-        'singular_name'         => 'Student Post',
-    );
- 
-    $args = array(
-        'labels'               => $labels,
-        'public'               => true,
-        'show_ui'              => true,
-        'show_in_menu'         => true,
-        'query_var'            => true,
-        'rewrite'              => array( 'slug' => 'studentposts' ),
-        'capability_type' => 'studentposts',
-        'capabilities' => array(
-          'publish_posts'      => 'publish_studentpost',
-          'edit_posts'         => 'edit_studentpost',
-          'read_posts'         => 'read_studentpost',
-          'edit_others_posts'  => 'edit_others_studentposts',
-          'read_private_posts' => 'read_private_studentposts',
-          'edit_post'          => 'edit_studentpost',
-          'delete_posts'       => 'delete_studentposts',
-          'read_post'          => 'read_studentpost',
-        ),
-        'has_archive'          => true,
-        'hierarchical'         => false,
-        'menu_position'        => null,
-        'taxonomies'           => array('category'),
-        'supports'             => array( 'title', 'editor', 'author', 'thumbnail'),
-    );
+    'name'                  => 'Student Posts',
+    'singular_name'         => 'Student Post',
+  );
+
+  $args = array(
+    'labels'               => $labels,
+    'public'               => true,
+    'show_ui'              => true,
+    'show_in_menu'         => true,
+    'query_var'            => true,
+    'rewrite'              => array( 'slug' => 'studentposts' ),
+    'capability_type' => 'studentposts',
+    'capabilities' => array(
+      'publish_posts'      => 'publish_studentpost',
+      'edit_posts'         => 'edit_studentpost',
+      'read_posts'         => 'read_studentpost',
+      'edit_others_posts'  => 'edit_others_studentposts',
+      'read_private_posts' => 'read_private_studentposts',
+      'edit_post'          => 'edit_studentpost',
+      'delete_posts'       => 'delete_studentposts',
+      'read_post'          => 'read_studentpost',
+    ),
+    'has_archive'          => true,
+    'hierarchical'         => false,
+    'menu_position'        => null,
+    'taxonomies'           => array('category'),
+    'supports'             => array( 'title', 'editor', 'author', 'thumbnail'),
+  );
 
   register_post_type('studentposts', $args);
+
+  // make sure all necisarry categories exits
+  if (get_cat_ID('assignment') == 0){
+    wp_insert_term('assignment', 'category' , array('slug' => 'assignment', 'description' => 'Needed for Qlokast Student Post to work, dont change a thing'));
+  }
+  if (get_cat_ID('weeklyreport') == 0){
+    wp_insert_term('weeklyreport', 'category', array('slug' => 'weeklyreport', 'description' => 'Needed for Qlokast Student Post to work, dont change a thing'));
+  }
+  if (get_cat_ID('studyplan') == 0){
+    wp_insert_term('studyplan', 'category', array('slug' => 'studyplan', 'description' => 'Needed for Qlokast Student Post to work, dont change a thing'));
+  }
+
 }
 add_action('init','post_type_studentposts_init');
 
