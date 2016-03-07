@@ -60,7 +60,7 @@ class Qlokast_Side_menu extends WP_Widget {
             <li><a href="/"> Mitt Flow </a></li>
             <li><a href="<?php echo '/author/'.$current_user->user_nicename ;?>"> Min sida</a></li>
             <br>
-          <?php endif ?>
+          
         
 
 <!--====Courses================-->
@@ -74,7 +74,7 @@ class Qlokast_Side_menu extends WP_Widget {
 
       <li>
         <label class="menu_label" for="<?php echo the_title() ?>">
-          + <a href="<?php the_permalink() ?>"><?php asv_the_title(); ?></a>
+          <span class="expandmenu"> + </span> <a href="<?php the_permalink() ?>"><?php asv_the_title(); ?></a>
         </label>
         <input type="checkbox" id="<?php echo the_title() ?>" />  
 
@@ -85,7 +85,7 @@ class Qlokast_Side_menu extends WP_Widget {
             <input type="checkbox" id="<?php echo the_title().'2' ?>" />
 
             <ul>
-              <?php $loop2 = new WP_Query( array( 'post_type' => 'lession', 'meta_key'=> '_course_parrent', 'meta_value'=> $ID) ); ?>
+              <?php $loop2 = new WP_Query( array( 'post_type' => 'lesson', 'meta_key'=> '_course_parent', 'meta_value'=> $ID) ); ?>
                 <?php if ($loop2-> have_posts() ) : ?>
                   <?php while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
                     <li>
@@ -102,7 +102,7 @@ class Qlokast_Side_menu extends WP_Widget {
             <input type="checkbox" id="<?php echo the_title().'3' ?>" />
 
             <ul>
-              <?php $loop3 = new WP_Query( array( 'post_type' => 'assignments', 'meta_key'=> '_lession_course_parrent', 'meta_value'=> $ID)); ?>
+              <?php $loop3 = new WP_Query( array( 'post_type' => 'assignment', 'meta_key'=> '_lession_course_parent', 'meta_value'=> $ID)); ?>
                 <?php if ($loop3-> have_posts() ) : ?>
                   <?php while ( $loop3->have_posts() ) : $loop3->the_post(); ?>
                     <li>
@@ -120,10 +120,19 @@ class Qlokast_Side_menu extends WP_Widget {
     <?php endwhile; wp_reset_postdata(); ?>
   <?php endif; ?>
 </ul>
-
-<!--====================-->
         
- 
+<?php endif ?> <!--if user is logged in -->
+
+<!--==========Visitor menu==========-->
+
+<ul>
+	<?php 
+		while ( have_posts() ) : the_post(); ?>
+			
+				<li><a href="<?php the_permalink() ?>"> <?php asv_the_title();?> </a></li>
+
+	<?php endwhile; ?>
+</ul>
 
 <?php
 

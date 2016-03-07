@@ -21,8 +21,8 @@ function post_type_assignment_init(){
         'show_ui'              => true,
         'show_in_menu'         => true,
         'query_var'            => true,
-        'rewrite'              => array( 'slug' => 'assignments' ),
-        'capability_type' => 'assignments',
+        'rewrite'              => array( 'slug' => 'assignment' ),
+        'capability_type' => 'assignment',
         'capabilities' => array(
           'publish_posts' => 'publish_assignment',
           'edit_posts' => 'edit_assignment',
@@ -38,16 +38,16 @@ function post_type_assignment_init(){
         'menu_position'        => null,
         'taxonomies'           => array('category'),
         'supports'             => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
-        'register_metabox_cb'  => 'add_lession_course_parrent_metaboxes',
+        'register_metabox_cb'  => 'add_lesson_course_parent_metaboxes',
     );
 
-  register_post_type('assignments', $args);
+  register_post_type('assignment', $args);
 }
 add_action('init','post_type_assignment_init');
 
 /* to make sure that no one can publish a publicaly visible course */
 function make_all_assignments_private( $new_status, $old_status, $post ) { 
-    if ( $post->post_type == 'assignments' && $new_status == 'publish' && $old_status  != $new_status ) {
+    if ( $post->post_type == 'assignment' && $new_status == 'publish' && $old_status  != $new_status ) {
         $post->post_status = 'private';
         wp_update_post( $post );
     }
@@ -55,29 +55,29 @@ function make_all_assignments_private( $new_status, $old_status, $post ) {
 add_action( 'transition_post_status', 'make_all_assignments_private', 10, 3 );
 
 /* metaboxes ==================== */
-function add_lession_course_parrent_metaboxes(){
-  add_meta_box('lession-course-parrent-metabox', 'Parrent', 
-    'lession_course_parrent_callback', 'assignments',
+function add_lesson_course_parent_metaboxes(){
+  add_meta_box('lesson-course-parent-metabox', 'parent', 
+    'lesson_course_parent_callback', 'assignment',
     'normal','high');
 }
-add_action('add_meta_boxes', 'add_lession_course_parrent_metaboxes');
+add_action('add_meta_boxes', 'add_lesson_course_parent_metaboxes');
 
-function lession_course_parrent_callback(){
+function lesson_course_parent_callback(){
   global $post;
 
   // creates the nonce we will recieve later, 
-  echo '<input type="hidden" name="lession_course_parrent_noncename" 
-    id="lession_course_parrent_noncename" value="'.wp_create_nonce(plugin_basename(__FILE__)).'">';
+  echo '<input type="hidden" name="lesson_course_parent_noncename" 
+    id="lesson_course_parent_noncename" value="'.wp_create_nonce(plugin_basename(__FILE__)).'">';
 
-  // get the parrent if it's allready been entered
-  $course_parrent = get_post(get_post_meta($post->ID,'_lession_course_parrent', true),'OBJECT');
+  // get the parent if it's allready been entered
+  $course_parent = get_post(get_post_meta($post->ID,'_lesson_course_parent', true),'OBJECT');
 
   // The input fields, potentially prefilled with previous data
-  echo '<select name="_lession_course_parrent">';
+  echo '<select name="_lesson_course_parent">';
 
-  // print the previously selected course or lession (if we are editing an allredy exiting assignment)
-  if ($course_parrent->post_type != 'assignments' ){
-    echo '<option value="'.$course_parrent->ID.'">'.$course_parrent->post_title.'</option>';
+  // print the previously selected course or lesson (if we are editing an allredy exiting assignment)
+  if ($course_parent->post_type != 'assignment' ){
+    echo '<option value="'.$course_parent->ID.'">'.$course_parent->post_title.'</option>';
   } else {
     echo '<option value="">None</option>';
   }
@@ -90,9 +90,9 @@ function lession_course_parrent_callback(){
     echo '<option value="'.get_the_ID().'">'.get_the_title().'</option>';
   endwhile;
 
-  echo '<option value=""> --- Lessions: </option>';
-  // get the available courses or lessions that this lession could choose as a parrent
-  $args = array( 'post_type' => 'lession');
+  echo '<option value=""> --- lessons: </option>';
+  // get the available courses or lessons that this lesson could choose as a parent
+  $args = array( 'post_type' => 'lesson');
   $loop = new WP_Query( $args );
   while ( $loop->have_posts() ) : $loop->the_post();
     echo '<option value="'.get_the_ID().'">'.get_the_title().'</option>';
@@ -104,14 +104,14 @@ function lession_course_parrent_callback(){
 
 }
 
-function save_lession_course_parrent_meta($post_id, $post){
+function save_lesson_course_parent_meta($post_id, $post){
 
-  if (!isset($_POST['lession_course_parrent_noncename'])){
+  if (!isset($_POST['lesson_course_parent_noncename'])){
     return $post->ID;
   }
 
   // verify this is the right call we're handling
-  if (!wp_verify_nonce($_POST['lession_course_parrent_noncename'], plugin_basename(__FILE__) )){
+  if (!wp_verify_nonce($_POST['lesson_course_parent_noncename'], plugin_basename(__FILE__) )){
     return $post->ID;
   }
 
@@ -121,12 +121,12 @@ function save_lession_course_parrent_meta($post_id, $post){
     return $post->ID;
   }
 
-  // or if he cant edit the parrent he is attaching to, which might be an lession or cource
-  if ( !current_user_can('edit_course', $_POST['_lession_course_parrent']) && !current_user_can('edit_lession', $_POST['_lession_course_parrent'])) {
+  // or if he cant edit the parent he is attaching to, which might be an lesson or cource
+  if ( !current_user_can('edit_course', $_POST['_lesson_course_parent']) && !current_user_can('edit_lesson', $_POST['_lesson_course_parent'])) {
     return $post->ID;
   }
 
-  $events_meta['_lession_course_parrent']       = $_POST['_lession_course_parrent'];
+  $events_meta['_lesson_course_parent']       = $_POST['_lesson_course_parent'];
 
   foreach($events_meta as $key => $value){
     //don't store custom data twice
@@ -153,5 +153,5 @@ function save_lession_course_parrent_meta($post_id, $post){
     }
   }
 }
-add_action('save_post', 'save_lession_course_parrent_meta', 1, 2);
+add_action('save_post', 'save_lesson_course_parent_meta', 1, 2);
 
