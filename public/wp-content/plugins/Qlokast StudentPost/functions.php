@@ -29,7 +29,6 @@ function post_type_studentposts_init(){
           'edit_others_posts'  => 'edit_others_studentposts',
           'read_private_posts' => 'read_private_studentposts',
           'edit_post'          => 'edit_studentpost',
-          'delete_post'        => 'delete_studentpost',
           'delete_posts'       => 'delete_studentposts',
           'read_post'          => 'read_studentpost',
         ),
@@ -63,13 +62,14 @@ function prefix_createStudyplan(){
     }
 
     $user_id = get_current_user_id();
+    $category = get_cat_ID('studyplan');
 
     $post_id  = wp_insert_post( array (
     'post_type'      => 'studentposts',
     'post_title'     => 'Studyplan for '.$current_user->user_firstname.' '.$current_user->user_lastname ,
     'post_content'   => wp_strip_all_tags( $_POST['submitStudyplan'] ),
     'post_author'    => $user_id,
-    'post_category'  => array("2"),
+    'post_category'  => array($category),
     'post_status'    => 'private', /* Secret studyplan! */
     'comment_status' => 'open',   // if you prefer
     'ping_status'    => 'closed',      // if you prefer
@@ -89,12 +89,14 @@ function prefix_createStudentReport(){
 
     $user_id = get_current_user_id();
 
+    $category = get_cat_ID('weeklyreport');
+
     $post_id  = wp_insert_post( array (
     'post_type'      => 'studentposts',
     'post_title'     => 'Studentreport for '.$current_user->user_firstname.' '.$current_user->user_lastname.' week #'.date('W').".",
     'post_content'   => wp_strip_all_tags( $_POST['submitStudentReport'] ),
     'post_author'    => $user_id,
-    'post_category'  => array("1"),
+    'post_category'  => array($category),
     'post_status'    => 'private', /* Secret studentreport! */
     'comment_status' => 'open',   // if you prefer
     'ping_status'    => 'closed',      // if you prefer
@@ -144,13 +146,14 @@ function prefix_submitAssignment(){
 
     //$user_id = get_current_user_id();
     $assignmentParent = get_post( $_POST['parrent'] );
+    $category = get_cat_ID('assignment');
 
     $post_id = wp_insert_post( array (
     'post_type'      => 'studentposts',
     'post_title'     => $assignmentParent->post_title.' '.$current_user->user_login.' '.date("Y-m-d"),
     'post_content'   => wp_strip_all_tags( $_POST['submitAssignmentContent'] ),
     'post_author'    => $current_user->ID, //$user_id,
-    'post_category'  => array("3"),
+    'post_category'  => array($category),
     'post_status'    => 'private', /* Secret studentreport! */
     'comment_status' => 'open',   // if you prefer
     'ping_status'    => 'closed',      // if you prefer

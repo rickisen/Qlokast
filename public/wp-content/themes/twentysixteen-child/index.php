@@ -49,11 +49,11 @@ get_header(); ?>
             include(locate_template('template-parts/flowpart.php'));
 
             /* get all studentreports */
-            $postType = 'studentposts'; $title = 'Senaste Studentrapporter'; $categoryName = 'studentrapport'; 
+            $postType = 'studentposts'; $title = 'Senaste Studentrapporter'; $categoryName = 'weeklyreport'; 
             include(locate_template('template-parts/flowpart.php'));
 
             /* get student plans */
-            $postType = 'studentposts'; $title = 'Studieplaner'; $categoryName = 'Studieplan'; 
+            $postType = 'studentposts'; $title = 'Studieplaner'; $categoryName = 'studyplan'; 
             include(locate_template('template-parts/flowpart.php'));
 
           }
