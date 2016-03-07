@@ -70,7 +70,7 @@ class Qlokast_Side_menu extends WP_Widget {
   <?php if ( $loop->have_posts()): ?>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
       <?php $ID= get_the_ID(); ?>
-
+ 
 
       <li>
         <label class="menu_label" for="<?php echo the_title() ?>">
