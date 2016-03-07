@@ -47,7 +47,7 @@ get_header(); ?>
       echo addStudentReportForm(); // outputs Form for studentreport
     }
     if ( $current_user->ID == $curauth->ID || $current_user->has_cap( 'read_private_studentposts' ) ) {
-      $loop = new WP_Query( array( 'post_type' => 'studentposts' , 'category_name' => 'studieplan', 'author' => $curauth->ID ) );
+      $loop = new WP_Query( array( 'post_type' => 'studentposts' , 'category_name' => 'studentrapport', 'author' => $curauth->ID ) );
       if ( $loop->have_posts() ) {
         echo "<h3>".$curauth->first_name."s studentrapporter: </h3>";
       }
