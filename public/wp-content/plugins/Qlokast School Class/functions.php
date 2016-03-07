@@ -88,10 +88,10 @@ function schoolclass(){
           <label for="bulk-action-selector-bottom" class="screen-reader-text">Select bulk action </label>
           <select name="_schoolclass" id="bulk-action-selector-bottom">
             <option value="">Change Class</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+            <option value="ABC12">ABC12</option>
+            <option value="ABC13">ABC13</option>
+            <option value="ABC14">ABC14</option>
+            <option value="ABC15">ABC15</option>
             <option value="5">5</option>
             <option value="-1">No Class</option>
           </select>
