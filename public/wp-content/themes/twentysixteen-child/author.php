@@ -10,7 +10,7 @@ get_header(); ?>
 
   <!-- get picture for the displayed user -->
   <?php echo get_avatar($curauth->ID, "500") ?>
-  <h1><?php echo $curauth->first_name." ".$curauth->last_name; ?></h1>
+  <h1><?php echo $curauth->display_name." ".$curauth->last_name; ?></h1>
   <dl>
       <dt>Profile</dt>
       <dd><?php echo $curauth->user_description; ?></dd>
@@ -45,7 +45,7 @@ get_header(); ?>
     if ( $current_user->ID == $curauth->ID || $current_user->has_cap( 'read_private_studentposts' ) ) {
       $loop = new WP_Query( array( 'post_type' => 'studentposts' , 'category_name' => 'weeklyreport', 'author' => $curauth->ID ) );
       if ( $loop->have_posts() ) {
-        echo "<h3>".$curauth->first_name."s studentrapporter: </h3>";
+        echo "<h3>".$curauth->display_name."s studentrapporter: </h3>";
       }
       while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div> <?php echo get_the_author() ?> : 
@@ -61,7 +61,7 @@ get_header(); ?>
       $loop = new WP_Query( array( 'post_type' => 'studentposts' , 'category_name' => 'studyplan', 'author' => $curauth->ID ) );
 
       if ( $loop->have_posts() ) {
-        echo "<h3>".$curauth->first_name."s studieplan: </h3>";
+        echo "<h3>".$curauth->display_name."s studieplan: </h3>";
 
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
           <div> <?php echo get_the_author() ?> : 
