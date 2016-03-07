@@ -10,37 +10,48 @@ Author URI:
 
 function post_type_studentposts_init(){
   $labels = array(
-        'name'                  => 'Student Posts',
-        'singular_name'         => 'Student Post',
-    );
- 
-    $args = array(
-        'labels'               => $labels,
-        'public'               => true,
-        'show_ui'              => true,
-        'show_in_menu'         => true,
-        'query_var'            => true,
-        'rewrite'              => array( 'slug' => 'studentposts' ),
-        'capability_type' => 'studentposts',
-        'capabilities' => array(
-          'publish_posts'      => 'publish_studentpost',
-          'edit_posts'         => 'edit_studentpost',
-          'read_posts'         => 'read_studentpost',
-          'edit_others_posts'  => 'edit_others_studentposts',
-          'read_private_posts' => 'read_private_studentposts',
-          'edit_post'          => 'edit_studentpost',
-          'delete_post'        => 'delete_studentpost',
-          'delete_posts'       => 'delete_studentposts',
-          'read_post'          => 'read_studentpost',
-        ),
-        'has_archive'          => true,
-        'hierarchical'         => false,
-        'menu_position'        => null,
-        'taxonomies'           => array('category'),
-        'supports'             => array( 'title', 'editor', 'author', 'thumbnail'),
-    );
+    'name'                  => 'Student Posts',
+    'singular_name'         => 'Student Post',
+  );
+
+  $args = array(
+    'labels'               => $labels,
+    'public'               => true,
+    'show_ui'              => true,
+    'show_in_menu'         => true,
+    'query_var'            => true,
+    'rewrite'              => array( 'slug' => 'studentposts' ),
+    'capability_type' => 'studentposts',
+    'capabilities' => array(
+      'publish_posts'      => 'publish_studentpost',
+      'edit_posts'         => 'edit_studentpost',
+      'read_posts'         => 'read_studentpost',
+      'edit_others_posts'  => 'edit_others_studentposts',
+      'read_private_posts' => 'read_private_studentposts',
+      'edit_post'          => 'edit_studentpost',
+      'delete_posts'       => 'delete_studentposts',
+      'read_post'          => 'read_studentpost',
+    ),
+    'has_archive'          => true,
+    'hierarchical'         => false,
+    'menu_position'        => null,
+    'taxonomies'           => array('category'),
+    'supports'             => array( 'title', 'editor', 'author', 'thumbnail'),
+  );
 
   register_post_type('studentposts', $args);
+
+  // make sure all necisarry categories exits
+  if (get_cat_ID('assignment') == 0){
+    wp_insert_term('assignment', 'category' , array('slug' => 'assignment', 'description' => 'Needed for Qlokast Student Post to work, dont change a thing'));
+  }
+  if (get_cat_ID('weeklyreport') == 0){
+    wp_insert_term('weeklyreport', 'category', array('slug' => 'weeklyreport', 'description' => 'Needed for Qlokast Student Post to work, dont change a thing'));
+  }
+  if (get_cat_ID('studyplan') == 0){
+    wp_insert_term('studyplan', 'category', array('slug' => 'studyplan', 'description' => 'Needed for Qlokast Student Post to work, dont change a thing'));
+  }
+
 }
 add_action('init','post_type_studentposts_init');
 
@@ -63,13 +74,14 @@ function prefix_createStudyplan(){
     }
 
     $user_id = get_current_user_id();
+    $category = get_cat_ID('studyplan');
 
     $post_id  = wp_insert_post( array (
     'post_type'      => 'studentposts',
     'post_title'     => 'Studyplan for '.$current_user->user_firstname.' '.$current_user->user_lastname ,
     'post_content'   => wp_strip_all_tags( $_POST['submitStudyplan'] ),
     'post_author'    => $user_id,
-    'post_category'  => array("2"),
+    'post_category'  => array($category),
     'post_status'    => 'private', /* Secret studyplan! */
     'comment_status' => 'open',   // if you prefer
     'ping_status'    => 'closed',      // if you prefer
@@ -89,12 +101,14 @@ function prefix_createStudentReport(){
 
     $user_id = get_current_user_id();
 
+    $category = get_cat_ID('weeklyreport');
+
     $post_id  = wp_insert_post( array (
     'post_type'      => 'studentposts',
     'post_title'     => 'Studentreport for '.$current_user->user_firstname.' '.$current_user->user_lastname.' week #'.date('W').".",
     'post_content'   => wp_strip_all_tags( $_POST['submitStudentReport'] ),
     'post_author'    => $user_id,
-    'post_category'  => array("1"),
+    'post_category'  => array($category),
     'post_status'    => 'private', /* Secret studentreport! */
     'comment_status' => 'open',   // if you prefer
     'ping_status'    => 'closed',      // if you prefer
@@ -143,14 +157,16 @@ function prefix_submitAssignment(){
     }
 
     //$user_id = get_current_user_id();
+
     $assignmentParent = get_post( $_POST['parent'] );
+    $category = get_cat_ID('assignment');
 
     $post_id = wp_insert_post( array (
     'post_type'      => 'studentposts',
     'post_title'     => $assignmentParent->post_title.' '.$current_user->user_login.' '.date("Y-m-d"),
     'post_content'   => wp_strip_all_tags( $_POST['submitAssignmentContent'] ),
     'post_author'    => $current_user->ID, //$user_id,
-    'post_category'  => array("3"),
+    'post_category'  => array($category),
     'post_status'    => 'private', /* Secret studentreport! */
     'comment_status' => 'open',   // if you prefer
     'ping_status'    => 'closed',      // if you prefer

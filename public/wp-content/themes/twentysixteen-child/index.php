@@ -49,7 +49,9 @@ get_header(); ?>
             include(locate_template('template-parts/flowpart.php'));
 
             /* get all studentreports */
+
             $postType = 'studentposts'; $title = 'De senaste studentrapporterna'; $categoryName = 'weeklyreport'; 
+
             include(locate_template('template-parts/flowpart.php'));
 
             /* get student plans */
