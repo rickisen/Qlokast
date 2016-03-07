@@ -157,7 +157,8 @@ function prefix_submitAssignment(){
     }
 
     //$user_id = get_current_user_id();
-    $assignmentParent = get_post( $_POST['parrent'] );
+
+    $assignmentParent = get_post( $_POST['parent'] );
     $category = get_cat_ID('assignment');
 
     $post_id = wp_insert_post( array (
@@ -170,7 +171,7 @@ function prefix_submitAssignment(){
     'comment_status' => 'open',   // if you prefer
     'ping_status'    => 'closed',      // if you prefer
     'meta_input'     => array(
-      'parrent' => $_POST['parrent']
+      'parent' => $_POST['parent']
       )
     ) );
    
@@ -201,23 +202,23 @@ function prefix_submitAssignment(){
 
 add_action( 'admin_post_submitAssignment', 'prefix_submitAssignment');
 
-function recieveAssignmentMiniForm($parrent){
+function recieveAssignmentMiniForm($parent){
     return '
       <form method="post" style="display:inline;"enctype="multipart/form-data" action="/wp-admin/admin-post.php" >
         <input type="hidden" name="action" value="submitAssignment">
-        <input type="hidden" name="parrent" value="'.$parrent.'">
+        <input type="hidden" name="parent" value="'.$parent.'">
         <input type="file" name="studentFile" id="studentFile">
         <button type="submit" >Skicka in!</button> 
       </form>
     ';
 }
 
-function recieveAssignmentForm($parrent ,$title = "Hand in your assignment:", $placeholder = "What have you done?"){
+function recieveAssignmentForm($parent ,$title = "Hand in your assignment:", $placeholder = "What have you done?"){
     return '
       <h2>'.$title.'</h2>
       <form method="post" enctype="multipart/form-data" action="/wp-admin/admin-post.php" >
         <input type="hidden" name="action" value="submitAssignment">
-        <input type="hidden" name="parrent" value="'.$parrent.'">
+        <input type="hidden" name="parent" value="'.$parent.'">
         <textarea rows="6" cols="30" name="submitAssignmentContent" placeholder=" '.$placeholder.' " ></textarea>
         <br>
         <input type="file" name="studentFile" id="studentFile">

@@ -19,12 +19,12 @@ get_header(); ?>
       <?php the_content(); ?>
     </div>
 
-    <!-- look for lessions conencted to this course -->
+    <!-- look for lessons conencted to this course -->
     <?php
       $args = array(
-        'meta_key'   => '_course_parrent',
+        'meta_key'   => '_course_parent',
         'meta_value' => $post->ID,
-        'post_type'  => 'lession'
+        'post_type'  => 'lesson'
       );
       $the_query = new WP_Query( $args );
     ?>
@@ -33,7 +33,7 @@ get_header(); ?>
       <hr>
       <h3> Lektioner </h3>
 
-      <!-- a new the loop with lessions -->
+      <!-- a new the loop with lessons -->
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <a href="<?php the_permalink() ?>"><h5><?php the_title(); ?></h5></a>
       <?php endwhile; ?>
@@ -41,12 +41,12 @@ get_header(); ?>
       <?php wp_reset_postdata(); ?>
     <?php endif; ?>
 
-    <!-- a new the loop with lessions -->
+    <!-- a new the loop with lessons -->
     <?php
       $args = array(
-        'meta_key'   => '_lession_course_parrent',
+        'meta_key'   => '_lesson_course_parent',
         'meta_value' => $post->ID,
-        'post_type'  => 'assignments'
+        'post_type'  => 'assignment'
       );
       $the_query = new WP_Query( $args );
     ?>
@@ -55,7 +55,7 @@ get_header(); ?>
       <hr>
       <h3> Kurs Övningar </h3>
 
-      <!-- a new the loop with lessions -->
+      <!-- a new the loop with lessons -->
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <a href="<?php the_permalink() ?>"><h5><?php the_title(); ?></h5></a>
       <?php endwhile; ?>

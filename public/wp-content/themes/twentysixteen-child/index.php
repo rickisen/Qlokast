@@ -35,11 +35,11 @@ get_header(); ?>
           if ($role == 'student'){ // show this stuff only for students
 
             /* get all assignments */
-            $postType = 'assignments'; $title = 'Senaste Uppgifter'; 
+            $postType = 'assignment'; $title = 'De senaste uppgifterna'; 
             include(locate_template('template-parts/flowpart.php'));
 
-            /* get all lessions */
-            $postType = 'lession'; $title = 'Senaste Lektioner'; 
+            /* get all lessons */
+            $postType = 'lesson'; $title = 'De senaste lektionerna'; 
             include(locate_template('template-parts/flowpart.php'));
 
           } else { // show this stuff only for teachers and others
@@ -49,7 +49,9 @@ get_header(); ?>
             include(locate_template('template-parts/flowpart.php'));
 
             /* get all studentreports */
-            $postType = 'studentposts'; $title = 'Senaste Studentrapporter'; $categoryName = 'weeklyreport'; 
+
+            $postType = 'studentposts'; $title = 'De senaste studentrapporterna'; $categoryName = 'weeklyreport'; 
+
             include(locate_template('template-parts/flowpart.php'));
 
             /* get student plans */
