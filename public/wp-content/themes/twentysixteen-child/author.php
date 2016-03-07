@@ -90,27 +90,6 @@ get_header(); ?>
 
   <hr>
 
-  <?php /* List reports*/
-    if ( $current_user->ID == $curauth->ID && in_array('student', $current_user->roles)) {
-      echo addStudentReportForm('Skriv in din vecko rapport', 'Hänger du med?'); // outputs Form for studentreport
-    }
-
-    if ( $current_user->ID == $curauth->ID || $current_user->has_cap( 'read_private_studentposts' ) ) {
-      $loop = new WP_Query( array( 'post_type' => 'studentposts' , 'cat' => '1', 'author' => $curauth->ID ) );
-      if ( $loop->have_posts() ) {
-        echo "<h3>".$curauth->first_name."s studentrapporter: </h3>";
-      }
-
-      while ( $loop->have_posts() ) : $loop->the_post(); ?>
-        <div> <?php echo get_the_author() ?> : 
-          <a class="<?php echo "category-".get_the_category()[0]->name;?>" href="<?php the_permalink() ?>"> <?php the_title(); ?></a>
-        </div>
-      <?php endwhile; wp_reset_postdata();
-    }
-  ?>
-
-  <hr>
-
   <!-- printar ut alla nyheter som denna person gjort, om hen nu gjort nagra -->
   <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
