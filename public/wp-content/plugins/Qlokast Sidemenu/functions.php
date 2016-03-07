@@ -69,26 +69,27 @@ class Qlokast_Side_menu extends WP_Widget {
   <?php $loop = new WP_Query( array( 'post_type' => 'courses' ) );?>
   <?php if ( $loop->have_posts()): ?>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+      <?php $ID= ''.get_the_ID(); ?>
 
 
       <li>
         <label class="menu_label" for="<?php echo the_title() ?>">
-          <?php asv_the_title(); ?>
+          <?php asv_the_title(); echo get_the_ID(); ?>
         </label>
         <input type="checkbox" id="<?php echo the_title() ?>" />  
 
       <!--Dropdown items Lessons and Assignments-->                          
         <ul> 
           <li>
-            <label for="<?php echo the_title().'2' ?>" class="menu_label">Lektioner</label>
+            <label for="<?php echo the_title().'2' ?>" class="menu_label"> <?php echo $ID ?>Lektioner</label>
             <input type="checkbox" id="<?php echo the_title().'2' ?>" />
 
             <ul>
-              <?php $loop2 = new WP_Query( array( 'post_type' => 'lession', 'meta_key'=> '_course_parrent', 'meta_value'=> get_the_ID()) ); ?>
+              <?php $loop2 = new WP_Query( array( 'post_type' => 'lession', 'meta_key'=> '_course_parrent', 'meta_value'=> $ID) ); ?>
                 <?php if ($loop2-> have_posts() ) : ?>
                   <?php while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
                     <li>
-                    <a href="<?php the_permalink() ?>"> <?php asv_the_title(); ?></a>
+                    <a href="<?php the_permalink() ?>"> <?php asv_the_title(); echo $ID ?></a>
                     </li>
                   <?php endwhile; ?>
               <?php endif; ?>
@@ -97,15 +98,15 @@ class Qlokast_Side_menu extends WP_Widget {
           </li>
   
           <li>
-            <label for="<?php echo the_title().'3' ?>" class="menu_label">Uppgifter</label>
+            <label for="<?php echo the_title().'3' ?>" class="menu_label"><?php echo $ID ?>Uppgifter</label>
             <input type="checkbox" id="<?php echo the_title().'3' ?>" />
 
             <ul>
-              <?php $loop3 = new WP_Query( array( 'post_type' => 'assignments', 'meta_key'=> '_course_parrent', 'meta_value'=> get_the_ID()) ); ?>
+              <?php $loop3 = new WP_Query( array( 'post_type' => 'assignments', 'meta_key'=> '_course_parrent', 'meta_value'=> $ID )); ?>
                 <?php if ($loop3-> have_posts() ) : ?>
                   <?php while ( $loop3->have_posts() ) : $loop3->the_post(); ?>
                     <li>
-                    <a href="<?php the_permalink() ?>"> <?php asv_the_title(); ?></a>
+                    <a href="<?php the_permalink() ?>"> <?php asv_the_title(); echo $ID ?></a>
                     </li>
                   <?php endwhile; ?>
               <?php endif; ?>
