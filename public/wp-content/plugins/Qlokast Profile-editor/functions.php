@@ -53,27 +53,27 @@ function prefix_edit_user_profile(){
 }
 add_action( 'admin_post_edit_user_profile', 'prefix_edit_user_profile');
 
-function add_profile_edit_form($title = "Edit your info:", $placeholders = array('first_name' => 'Enter Name Here', 'last_name' => 'Enter Last Name Here', 'description' => 'Description')){
+function add_profile_edit_form($title = "Uppdatera din information:", $placeholders = array('first_name' => 'First name', 'last_name' => 'Last name', 'description' => 'Description')){
     return '
       <h2>'.$title.'</h2>
       <form method="post" enctype="multipart/form-data" action="/wp-admin/admin-post.php" >
         <input type="hidden" name="action" value="edit_user_profile">
 
-        <label for="first_name">First Name</label>
+        <label for="first_name">Förnamn</label>
         <input type="text" id="first_name" name="first_name" placeholder="'.$placeholders['first_name'].'">
 
-        <label for="last_name">Last Name</label>
+        <label for="last_name">Efternamn</label>
         <input type="text" id="last_name" name="last_name" placeholder="'.$placeholders['last_name'].'">
 
-        <label for="description">Bio</label>
+        <label for="description">Beskrivning</label>
         <textarea cols="30" id="description" name="description" rows="6"> '.$placeholders['description'].' </textarea>
 
-        <label for="user_picture">Picture</label>
+        <label for="user_picture">Bild</label>
         <br>
         <input type="file" name="user_picture" id="user_picture">
         <br>
 
-        <button type="submit" >Submit</button> 
+        <button type="submit" >Skicka in</button> 
       </form>
     ';
 }

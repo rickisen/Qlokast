@@ -78,7 +78,7 @@ function prefix_createStudyplan(){
 
     $post_id  = wp_insert_post( array (
     'post_type'      => 'studentposts',
-    'post_title'     => 'Studyplan for '.$current_user->display_name ,
+    'post_title'     => 'Studieplan för '.$current_user->display_name ,
     'post_content'   => wp_strip_all_tags( $_POST['submitStudyplan'] ),
     'post_author'    => $user_id,
     'post_category'  => array($category),
@@ -105,7 +105,7 @@ function prefix_createStudentReport(){
 
     $post_id  = wp_insert_post( array (
     'post_type'      => 'studentposts',
-    'post_title'     => 'Studentreport for '.$current_user->display_name.' week #'.date('W').".",
+    'post_title'     => 'Studentrapport för '.$current_user->display_name.' week #'.date('W').".",
     'post_content'   => wp_strip_all_tags( $_POST['submitStudentReport'] ),
     'post_author'    => $user_id,
     'post_category'  => array($category),
@@ -122,7 +122,7 @@ function prefix_createStudentReport(){
 
 add_action( 'admin_post_createStudentReport', 'prefix_createStudentReport');
 
-function addStudyplanForm($title = "Enter your studyplan:", $placeholder = "Write here..."){
+function addStudyplanForm($title = "Din studieplan:", $placeholder = "Skriv in din studieplan..."){
     return '
       <h2>'.$title.'</h2>
       <form method="post" action="/wp-admin/admin-post.php" >
@@ -133,16 +133,16 @@ function addStudyplanForm($title = "Enter your studyplan:", $placeholder = "Writ
     ';
 }
 
-function addStudentReportForm($title = "Enter your studentreport:", $question = "Do you feel up to speed?", $placeholder = "Write here..."){
+function addStudentReportForm($title = "Din studentrapport:", $question = "Hänger du med?", $placeholder = "Skriv in din studentrapport..."){
     return '
       <h2>'.$title.'</h2>
       <form method="post" action="/wp-admin/admin-post.php" >
         <input type="hidden" name="action" value="createStudentReport">
-        <textarea rows="6" cols="30" name="submitStudentReport" placeholder=" '.$placeholder.' " ></textarea>
-        <p>'.$question.'</p>
-        <p>Yes! <input type="radio" name="studentReportStatus" value="yes" checked ></p>
-        <p>No! <input type="radio" name="studentReportStatus" value="no" ></p>
-        <button type="submit" >Skicka in!</button> 
+        <textarea rows="6" cols="30" name="submitStudentReport" placeholder=" '.$placeholder.' " ></textarea><br><br>
+        <span>'.$question.'
+        Ja! <input type="radio" name="studentReportStatus" value="yes" checked >
+        Nej! <input type="radio" name="studentReportStatus" value="no" ></span><br><br>
+        <p><button type="submit" >Skicka in!</button> </p><br>
       </form>
     ';
 }
