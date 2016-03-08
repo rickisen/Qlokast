@@ -19,18 +19,45 @@ function courseFinalGrade(){
   // Handle incomming POSTS 
   if (isset($_POST['_finalgrades']) && !empty($_POST['_finalgrades']) && isset($_POST['users']) ){
     foreach ($_POST['users'] as $student => $grade ) {
-      submit_final_grades($student,1,$grade);
+          submit_final_grades($student,1,$grade);
     }
   } 
 
+    $loop = new WP_Query( array( 'post_type' => 'courses' ) );
+      if ( $loop->have_posts()) {
+
+        while ( $loop->have_posts()) {
+
+          $loop->the_post(); 
+          $yhid = get_post_meta(get_the_id(), '_yh_id', true); 
+
+          if(!empty($yhid) ) {
+              generate_course_form($yhid);
+          }
+        }
+      }
+  }       
+         
+
+
+function add_QlokastGradeClient_to_admin_menu(){
+  add_users_page("Final Grades","Final Grades",'manage_options',"courseFinalGrade", "courseFinalGrade" );
+}
+add_action("admin_menu", "add_QlokastGradeClient_to_admin_menu");
+
+
+function generate_course_form($course_id) {
+
   // get all the current set grades
-  $grades = get_grades('1');
+  $grades = get_grades($course_id);
 
   // Output the form and table header ?>
+
     <div class="wrap">
-      <h1>Change Student's Final Grades<h1>
+      <h1>Change Student's Final Grades for <?php echo $course_id  ?></h1>
       <form method="post" action="">
         <input type="hidden" name="_finalgrades" value="true">
+             <input type="hidden" name="_course" value="true">
         <table class="wp-list-table widefat fixed striped users">
           <thead> 
             <tr>
@@ -79,19 +106,14 @@ function courseFinalGrade(){
         </select>
         </td>
       </tr>
-  <?php endforeach ?>
+  <?php endforeach; ?>
     </table>
     <input type="submit" value="Gradem Up">
   </form>
 </div>
 
 <?php
-} // Ends function
-
-function add_QlokastGradeClient_to_admin_menu(){
-  add_users_page("Final Grades","Final Grades",'manage_options',"courseFinalGrade", "courseFinalGrade" );
-}
-add_action("admin_menu", "add_QlokastGradeClient_to_admin_menu");
+  } // Ends function
 
 function get_grades($course){
   $ch = curl_init(); 
