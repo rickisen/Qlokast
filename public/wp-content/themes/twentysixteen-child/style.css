@@ -64,5 +64,8 @@ hr{
 }
 
 .student_profile{
-  border-style: solid;
+  display: inline-block;
+  width:150px;
+  height:150px;
+  text-align: center;
 }
