@@ -17,12 +17,14 @@ function courseFinalGrade(){
   }
 
   // Handle incomming POSTS
-  if (isset($_POST['_finalgrades']) && !empty($_POST['_finalgrades']) && isset($_POST['users']) ){
-    foreach ($_POST['users'] as $student => $grade ) {
+  if (isset($_POST['_finalgrades']) && isset($_POST['_course']) && isset($_POST['_users']) ){
+    foreach ($_POST['_users'] as $student => $grade ) {
       submit_final_grades($student,1,$grade);
     }
   }
 
+  // Gets all the courses in our wp installation, and generates
+  // a form each with students and their current grades
   $loop = new WP_Query( array( 'post_type' => 'courses' ) );
   if ( $loop->have_posts()) {
 
@@ -55,7 +57,7 @@ function generate_course_form($course_id) {
       <h1>Change Student's Final Grades for <?php echo $course_id  ?></h1>
       <form method="post" action="">
         <input type="hidden" name="_finalgrades" value="true">
-             <input type="hidden" name="_course" value="true">
+        <input type="hidden" name="_course" value="<?php echo $course_id  ?>">
         <table class="wp-list-table widefat fixed striped users">
           <thead>
             <tr>
@@ -94,7 +96,7 @@ function generate_course_form($course_id) {
         </td>
         <td class='name column-name' data-colname="Name"> <?php echo $student->data->display_name ?> </td>
         <td class='finalgrades column-roles' data-colname="grade">
-        <select name='users[<?php echo $student->ID ?>]'>
+        <select name='_users[<?php echo $student->ID ?>]'>
           <option value="<?php echo $grades[$student->ID]?>"><?php echo $grades[$student->ID]?></option>
           <option value="">----</option>
           <option value="vg">VG</option>
@@ -110,21 +112,16 @@ function generate_course_form($course_id) {
   </form>
 </div>
 
-<?php
-} // Ends function
+<?php } // Ends generate_course_form function
 
 function get_grades($course){
-  $ch = curl_init();
-
-  $url = "api.patriknordahl.com/?/course/".$course;
-
+  $ch = curl_init(); 
+  $url = "api.patriknordahl.com/?/course/".$course; 
   curl_setopt($ch, CURLOPT_URL, $url);
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
 
-  $output = curl_exec($ch);
-
-  $gradeSon = json_decode($output);
-
+  $output = curl_exec($ch); 
+  $gradeSon = json_decode($output); 
   curl_close($ch);
 
   // make the array more php friendly
