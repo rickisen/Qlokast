@@ -54,82 +54,76 @@ class Qlokast_Side_menu extends WP_Widget {
 
         <!--If user is logged in show "Min sida" link -->
         
-          <?php if (is_user_logged_in()): ?>
+        <?php if (is_user_logged_in()): ?>
             <?php global $current_user; ?>
             <?php get_currentuserinfo(); ?>
             <li><a href="/"> Mitt Flow </a></li>
             <li><a href="<?php echo '/author/'.$current_user->user_nicename ;?>"> Min sida</a></li>
-            <br>
-          
-        
+            <hr>
 
 <!--====Courses================-->
 
 <!--Dropdown menu header -->
-  <?php $loop = new WP_Query( array( 'post_type' => 'courses' ) );?>
-  <?php if ( $loop->have_posts()): ?>
-    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-      <?php $ID= get_the_ID(); ?>
- 
+	  	<?php $loop = new WP_Query( array( 'post_type' => 'courses' ) );?>
+	  	<?php if ( $loop->have_posts()): ?>
+	    	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+	      		<?php $ID= get_the_ID(); ?>
+	 
 
-      <li>
-        <label class="menu_label" for="<?php echo the_title() ?>">
-          <span class="expandmenu"> + </span> <a href="<?php the_permalink() ?>"><?php asv_the_title(); ?></a>
-        </label>
-        <input type="checkbox" id="<?php echo the_title() ?>" />  
+		    <li>
+		        <label class="menu_label" for="<?php echo the_title() ?>">
+		          <span class="expandmenu"> + </span> <a href="<?php the_permalink() ?>"><?php asv_the_title(); ?></a>
+		        </label>
+		        <input type="checkbox" id="<?php echo the_title() ?>" />  
 
-      <!--Dropdown items Lessons and Assignments-->                          
-        <ul> 
-          <li>
-            <label for="<?php echo the_title().'2' ?>" class="menu_label"> Lektioner</label>
-            <input type="checkbox" id="<?php echo the_title().'2' ?>" />
+		      <!--Dropdown items Lessons and Assignments-->                          
+		        <ul> 
+		          <li>
+		            <label for="<?php echo the_title().'2' ?>" class="menu_label"> Lektioner</label>
+		            <input type="checkbox" id="<?php echo the_title().'2' ?>" />
 
-            <ul>
-              <?php $loop2 = new WP_Query( array( 'post_type' => 'lesson', 'meta_key'=> '_course_parent', 'meta_value'=> $ID) ); ?>
-                <?php if ($loop2-> have_posts() ) : ?>
-                  <?php while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
-                    <li>
-                    <a href="<?php the_permalink() ?>"> <?php asv_the_title(); ?></a> 
-                    </li>
-                  <?php endwhile; ?>
-              <?php endif; ?>
-            </ul>
+		            <ul>
+		              	<?php $loop2 = new WP_Query( array( 'post_type' => 'lesson', 'meta_key'=> '_course_parent', 'meta_value'=> $ID) ); ?>
+		                	<?php if ($loop2-> have_posts() ) : ?>
+		                  		<?php while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
+				                    <li>
+				                    <a href="<?php the_permalink() ?>"> <?php asv_the_title(); ?></a> 
+				                    </li>
+		                  		<?php endwhile; ?>
+		              		<?php endif; ?>
+		            </ul>
 
-          </li>
-  
-          <li>
-            <label for="<?php echo the_title().'3' ?>" class="menu_label">Uppgifter</label>
-            <input type="checkbox" id="<?php echo the_title().'3' ?>" />
+		          </li>
+		  
+			        <li>
+			            <label for="<?php echo the_title().'3' ?>" class="menu_label">Uppgifter</label>
+			            <input type="checkbox" id="<?php echo the_title().'3' ?>" />
 
-            <ul>
-              <?php $loop3 = new WP_Query( array( 'post_type' => 'assignment', 'meta_key'=> '_lesson_course_parent', 'meta_value'=> $ID)); ?>
-                <?php if ($loop3-> have_posts() ) : ?>
-                  <?php while ( $loop3->have_posts() ) : $loop3->the_post(); ?>
-                    <li>
-                    <a href="<?php the_permalink() ?>"> <?php asv_the_title();?> </a>
-                    </li>
-                  <?php endwhile; ?>
-              <?php endif; ?>
-            </ul>
+			            <ul>
+			              	<?php $loop3 = new WP_Query( array( 'post_type' => 'assignment', 'meta_key'=> '_lesson_course_parent', 'meta_value'=> $ID)); ?>
+		                	<?php if ($loop3-> have_posts() ) : ?>
+		                  		<?php while ( $loop3->have_posts() ) : $loop3->the_post(); ?>
+				                    <li>
+				                    <a href="<?php the_permalink() ?>"> <?php asv_the_title();?> </a>
+				                    </li>
+		                  		<?php endwhile; ?>
+		              		<?php endif; ?>
+			            </ul>
 
-          </li>
+			        </li>
 
-        </ul>
+		        </ul>
 
-      </li>
-    <?php endwhile; wp_reset_postdata(); ?>
-  <?php endif; ?>
+		    </li>
+	    <?php endwhile; wp_reset_postdata(); ?>
+	  <?php endif; ?>
 
-<?php endif ?> <!--if user is logged in -->
+	<?php endif ?> <!--if user is logged in -->
 
-<br>
+	<hr>
 
 <!--==========NEWS==========-->
 
-
-	<?php 
-		while ( have_posts() ) : the_post(); ?>
-			
 				<?php $loop3 = new WP_Query( array( 'post_type' => 'news')); ?>
                 <?php if ($loop3-> have_posts() ) : ?>
                   <?php while ( $loop3->have_posts() ) : $loop3->the_post(); ?>
@@ -139,7 +133,6 @@ class Qlokast_Side_menu extends WP_Widget {
                   <?php endwhile; ?>
               <?php endif; ?>
 
-	<?php endwhile; ?>
 </ul>
 
 <?php

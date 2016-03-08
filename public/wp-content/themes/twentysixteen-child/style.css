@@ -10,11 +10,6 @@
  
 /* =Theme customization starts here
 ------------------------------------------------------- */
-
-a .site-title{
-  color: red;
-}
-
 .studentReportStatus-no {
   color:red;
 }
@@ -23,13 +18,13 @@ a .site-title{
   text-transform: uppercase;
 }
 
-
 .gradeCourse{
   display:inline-block;
 }
 
-/* Minimal css for clickable pure CSS collapsible tree menu */
-/* As specific as possible to prevent interference with other code */
+hr{
+  margin-top: 20px;
+}
 
 /* Collapsible tree menu */
 #menutree li {
@@ -57,4 +52,5 @@ a .site-title{
 .expandmenu{
 	font-size: 18px;
 	font-weight: bold;
+  font-family: arial;
 }
