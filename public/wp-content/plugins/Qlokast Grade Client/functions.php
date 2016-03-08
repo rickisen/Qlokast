@@ -1,0 +1,156 @@
+<?php
+/*
+Plugin Name: Qlokast Final Grade Client
+Plugin URI: http://wordpress.org
+Description: Plugin for setting Final grades through "the API"
+Author: medieinstuututu
+Version: 0.1
+Author URI:
+ */
+
+function courseFinalGrade(){
+
+  // Validate the current user
+  global $current_user; get_currentuserinfo();
+  if (!is_user_logged_in() || !$current_user->has_cap('manage_options')) {
+    return;
+  }
+
+  // Handle incomming POSTS
+  if (isset($_POST['_finalgrades']) && isset($_POST['_course']) && isset($_POST['_users']) ){
+    foreach ($_POST['_users'] as $student => $grade ) {
+      submit_final_grades($student,1,$grade);
+    }
+  }
+
+  // Gets all the courses in our wp installation that have a yhid, and generates
+  // a form each with students and their current grades
+  $loop = new WP_Query( array( 'post_type' => 'courses', 'meta_key' => '_yh_id') );
+  if ( $loop->have_posts()) {
+
+    while ( $loop->have_posts()) {
+
+      $loop->the_post();
+      $yhid = get_post_meta(get_the_id(), '_yh_id', true);
+
+      if(!empty($yhid) ) {
+        generate_course_form($yhid);
+      }
+    }
+  }
+}
+
+function add_QlokastGradeClient_to_admin_menu(){
+  add_users_page("Final Grades","Final Grades",'manage_options',"courseFinalGrade", "courseFinalGrade" );
+}
+add_action("admin_menu", "add_QlokastGradeClient_to_admin_menu");
+
+
+function generate_course_form($course_id) {
+
+  // get all the current set grades
+  $grades = get_grades($course_id);
+
+  // Output the form and table header ?>
+
+    <div class="wrap">
+      <h1>Change Student's Final Grades for <?php echo $course_id  ?></h1>
+      <form method="post" action="">
+        <input type="hidden" name="_finalgrades" value="true">
+        <input type="hidden" name="_course" value="<?php echo $course_id  ?>">
+        <table class="wp-list-table widefat fixed striped users">
+          <thead>
+            <tr>
+              <th scope="col" class='manage-column column-username column-primary sortable desc'>
+                <a href="">
+                  <span> Student ID </span> <span class="sorting-indicator"> </span>
+                </a>
+              </th>
+              <th scope="col" id='username' class='manage-column column-username column-primary sortable desc'>
+                <a href="">
+                  <span>Username </span> <span class="sorting-indicator"> </span>
+                </a>
+              </th>
+              <th scope="col" id='name' class='manage-column column-name sortable desc'>
+                <a href="">
+                  <span>Name </span> <span class="sorting-indicator"> </span>
+                </a>
+              </th>
+              <th scope="col" id='grade' class='manage-column column-roles'>Set Final Grade</th>
+            </tr>
+          </thead>
+<?php
+
+    // make a new row for every student
+    $students = get_users(array('role' => 'Student'));
+  foreach ($students as $student) :
+?>
+      <tr id='<?php echo 'user-'.$student->ID ?>'>
+        <th scope='row' class=''>
+          <span><?php echo $student->ID ?></span>
+        </th>
+        <td class='username column-username has-row-actions column-primary' data-colname="Username">
+          <strong>
+            <a href=""><?php echo $student->data->user_login ?></a>
+          </strong>
+        </td>
+        <td class='name column-name' data-colname="Name"> <?php echo $student->data->display_name ?> </td>
+        <td class='finalgrades column-roles' data-colname="grade">
+        <select name='_users[<?php echo $student->ID ?>]'>
+          <option value="<?php echo $grades[$student->ID]?>"><?php echo $grades[$student->ID]?></option>
+          <option value="">----</option>
+          <option value="vg">VG</option>
+          <option value="g">G</option>
+          <option value="ig">IG</option>
+          <option value="">None</option>
+        </select>
+        </td>
+      </tr>
+  <?php endforeach; ?>
+    </table>
+    <input type="submit" value="Gradem Up">
+  </form>
+</div>
+
+<?php } // Ends generate_course_form function
+
+function get_grades($course){
+  $ch = curl_init(); 
+  $url = "api.patriknordahl.com/?/course/".$course; 
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+
+  $output = curl_exec($ch); 
+  $gradeSon = json_decode($output); 
+  curl_close($ch);
+
+  // make the array more php friendly
+  foreach ($gradeSon[0] as $studentValues) {
+    $grades[$studentValues->studentid] = $studentValues->grade;
+  }
+
+  return $grades;
+}
+
+function submit_final_grades($student, $course, $grade){
+  //ready data for transfer
+  $data = array('studentid' => $student, 'grade' => $grade);
+
+  // set options for transfer
+  $ch = curl_init();
+  $url = "api.patriknordahl.com/?/course/".$course."/grades";
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+  curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query($data));
+
+  // execute transfer
+  $response = curl_exec($ch);
+  curl_close($ch);
+
+  if (!$response){
+    return false;
+  } else {
+    return true;
+  }
+}
