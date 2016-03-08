@@ -135,7 +135,7 @@ class Qlokast_Side_menu extends WP_Widget {
                   <?php while ( $loop3->have_posts() ) : $loop3->the_post(); ?>
                     <li>
                     <a href="<?php the_permalink() ?>"> <?php asv_the_title();?> </a>
-                    </li>
+                    </li> 
                   <?php endwhile; ?>
               <?php endif; ?>
 
