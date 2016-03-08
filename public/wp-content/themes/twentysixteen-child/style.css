@@ -11,8 +11,8 @@
 /* =Theme customization starts here
 ------------------------------------------------------- */
 
-body {
-	background-color: green;
+a .site-title{
+  color: red;
 }
 
 .studentReportStatus-no {

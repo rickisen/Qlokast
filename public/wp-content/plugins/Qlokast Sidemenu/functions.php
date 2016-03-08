@@ -102,7 +102,7 @@ class Qlokast_Side_menu extends WP_Widget {
             <input type="checkbox" id="<?php echo the_title().'3' ?>" />
 
             <ul>
-              <?php $loop3 = new WP_Query( array( 'post_type' => 'assignment', 'meta_key'=> '_lession_course_parent', 'meta_value'=> $ID)); ?>
+              <?php $loop3 = new WP_Query( array( 'post_type' => 'assignment', 'meta_key'=> '_lesson_course_parent', 'meta_value'=> $ID)); ?>
                 <?php if ($loop3-> have_posts() ) : ?>
                   <?php while ( $loop3->have_posts() ) : $loop3->the_post(); ?>
                     <li>
@@ -119,17 +119,25 @@ class Qlokast_Side_menu extends WP_Widget {
       </li>
     <?php endwhile; wp_reset_postdata(); ?>
   <?php endif; ?>
-</ul>
-        
+
 <?php endif ?> <!--if user is logged in -->
 
-<!--==========Visitor menu==========-->
+<br>
 
-<ul>
+<!--==========NEWS==========-->
+
+
 	<?php 
 		while ( have_posts() ) : the_post(); ?>
 			
-				<li><a href="<?php the_permalink() ?>"> <?php asv_the_title();?> </a></li>
+				<?php $loop3 = new WP_Query( array( 'post_type' => 'news')); ?>
+                <?php if ($loop3-> have_posts() ) : ?>
+                  <?php while ( $loop3->have_posts() ) : $loop3->the_post(); ?>
+                    <li>
+                    <a href="<?php the_permalink() ?>"> <?php asv_the_title();?> </a>
+                    </li>
+                  <?php endwhile; ?>
+              <?php endif; ?>
 
 	<?php endwhile; ?>
 </ul>
