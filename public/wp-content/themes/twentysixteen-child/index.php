@@ -26,6 +26,14 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+      <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '89' ); } 
+      if ( function_exists( 'soliloquy' ) ) { soliloquy( 'slider', 'slug' ); } ?>
+      <br>
+
+      <?php if (!is_user_logged_in()) {
+        include(locate_template('template-parts/presentation.php'));
+      }?>
+
       <?php 
         if ( have_posts() ) {
           /* get all news */
