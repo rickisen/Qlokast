@@ -245,7 +245,7 @@ function prefix_gradingSystem(){
 
 add_action( 'admin_post_gradingSystem', 'prefix_gradingSystem');
 
-function addGradingSystemForm($title = 'Betyg', $question = "Sätt betyg:"){
+function addGradingSystemForm($title = 'Betyg', $question = "Sätt betyg: "){
      $post_ID= get_the_ID();
     return '
       <h2>'.$title.'</h2>
