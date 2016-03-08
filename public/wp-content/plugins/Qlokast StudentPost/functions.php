@@ -245,17 +245,17 @@ function prefix_gradingSystem(){
 
 add_action( 'admin_post_gradingSystem', 'prefix_gradingSystem');
 
-function addGradingSystemForm($title = 'Grade', $question = "Choose Grade:"){
+function addGradingSystemForm($title = 'Betyg', $question = "Sätt betyg:"){
      $post_ID= get_the_ID();
     return '
       <h2>'.$title.'</h2>
       <form method="post" action="/wp-admin/admin-post.php" >
         <input type="hidden" name="action" value="gradingSystem">
         <input type="hidden" name="post_ID" value="'.$post_ID.'">
-        <p>'.$question.'</p>
-        <p>VG <input type="radio" name="assignmentGrade" value="vg" checked ></p>
-        <p>G <input type="radio" name="assignmentGrade" value="g" ></p>
-        <p>IG <input type="radio" name="assignmentGrade" value="ig" ></p>
+        <span>'.$question.'
+        VG <input type="radio" name="assignmentGrade" value="vg" >
+        G <input type="radio" name="assignmentGrade" value="g" >
+        IG <input type="radio" name="assignmentGrade" value="ig" ></span>
         <button type="submit">Skicka in!</button> 
       </form>
     ';
