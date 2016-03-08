@@ -9,7 +9,6 @@
 
 get_header(); ?>
 
-
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
 
@@ -19,14 +18,6 @@ get_header(); ?>
       <p>Publicerad <?php the_time("Y-m-d H:i"); ?> av <?php the_author_posts_link(); ?></p>
       <?php the_content(); ?>
     </div>
-
-    <?php 
-      // If comments are open or we have at least one comment, load up the comment template.
-      if ( comments_open() || get_comments_number() ) {
-        comments_template();
-      } 
-    ?>
-
 
   <?php if ( !empty($grade = get_post_meta( get_the_ID(), 'grade', true))) : ?>
     <span class="grade"> <?php echo $grade ?> </span>
