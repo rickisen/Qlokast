@@ -197,23 +197,13 @@ function prefix_submitAssignment(){
 
     }
 
-    header( "location: /assignments/".$assignmentParent->post_name );
+    header( "location: /assignment/".$assignmentParent->post_name );
 }
 
 add_action( 'admin_post_submitAssignment', 'prefix_submitAssignment');
 
-function recieveAssignmentMiniForm($parent){
-    return '
-      <form method="post" style="display:inline;"enctype="multipart/form-data" action="/wp-admin/admin-post.php" >
-        <input type="hidden" name="action" value="submitAssignment">
-        <input type="hidden" name="parent" value="'.$parent.'">
-        <input type="file" name="studentFile" id="studentFile">
-        <button type="submit" >Skicka in!</button> 
-      </form>
-    ';
-}
 
-function recieveAssignmentForm($parent ,$title = "Hand in your assignment:", $placeholder = "What have you done?"){
+function recieveAssignmentForm($parent ,$title = "Lämna in din uppgift:", $placeholder = "Vad har du gjort?"){
     return '
       <h2>'.$title.'</h2>
       <form method="post" enctype="multipart/form-data" action="/wp-admin/admin-post.php" >

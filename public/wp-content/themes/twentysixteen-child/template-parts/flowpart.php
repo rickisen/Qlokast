@@ -51,8 +51,6 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <?php if ( $subLoop->have_posts() ) : ?>
           <?php $subLoop->the_post() ?>
           <span> inlämnad: <a href="<?php the_permalink() ?>"><?php asv_the_title();?></a> </span>
-        <?php else : ?>
-          <?php echo recieveAssignmentMiniForm(get_the_ID()); ?>
         <?php endif; ?>
 
       <?php endif; ?>
