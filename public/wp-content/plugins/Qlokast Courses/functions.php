@@ -38,41 +38,34 @@ function post_type_course_init(){
         'menu_position'        => null,
         'taxonomies'           => array('category'),
         'supports'             => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
-        'register_metabox_cb'  => 'add_yearclass_metaboxes',
+        'register_metabox_cb'  => 'add_additional_info_metaboxes',
     );
 
   register_post_type('courses', $args);
 }
 add_action('init','post_type_course_init');
 
-/* to make sure that no one can publish a publicaly visible course */
-/* function make_all_courses_private( $new_status, $old_status, $post ) { */ 
-/*     if ( $post->post_type == 'courses' && $new_status == 'publish' && $old_status  != $new_status ) { */
-/*         $post->post_status = 'private'; */
-/*         wp_update_post( $post ); */
-/*     } */
-/* } */ 
-/* add_action( 'transition_post_status', 'make_all_courses_private', 10, 3 ); */
-
 /* metaboxes ==================== */
-function add_yearclass_metaboxes(){
-  add_meta_box('yearclass-metabox', 'For Students of year', 
-    'yearclass_callback', 'courses',
+function add_additional_info_metaboxes(){
+  add_meta_box('additional_info-metabox', 'Additional Info', 
+    'additional_info_callback', 'courses',
     'normal','high');
 }
-add_action('add_meta_boxes', 'add_yearclass_metaboxes');
+add_action('add_meta_boxes', 'add_additional_info_metaboxes');
 
-function yearclass_callback(){
+function additional_info_callback(){
   global $post;
 
   // creates the nonce we will recieve later, 
-  echo '<input type="hidden" name="yearclass_noncename" id="yearclass_noncename" value="'.wp_create_nonce(plugin_basename(__FILE__)).'">';
+  echo '<input type="hidden" name="additional_info_noncename" id="additional_info_noncename" value="'.wp_create_nonce(plugin_basename(__FILE__)).'">';
 
-  // get the parent if it's allready been entered
+  // get the previous value if it's allready been entered
   $yearclass = get_post_meta($post->ID,'_yearclass', true);
+  $yh_id = get_post_meta($post->ID,'_yh_id', true);
 
   // The input fields, potentially prefilled with previous data
-  echo '<select name="_yearclass">';
+  echo '<label for="yearclass">For students of year:</label>';
+  echo '<select name="_yearclass" id="yearclass">';
 
   // print the previously selected year (if we are editing an allredy exiting course)
   if ($yearclass > 0 ){
@@ -90,16 +83,18 @@ function yearclass_callback(){
   }
   echo '</select>';
 
+  echo '<hr>';
+  echo '<label for="yh_id"> This Courses official ID </label>';
+  echo '<input type="text" id="yh_id" name="_yh_id" value="'.$yh_id.'"></input>';
 }
 
-function save_yearclass_meta($post_id, $post){
-
-  if (!isset($_POST['yearclass_noncename'])){
+function save_additional_info($post_id, $post){
+  if (!isset($_POST['additional_info_noncename'])){
     return $post->ID;
   }
 
   // verify this is the right call we're handling
-  if (!wp_verify_nonce($_POST['yearclass_noncename'], plugin_basename(__FILE__) )){
+  if (!wp_verify_nonce($_POST['additional_info_noncename'], plugin_basename(__FILE__) )){
     return $post->ID;
   }
 
@@ -108,7 +103,8 @@ function save_yearclass_meta($post_id, $post){
     return $post->ID;
   }
 
-  $events_meta['_yearclass']       = $_POST['_yearclass'];
+  $events_meta['_yearclass'] = $_POST['_yearclass'];
+  $events_meta['_yh_id']     = $_POST['_yh_id'];
 
   foreach($events_meta as $key => $value){
     //don't store custom data twice
@@ -135,7 +131,4 @@ function save_yearclass_meta($post_id, $post){
     }
   }
 }
-add_action('save_post', 'save_yearclass_meta', 1, 2);
-
-
-
+add_action('save_post', 'save_additional_info', 1, 2);
