@@ -1,8 +1,18 @@
 <?php 
-  if (isset($categoryName)){
-    $loop = new WP_Query( array( 'post_type' => $postType , 'category_name' => $categoryName, 'meta_value' => $value ) );
-  }else{
-    $loop = new WP_Query( array( 'post_type' => $postType ) );
+
+  switch ($switch) {
+    case '1':
+      $loop = new WP_Query( array( 'post_type' => $postType ) );
+      break;
+    case '2':
+      $loop = new WP_Query( array( 'post_type' => $postType, 'category_name' => $categoryName ) );
+      break;
+    case '3':
+      $loop = new WP_Query( array( 'post_type' => $postType , 'category_name' => $categoryName, 'meta_key' => $key, 'meta_value' => $value ) );
+      break;
+    default:
+      $loop = new WP_Query( array( 'post_type' => $postType ) );
+      break;
   }
 ?>
 
@@ -41,8 +51,6 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <?php if ( $subLoop->have_posts() ) : ?>
           <?php $subLoop->the_post() ?>
           <span> inlämnad: <a href="<?php the_permalink() ?>"><?php asv_the_title();?></a> </span>
-        <?php else : ?>
-          <?php echo recieveAssignmentMiniForm(get_the_ID()); ?>
         <?php endif; ?>
 
       <?php endif; ?>
@@ -59,4 +67,5 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 $title = "";
 $postType = "";
 $categoryName = "";
+$value = "";
 ?>

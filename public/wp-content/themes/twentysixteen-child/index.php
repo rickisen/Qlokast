@@ -26,6 +26,14 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+      <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '89' ); } 
+      if ( function_exists( 'soliloquy' ) ) { soliloquy( 'slider', 'slug' ); } ?>
+      <br>
+
+      <?php if (!is_user_logged_in()) {
+        include(locate_template('template-parts/presentation.php'));
+      }?>
+
       <?php 
         if ( have_posts() ) {
           /* get all news */
@@ -35,27 +43,29 @@ get_header(); ?>
           if ($role == 'student'){ // show this stuff only for students
 
             /* get all assignments */
-            $postType = 'assignment'; $title = 'De senaste uppgifterna'; 
+            $postType = 'assignment'; $title = 'De senaste uppgifterna'; $switch = '1'; 
             include(locate_template('template-parts/flowpart.php'));
 
             /* get all lessons */
-            $postType = 'lesson'; $title = 'De senaste lektionerna'; 
+            $postType = 'lesson'; $title = 'De senaste lektionerna'; $switch = '1'; 
             include(locate_template('template-parts/flowpart.php'));
 
           } else { // show this stuff only for teachers and others
 
             /* get assignment answers */
-            $postType = 'studentposts'; $title = 'Inkommna Inlämningar'; $categoryName = 'assignment'; 
+            $postType = 'studentposts'; $title = 'Inkommna Inlämningar'; $categoryName = 'assignment'; $switch = '2'; 
+            include(locate_template('template-parts/flowpart.php'));
+
+            /* get all studentreports that needs to catch up */
+            $postType = 'studentposts'; $title = 'Studenter som ligger efter'; $categoryName = 'weeklyreport'; $value = 'no'; $key = 'status'; $switch = '3'; 
             include(locate_template('template-parts/flowpart.php'));
 
             /* get all studentreports */
-
-            $postType = 'studentposts'; $title = 'De senaste studentrapporterna'; $categoryName = 'weeklyreport'; 
-
+            $postType = 'studentposts'; $title = 'De senaste studentrapporterna'; $categoryName = 'weeklyreport'; $switch = '2'; 
             include(locate_template('template-parts/flowpart.php'));
 
             /* get student plans */
-            $postType = 'studentposts'; $title = 'Studieplaner'; $categoryName = 'studyplan'; 
+            $postType = 'studentposts'; $title = 'Studieplaner'; $categoryName = 'studyplan'; $switch = '2'; 
             include(locate_template('template-parts/flowpart.php'));
 
           }

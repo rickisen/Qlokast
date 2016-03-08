@@ -11,8 +11,8 @@
 /* =Theme customization starts here
 ------------------------------------------------------- */
 
-body {
-	background-color: green;
+body{
+  font-family: Montserrat;
 }
 
 .studentReportStatus-no {
@@ -23,13 +23,14 @@ body {
   text-transform: uppercase;
 }
 
-
-.gradeCourse{
-  display:inline-block;
+hr{
+  margin-top: 20px;
 }
 
-/* Minimal css for clickable pure CSS collapsible tree menu */
-/* As specific as possible to prevent interference with other code */
+.site-branding .site-title a {
+  color: #007acc;
+  font-size: 50px;
+}
 
 /* Collapsible tree menu */
 #menutree li {
@@ -57,4 +58,9 @@ body {
 .expandmenu{
 	font-size: 18px;
 	font-weight: bold;
+  font-family: arial;
+}
+
+.student_profile{
+  border-style: solid;
 }
