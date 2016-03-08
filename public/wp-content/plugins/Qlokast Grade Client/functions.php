@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Qlokast Grade Client
+Plugin Name: Qlokast Final Grade Client
 Plugin URI: http://wordpress.org
-Description: Plugin for adding support for School Classes amongst users
+Description: Plugin for setting Final grades through "the API"
 Author: medieinstuututu
 Version: 0.1
 Author URI: 
@@ -17,33 +17,26 @@ function courseFinalGrade(){
   }
 
   // Handle incomming POSTS 
-  if (isset($_POST['_schoolclass']) && !empty($_POST['_schoolclass']) && isset($_POST['users']) ){
-    $newClass = $_POST['_schoolclass'];
-    $users = $_POST['users'];
-
-    foreach ($users as $user) {
-      if ( empty(get_user_meta($user, 'schoolclass', true)) ) {
-        add_user_meta($user, 'schoolclass', $newClass);
-      } elseif ($newClass > 0){
-        update_user_meta($user, 'schoolclass', $newClass);
-      } elseif ($newClass <= 0){
-        delete_user_meta($user, 'schoolclass');
-      }
+  if (isset($_POST['_finalgrades']) && !empty($_POST['_finalgrades']) && isset($_POST['users']) ){
+    foreach ($_POST['users'] as $student => $grade ) {
+      submit_final_grades($student,1,$grade);
     }
-
   } 
+
+  // get all the current set grades
+  $grades = get_grades('1');
 
   // Output the form and table header ?>
     <div class="wrap">
-      <h1>Manage Student's "Class"<h1>
+      <h1>Change Student's Final Grades<h1>
       <form method="post" action="">
-        <input type="hidden" name="schoolclass" value="true">
+        <input type="hidden" name="_finalgrades" value="true">
         <table class="wp-list-table widefat fixed striped users">
           <thead> 
             <tr>
-              <th scope="col" id='checkbox' class='manage-column column-username column-primary sortable desc'>
+              <th scope="col" class='manage-column column-username column-primary sortable desc'>
                 <a href="">
-                  <span> Select </span> <span class="sorting-indicator"> </span>
+                  <span> Student ID </span> <span class="sorting-indicator"> </span>
                 </a>
               </th>
               <th scope="col" id='username' class='manage-column column-username column-primary sortable desc'>
@@ -56,19 +49,18 @@ function courseFinalGrade(){
                   <span>Name </span> <span class="sorting-indicator"> </span>
                 </a>
               </th>
-              <th scope="col" id='shoolclass' class='manage-column column-roles'>School Class </th>
+              <th scope="col" id='grade' class='manage-column column-roles'>Set Final Grade</th>
             </tr>
           </thead>
   <?php
 
     // make a new row for every student
   $students = get_users(array('role' => 'Student'));
-  foreach ($students as $student) {
+  foreach ($students as $student) :
     ?>
       <tr id='<?php echo 'user-'.$student->ID ?>'>
         <th scope='row' class=''>
-        <label class="screen-reader-text" for="<?php echo 'user_'.$student->ID ?>">Select <?php echo 'user_'.$student->nicename ?> </label>
-        <input type='checkbox' name='users[]' id='<?php echo 'user_'.$student->ID ?>' class='student' value='<?php echo $student->ID ?>' />
+          <span><?php echo $student->ID ?></span>
         </th>
         <td class='username column-username has-row-actions column-primary' data-colname="Username">
           <strong>
@@ -76,35 +68,72 @@ function courseFinalGrade(){
           </strong>
         </td>
         <td class='name column-name' data-colname="Name"> <?php echo $student->data->display_name ?> </td>
-        <td class='schoolclass column-roles' data-colname="SchoolClass"><?php echo $student->schoolclass ?></td>
+        <td class='finalgrades column-roles' data-colname="grade">
+        <select name='users[<?php echo $student->ID ?>]'>
+          <option value="<?php echo $grades[$student->ID]?>"><?php echo $grades[$student->ID]?></option>
+          <option value="">----</option>
+          <option value="vg">VG</option>
+          <option value="g">G</option>
+          <option value="ig">IG</option>
+          <option value="">None</option>
+        </select>
+        </td>
       </tr>
-    <?php
-  }
+  <?php endforeach ?>
+    </table>
+    <input type="submit" value="Gradem Up">
+  </form>
+</div>
 
-  // The select at the bottom of the table ?>
-  </table>
-      <div class="tablenav bottom">
-        <div class="alignleft actions bulkactions">
-          <label for="bulk-action-selector-bottom" class="screen-reader-text">Select bulk action </label>
-          <select name="_schoolclass" id="bulk-action-selector-bottom">
-            <option value="">Change Class</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="-1">No Class</option>
-          </select>
-          <input type="submit" id="doaction2" class="button action" value="Apply"  />
-        </div>
-        <br class="clear" />
-      </div>
-  <?php
-
-  echo '</form></div>'; // end of wrap
-}
+<?php
+} // Ends function
 
 function add_QlokastGradeClient_to_admin_menu(){
   add_users_page("Final Grades","Final Grades",'manage_options',"courseFinalGrade", "courseFinalGrade" );
 }
 add_action("admin_menu", "add_QlokastGradeClient_to_admin_menu");
+
+function get_grades($course){
+  $ch = curl_init(); 
+
+  $url = "api.patriknordahl.com/?/course/".$course;
+
+  curl_setopt($ch, CURLOPT_URL, $url); 
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+
+  $output = curl_exec($ch); 
+
+  $gradeSon = json_decode($output);
+
+  curl_close($ch); 
+
+  // make the array more php friendly
+  foreach ($gradeSon[0] as $studentValues) {
+    $grades[$studentValues->studentid] = $studentValues->grade;
+  }
+
+  return $grades;
+}
+
+function submit_final_grades($student, $course, $grade){
+  //ready data for transfer
+  $data = array('studentid' => $student, 'grade' => $grade);
+
+  // set options for transfer
+  $ch = curl_init(); 
+  $url = "api.patriknordahl.com/?/course/".$course."/grades";
+  curl_setopt($ch, CURLOPT_URL, $url); 
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+  curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query($data));
+
+  // execute transfer
+  $response = curl_exec($ch);
+  curl_close($ch); 
+
+  if (!$response){
+    return false;
+  } else {
+    return true;
+  }
+}
