@@ -5,8 +5,8 @@ Plugin URI: http://wordpress.org
 Description: Plugin for setting Final grades through "the API"
 Author: medieinstuututu
 Version: 0.1
-Author URI: 
-*/
+Author URI:
+ */
 
 function courseFinalGrade(){
 
@@ -16,29 +16,27 @@ function courseFinalGrade(){
     return;
   }
 
-  // Handle incomming POSTS 
+  // Handle incomming POSTS
   if (isset($_POST['_finalgrades']) && !empty($_POST['_finalgrades']) && isset($_POST['users']) ){
     foreach ($_POST['users'] as $student => $grade ) {
-          submit_final_grades($student,1,$grade);
+      submit_final_grades($student,1,$grade);
     }
-  } 
+  }
 
-    $loop = new WP_Query( array( 'post_type' => 'courses' ) );
-      if ( $loop->have_posts()) {
+  $loop = new WP_Query( array( 'post_type' => 'courses' ) );
+  if ( $loop->have_posts()) {
 
-        while ( $loop->have_posts()) {
+    while ( $loop->have_posts()) {
 
-          $loop->the_post(); 
-          $yhid = get_post_meta(get_the_id(), '_yh_id', true); 
+      $loop->the_post();
+      $yhid = get_post_meta(get_the_id(), '_yh_id', true);
 
-          if(!empty($yhid) ) {
-              generate_course_form($yhid);
-          }
-        }
+      if(!empty($yhid) ) {
+        generate_course_form($yhid);
       }
-  }       
-         
-
+    }
+  }
+}
 
 function add_QlokastGradeClient_to_admin_menu(){
   add_users_page("Final Grades","Final Grades",'manage_options',"courseFinalGrade", "courseFinalGrade" );
@@ -59,7 +57,7 @@ function generate_course_form($course_id) {
         <input type="hidden" name="_finalgrades" value="true">
              <input type="hidden" name="_course" value="true">
         <table class="wp-list-table widefat fixed striped users">
-          <thead> 
+          <thead>
             <tr>
               <th scope="col" class='manage-column column-username column-primary sortable desc'>
                 <a href="">
@@ -79,12 +77,12 @@ function generate_course_form($course_id) {
               <th scope="col" id='grade' class='manage-column column-roles'>Set Final Grade</th>
             </tr>
           </thead>
-  <?php
+<?php
 
     // make a new row for every student
-  $students = get_users(array('role' => 'Student'));
+    $students = get_users(array('role' => 'Student'));
   foreach ($students as $student) :
-    ?>
+?>
       <tr id='<?php echo 'user-'.$student->ID ?>'>
         <th scope='row' class=''>
           <span><?php echo $student->ID ?></span>
@@ -113,21 +111,21 @@ function generate_course_form($course_id) {
 </div>
 
 <?php
-  } // Ends function
+} // Ends function
 
 function get_grades($course){
-  $ch = curl_init(); 
+  $ch = curl_init();
 
   $url = "api.patriknordahl.com/?/course/".$course;
 
-  curl_setopt($ch, CURLOPT_URL, $url); 
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
-  $output = curl_exec($ch); 
+  $output = curl_exec($ch);
 
   $gradeSon = json_decode($output);
 
-  curl_close($ch); 
+  curl_close($ch);
 
   // make the array more php friendly
   foreach ($gradeSon[0] as $studentValues) {
@@ -142,16 +140,16 @@ function submit_final_grades($student, $course, $grade){
   $data = array('studentid' => $student, 'grade' => $grade);
 
   // set options for transfer
-  $ch = curl_init(); 
+  $ch = curl_init();
   $url = "api.patriknordahl.com/?/course/".$course."/grades";
-  curl_setopt($ch, CURLOPT_URL, $url); 
+  curl_setopt($ch, CURLOPT_URL, $url);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
   curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query($data));
 
   // execute transfer
   $response = curl_exec($ch);
-  curl_close($ch); 
+  curl_close($ch);
 
   if (!$response){
     return false;
