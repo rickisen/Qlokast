@@ -48,8 +48,8 @@ get_header(); ?>
 				// Array of WP_User objects.
 				foreach ( $blogusers as $user ) {
 					echo '<div class="student_profile">';
-					echo get_avatar($user->ID, "50"); 
-					echo '<a href=/author/'.$user->user_nicename.'> '.$user->display_name.'</a> <br><br><br>' ;
+						echo get_avatar($user->ID, "100").'</br>'; 
+						echo '<a href=/author/'.$user->user_nicename.'> '.$user->display_name.'</a> ' ;
 					echo '</div>';
 				}
 
