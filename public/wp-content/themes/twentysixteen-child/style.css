@@ -11,9 +11,7 @@
 /* =Theme customization starts here
 ------------------------------------------------------- */
 
-a .site-title{
-  color: red;
-}
+
 
 .studentReportStatus-no {
   color:red;
@@ -23,10 +21,15 @@ a .site-title{
   text-transform: uppercase;
 }
 
+.site-branding .site-title a {
+  color:#007acc;
+  font-size: 50px;
+}
 
 .gradeCourse{
   display:inline-block;
 }
+
 
 /* Minimal css for clickable pure CSS collapsible tree menu */
 /* As specific as possible to prevent interference with other code */
