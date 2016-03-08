@@ -88,10 +88,10 @@ function schoolclass(){
           <label for="bulk-action-selector-bottom" class="screen-reader-text">Select bulk action </label>
           <select name="_schoolclass" id="bulk-action-selector-bottom">
             <option value="">Change Class</option>
-            <option value="ABC12">ABC12</option>
-            <option value="ABC13">ABC13</option>
-            <option value="ABC14">ABC14</option>
-            <option value="ABC15">ABC15</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
             <option value="5">5</option>
             <option value="-1">No Class</option>
           </select>
@@ -109,41 +109,3 @@ function add_QlokastSchoolClass_to_admin_menu(){
 }
 add_action("admin_menu", "add_QlokastSchoolClass_to_admin_menu");
 
-
-
-
-
-//======GRADING=====
-
-function prefix_gradingCourse(){
-    global $current_user; get_currentuserinfo();
-
-    if(!$current_user->has_cap( 'read_private_studentposts' )){
-      die();
-    }
-
-    update_metadata('post', $_POST['post_ID'], 'grade', $_POST['gradeCourse']);
-
-    header( "location: ".get_permalink($_POST['post_ID']) );
-
-}
-
-add_action( 'admin_post_gradingCourse', 'prefix_gradingCourse');
-
-function addCourseGradingSystemForm($title = 'Grade', $question = "Choose Grade:"){
-     $post_ID= get_the_ID();
-    return '
-      <h2>'.$title.'</h2>
-      <div class"gradeCourse">
-      <form method="post" action="/wp-admin/admin-post.php" >
-        <input type="hidden" name="action" value="gradingCourse">
-        <input type="hidden" name="post_ID" value="'.$post_ID.'">
-        <p>'.$question.'</p>
-        <p>VG <input type="radio" name="gradeCourse" value="vg" ></p>
-        <p>G <input type="radio" name="gradeCourse" value="g" ></p>
-        <p>IG <input type="radio" name="gradeCourse" value="ig" ></p>
-        <button type="submit">Skicka in!</button> 
-        </div>
-      </form>
-    ';
-}

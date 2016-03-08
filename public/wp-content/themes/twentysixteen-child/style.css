@@ -10,19 +10,17 @@
  
 /* =Theme customization starts here
 ------------------------------------------------------- */
+
 body{
   font-family: Montserrat;
 }
+
 .studentReportStatus-no {
   color:red;
 }
 
 .grade {
   text-transform: uppercase;
-}
-
-.gradeCourse{
-  display:inline-block;
 }
 
 hr{
