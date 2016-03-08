@@ -23,8 +23,15 @@ body {
   text-transform: uppercase;
 }
 
-/* Collapsible tree menu */
 
+.gradeCourse{
+  display:inline-block;
+}
+
+/* Minimal css for clickable pure CSS collapsible tree menu */
+/* As specific as possible to prevent interference with other code */
+
+/* Collapsible tree menu */
 #menutree li {
    list-style: none;          /* all list item li dots invisible */
          }

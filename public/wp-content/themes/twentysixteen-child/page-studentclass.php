@@ -56,6 +56,7 @@ get_header(); ?>
 					echo get_avatar($user->ID, "50"); 
 					echo '<a href=/author/'.$user->user_nicename.'> '.$user->display_name.'</a> <br>' ;
 					
+					
 				}
 
 				

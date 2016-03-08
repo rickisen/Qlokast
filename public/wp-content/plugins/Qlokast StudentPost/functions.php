@@ -78,7 +78,7 @@ function prefix_createStudyplan(){
 
     $post_id  = wp_insert_post( array (
     'post_type'      => 'studentposts',
-    'post_title'     => 'Studyplan for '.$current_user->user_firstname.' '.$current_user->user_lastname ,
+    'post_title'     => 'Studyplan for '.$current_user->display_name ,
     'post_content'   => wp_strip_all_tags( $_POST['submitStudyplan'] ),
     'post_author'    => $user_id,
     'post_category'  => array($category),
@@ -105,7 +105,7 @@ function prefix_createStudentReport(){
 
     $post_id  = wp_insert_post( array (
     'post_type'      => 'studentposts',
-    'post_title'     => 'Studentreport for '.$current_user->user_firstname.' '.$current_user->user_lastname.' week #'.date('W').".",
+    'post_title'     => 'Studentreport for '.$current_user->display_name.' week #'.date('W').".",
     'post_content'   => wp_strip_all_tags( $_POST['submitStudentReport'] ),
     'post_author'    => $user_id,
     'post_category'  => array($category),
