@@ -23,9 +23,9 @@ function courseFinalGrade(){
     }
   }
 
-  // Gets all the courses in our wp installation, and generates
+  // Gets all the courses in our wp installation that have a yhid, and generates
   // a form each with students and their current grades
-  $loop = new WP_Query( array( 'post_type' => 'courses' ) );
+  $loop = new WP_Query( array( 'post_type' => 'courses', 'meta_key' => '_yh_id') );
   if ( $loop->have_posts()) {
 
     while ( $loop->have_posts()) {
