@@ -13,7 +13,7 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 		<?php the_post(); ?>
-		<div class="lession">	
+		<div class="lesson">	
 			<h1><?php asv_the_title(); ?></h1>
 			<hr>
 			<?php the_content(); ?>

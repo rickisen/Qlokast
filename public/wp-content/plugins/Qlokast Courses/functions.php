@@ -68,7 +68,7 @@ function yearclass_callback(){
   // creates the nonce we will recieve later, 
   echo '<input type="hidden" name="yearclass_noncename" id="yearclass_noncename" value="'.wp_create_nonce(plugin_basename(__FILE__)).'">';
 
-  // get the parrent if it's allready been entered
+  // get the parent if it's allready been entered
   $yearclass = get_post_meta($post->ID,'_yearclass', true);
 
   // The input fields, potentially prefilled with previous data

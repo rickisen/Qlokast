@@ -17,18 +17,18 @@ get_header(); ?>
 
 					<?php the_post(); ?>
 
-          <div class="lession">	
+          <div class="lesson">	
             <h1><?php the_title(); ?></h1>
             <p>Publicerad <?php the_time("Y-m-d H:i"); ?> av <?php the_author_posts_link(); ?></p>
             <?php the_content(); ?>
           </div>
 
-          <!-- Find all assignments belonging to this lession -->
+          <!-- Find all assignments belonging to this lesson -->
           <?php
             $args = array(
-              'meta_key'   => '_lession_course_parrent',
+              'meta_key'   => '_lesson_course_parent',
               'meta_value' => $post->ID,
-              'post_type'  => 'assignments'
+              'post_type'  => 'assignment'
             );
             $the_query = new WP_Query( $args );
           ?>
@@ -37,7 +37,7 @@ get_header(); ?>
             <hr>
             <h3> Övningar </h3>
 
-            <!-- a new the loop with lessions -->
+            <!-- a new the loop with lessons -->
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
               <a href="<?php the_permalink() ?>"><h5><?php the_title(); ?></h5></a>
             <?php endwhile; ?>
