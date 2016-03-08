@@ -109,3 +109,41 @@ function add_QlokastSchoolClass_to_admin_menu(){
 }
 add_action("admin_menu", "add_QlokastSchoolClass_to_admin_menu");
 
+
+
+
+
+//======GRADING=====
+
+function prefix_gradingCourse(){
+    global $current_user; get_currentuserinfo();
+
+    if(!$current_user->has_cap( 'read_private_studentposts' )){
+      die();
+    }
+
+    update_metadata('post', $_POST['post_ID'], 'grade', $_POST['gradeCourse']);
+
+    header( "location: ".get_permalink($_POST['post_ID']) );
+
+}
+
+add_action( 'admin_post_gradingCourse', 'prefix_gradingCourse');
+
+function addCourseGradingSystemForm($title = 'Grade', $question = "Choose Grade:"){
+     $post_ID= get_the_ID();
+    return '
+      <h2>'.$title.'</h2>
+      <div class"gradeCourse">
+      <form method="post" action="/wp-admin/admin-post.php" >
+        <input type="hidden" name="action" value="gradingCourse">
+        <input type="hidden" name="post_ID" value="'.$post_ID.'">
+        <p>'.$question.'</p>
+        <p>VG <input type="radio" name="gradeCourse" value="vg" ></p>
+        <p>G <input type="radio" name="gradeCourse" value="g" ></p>
+        <p>IG <input type="radio" name="gradeCourse" value="ig" ></p>
+        <button type="submit">Skicka in!</button> 
+        </div>
+      </form>
+    ';
+}
