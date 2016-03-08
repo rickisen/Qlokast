@@ -13,18 +13,13 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 		<?php the_post(); ?>
-		<div class="lesson">	
+		<div>	
 			<h1><?php asv_the_title(); ?></h1>
+			
+			<p>
+				Här kan du läsa om våra elever som går på utbildningen.
+			</p>
 			<hr>
-			<?php the_content(); ?>
-			<hr>
-			<?php if (get_post_meta(get_the_ID(),'studentFile',true)) : ?>
-        <p> Attached File: <?php echo wp_get_attachment_link(get_post_meta(get_the_ID(), 'studentFile', true )); ?> </p>
-			<?php else : ?>
-        <p> No Attachment Found </p>
-			<?php endif ?>
-			<h4>Skriven av <i><?php echo get_the_author() ?></i> den <i><?php the_time("Y-m-d H:i"); ?></i></h4>
-			<br>
 		</div>
 
 		
@@ -52,21 +47,16 @@ get_header(); ?>
 				$blogusers = get_users( $args );
 				// Array of WP_User objects.
 				foreach ( $blogusers as $user ) {
-	
+					echo '<div class="student_profile">';
 					echo get_avatar($user->ID, "50"); 
-					echo '<a href=/author/'.$user->user_nicename.'> '.$user->display_name.'</a> <br>' ;
-					
-					
+					echo '<a href=/author/'.$user->user_nicename.'> '.$user->display_name.'</a> <br><br><br>' ;
+					echo '</div>';
 				}
-
-				
-
-
 
 		?>
 
 
-
+<h4>Uppdaterad <?php the_time("Y-m-d H:i"); ?></i></h4>
       
   </main><!-- #main -->
 </div><!-- #primary --> 
