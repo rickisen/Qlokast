@@ -12,30 +12,19 @@ get_header(); ?>
   <?php echo get_avatar($curauth->ID, "500") ?>
   <h1><?php echo $curauth->display_name." ".$curauth->last_name; ?></h1>
   <dl>
+      <?php if ( $curauth->show_description == 'on' || is_user_logged_in() ): ?>
       <dt>Profile</dt>
       <dd><?php echo $curauth->user_description; ?></dd>
+      <?php endif ?>
+      <?php if ( $curauth->show_website == 'on' || is_user_logged_in() ): ?>
       <dt>Website</dt>
       <dd><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></dd>
-      
-    <?php
-        /* $curauth->aim; */
-        /* $curauth->description; */
-        /* $curauth->display_name; */
-        /* $curauth->first_name; */
-        /* $curauth->ID; */
-        /* $curauth->jabber; */
-        /* $curauth->last_name; */
-        /* $curauth->nickname; */
-        /* $curauth->user_email; */
-        /* $curauth->user_login; */
-        /* $curauth->user_nicename; */
-        /* $curauth->user_registered; */
-        /* $curauth->user_url; */
-        /* $curauth->yim; */
-    ?>
+      <?php endif ?>
+      <?php if ( $curauth->show_email == 'on' || is_user_logged_in() ): ?>
+      <dt>Email</dt>
+      <dd><?php echo $curauth->user_email; ?></dd>
+      <?php endif ?>
   </dl>
-
-
 
   <?php
     /* List reports*/
@@ -53,7 +42,6 @@ get_header(); ?>
         </div>
       <?php endwhile; wp_reset_postdata();
     }
-
   ?>
 
   <?php /* Check for studieplan */
@@ -96,9 +84,14 @@ get_header(); ?>
   <!-- form to update profile -->
   <?php if ( is_user_logged_in() && $current_user->ID == $curauth->ID ) : ?>
   <?php	echo add_profile_edit_form('Uppdatera din profil här', array(
-    'first_name' => $curauth->first_name,
-    'last_name' => $curauth->last_name,
-    'description' => $curauth->user_description
+    'first_name'       => $curauth->first_name,
+    'last_name'        => $curauth->last_name,
+    'webpage'          => $curauth->user_url,
+    'description'      => $curauth->user_description,
+    'show_description' => $curauth->show_description,
+    'show_email'       => $curauth->show_email,
+    'show_picture'     => $curauth->show_picture,
+    'show_website'     => $curauth->show_website,
     )); ?>
   <?php	endif ?>
 
