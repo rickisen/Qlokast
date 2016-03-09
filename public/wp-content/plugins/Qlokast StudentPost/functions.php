@@ -203,6 +203,19 @@ function prefix_submitAssignment(){
 add_action( 'admin_post_submitAssignment', 'prefix_submitAssignment');
 
 
+function recieveAssignmentMiniForm($parent){
+  return '
+    <form method="post" style="display:inline;"enctype="multipart/form-data" action="/wp-admin/admin-post.php" >
+      <input type="hidden" name="action" value="submitAssignment">
+      <input type="hidden" name="parent" value="'.$parent.'">
+      <p><input type="file" name="studentFile" id="studentFile">
+      <button id="mini-button" type="submit" >Skicka in!</button> </p>
+    </form>
+    <hr>
+  ';
+}
+
+
 function recieveAssignmentForm($parent ,$title = "Lämna in din uppgift:", $placeholder = "Vad har du gjort?"){
     return '
       <h2>'.$title.'</h2>
