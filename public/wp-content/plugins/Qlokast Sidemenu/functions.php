@@ -123,7 +123,7 @@ class Qlokast_Side_menu extends WP_Widget {
 	<hr>
 
 <!--==========NEWS==========-->
-
+				<h2>NYHETER</h2>
 				<?php $loop3 = new WP_Query( array( 'post_type' => 'news')); ?>
                 <?php if ($loop3-> have_posts() ) : ?>
                   <?php while ( $loop3->have_posts() ) : $loop3->the_post(); ?>

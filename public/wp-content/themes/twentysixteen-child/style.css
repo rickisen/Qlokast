@@ -49,12 +49,17 @@ hr{
       cursor: pointer;        /* cursor changes when you mouse over this class */
     }                         /* could add the many user-select: none; commands here */
 
-      li .menu_label + input[type=checkbox] + ul > li
+      li .menu_label + input[type=checkbox]:checked + ul > li
          {
-            display: none;         /* prevents sublists below unchecked labels from displaying */
+           display: block;         /* display submenu on click */
          }
 
-      li .menu_label + input[type=checkbox]:checked + ul > li
+          li .menu_label + input[type=checkbox]:active + ul > li
+         {
+           display: block;         /* display submenu on click */
+         }
+
+         li .menu_label + input[type=checkbox]:select + ul > li
          {
            display: block;         /* display submenu on click */
          }
