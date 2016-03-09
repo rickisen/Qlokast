@@ -96,12 +96,34 @@ function lesson_course_parent_callback(){
   $loop = new WP_Query( $args );
   while ( $loop->have_posts() ) : $loop->the_post();
     echo '<option value="'.get_the_ID().'">'.get_the_title().'</option>';
-  endwhile;
-  wp_reset_postdata(); 
+  endwhile; wp_reset_postdata(); 
 
-  echo '</select>';
+  echo '</select><hr>';
   wp_reset_postdata(); // so we don't affect anyone elses queries
 
+
+  // deadline options
+  $months = ['Month','jan','feb','mar','apr',
+    'may','jun','jul','aug','sep','oct','nov','dec'];
+
+  echo '<h4>Deadline</h4>';
+  echo '<label for="months">month:</label>';
+  echo '<select id="months" name="_deadline_month">';
+  foreach ($months as $number => $month) {
+    // only supply a value value if its greater than 0
+    $value = $number > 0 ? $number : '';
+    echo '<option value="'.$value.'">'.$month.'</option>';
+  }
+  echo '</select>';
+
+  echo '<label for="days"> Day:</label>';
+  echo '<select id="days" name="_deadline_day">';
+  for ($i = 0; $i < 31; $i++) { 
+    // only supply a value value if its greater than 0
+    $value = $i > 0 ? $i : '';
+    echo '<option value="'.$value.'">'.$i.'</option>';
+  }
+  echo '</select>';
 }
 
 function save_lesson_course_parent_meta($post_id, $post){
@@ -126,7 +148,14 @@ function save_lesson_course_parent_meta($post_id, $post){
     return $post->ID;
   }
 
-  $events_meta['_lesson_course_parent']       = $_POST['_lesson_course_parent'];
+  // calculate deadline timestamp, first check if its for this year or next
+  $deadline = strtotime($_POST['_deadline_month'].'/'.$_POST['_deadline_day']);
+  if ( $deadline < time() ) { // if its not in the future the user wanted the same date next year
+    $deadline = strtotime('+1 years', $deadline);
+  }   
+
+  $events_meta['_deadline']  = $deadline;
+  $events_meta['_lesson_course_parent'] = $_POST['_lesson_course_parent'];
 
   foreach($events_meta as $key => $value){
     //don't store custom data twice

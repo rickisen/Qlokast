@@ -149,21 +149,30 @@ function addStudentReportForm($title = "Enter your studentreport:", $question = 
 
 // Hand in Assignments
 function prefix_submitAssignment(){
-    global $current_user; get_currentuserinfo();
+  global $current_user; get_currentuserinfo();
 
-    /* verify permissions */
-    if(!$current_user->has_cap( 'publish_studentpost' )){
-      die();
-    }
+  /* verify permissions */
+  if(!$current_user->has_cap( 'publish_studentpost' )){
+    die();
+  }
 
-    //$user_id = get_current_user_id();
+  //$user_id = get_current_user_id();
 
-    $assignmentParent = get_post( $_POST['parent'] );
-    $category = get_cat_ID('assignment');
+  $assignmentParent = get_post( $_POST['parent'] );
+  $category = get_cat_ID('assignment');
 
-    $post_id = wp_insert_post( array (
+  $deadline  = get_post_meta($assignmentParent->ID, '_deadline', true);
+
+  if($deadline < time()){ // late assignment
+    $title_mod = 'Late';
+    $status = 'Late';
+  } else {
+    $status = 'On Time';
+  }
+
+  $post_id = wp_insert_post( array (
     'post_type'      => 'studentposts',
-    'post_title'     => $assignmentParent->post_title.' '.$current_user->user_login.' '.date("Y-m-d"),
+    'post_title'     => $assignmentParent->post_title.' '.$current_user->user_login.' '.date("Y-m-d").' '.$title_mod,
     'post_content'   => wp_strip_all_tags( $_POST['submitAssignmentContent'] ),
     'post_author'    => $current_user->ID, //$user_id,
     'post_category'  => array($category),
@@ -171,40 +180,41 @@ function prefix_submitAssignment(){
     'comment_status' => 'open',   // if you prefer
     'ping_status'    => 'closed',      // if you prefer
     'meta_input'     => array(
-      'parent' => $_POST['parent']
-      )
-    ) );
-   
-    if ( $_FILES['studentFile']['size'] > 0 ){
+      'parent' => $_POST['parent'],
+      'status' => $status
+    )
+  ) );
 
-      if (!function_exists('wp_generate_attachment_metadata')){
-          require_once(ABSPATH . "wp-admin" . '/includes/image.php');
-          require_once(ABSPATH . "wp-admin" . '/includes/file.php');
-          require_once(ABSPATH . "wp-admin" . '/includes/media.php');
-      }
+  if ( $_FILES['studentFile']['size'] > 0 ){
 
-      foreach ($_FILES as $file => $array) {
-          if ($_FILES[$file]['error'] !== UPLOAD_ERR_OK) {
-              return "upload error : " . $_FILES[$file]['error'];
-          }
-          $attach_id = media_handle_upload( $file, $post_id );
-      }   
-
-      if ($attach_id > 0){
-          update_post_meta($post_id, 'studentFile', $attach_id);
-          /* update_user_meta( $current_user->ID, 'user_picture', $attach_id); */
-      }
-
+    if (!function_exists('wp_generate_attachment_metadata')){
+      require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+      require_once(ABSPATH . "wp-admin" . '/includes/file.php');
+      require_once(ABSPATH . "wp-admin" . '/includes/media.php');
     }
 
-    header( "location: /assignment/".$assignmentParent->post_name );
+    foreach ($_FILES as $file => $array) {
+      if ($_FILES[$file]['error'] !== UPLOAD_ERR_OK) {
+        return "upload error : " . $_FILES[$file]['error'];
+      }
+      $attach_id = media_handle_upload( $file, $post_id );
+    }   
+
+    if ($attach_id > 0){
+      update_post_meta($post_id, 'studentFile', $attach_id);
+      /* update_user_meta( $current_user->ID, 'user_picture', $attach_id); */
+    }
+
+  }
+
+  header( "location: /assignment/".$assignmentParent->post_name );
 }
 
 add_action( 'admin_post_submitAssignment', 'prefix_submitAssignment');
 
 
 function recieveAssignmentForm($parent ,$title = "Lämna in din uppgift:", $placeholder = "Vad har du gjort?"){
-    return '
+  return '
       <h2>'.$title.'</h2>
       <form method="post" enctype="multipart/form-data" action="/wp-admin/admin-post.php" >
         <input type="hidden" name="action" value="submitAssignment">
@@ -221,23 +231,23 @@ function recieveAssignmentForm($parent ,$title = "Lämna in din uppgift:", $plac
 //======GRADING=====
 
 function prefix_gradingSystem(){
-    global $current_user; get_currentuserinfo();
+  global $current_user; get_currentuserinfo();
 
-    if(!$current_user->has_cap( 'read_private_studentposts' )){
-      die();
-    }
+  if(!$current_user->has_cap( 'read_private_studentposts' )){
+    die();
+  }
 
-    update_metadata('post', $_POST['post_ID'], 'grade', $_POST['assignmentGrade']);
+  update_metadata('post', $_POST['post_ID'], 'grade', $_POST['assignmentGrade']);
 
-    header( "location: ".get_permalink($_POST['post_ID']) );
+  header( "location: ".get_permalink($_POST['post_ID']) );
 
 }
 
 add_action( 'admin_post_gradingSystem', 'prefix_gradingSystem');
 
 function addGradingSystemForm($title = 'Betyg', $question = "Sätt betyg: "){
-     $post_ID= get_the_ID();
-    return '
+  $post_ID= get_the_ID();
+  return '
       <h2>'.$title.'</h2>
       <form method="post" action="/wp-admin/admin-post.php" >
         <input type="hidden" name="action" value="gradingSystem">
