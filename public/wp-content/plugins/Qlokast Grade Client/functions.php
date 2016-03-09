@@ -19,7 +19,7 @@ function courseFinalGrade(){
   // Handle incomming POSTS
   if (isset($_POST['_finalgrades']) && isset($_POST['_course']) && isset($_POST['_users']) ){
     foreach ($_POST['_users'] as $student => $grade ) {
-      submit_final_grades($student,1,$grade);
+      submit_final_grades($student,$_POST['_course'],$grade);
     }
   }
 
