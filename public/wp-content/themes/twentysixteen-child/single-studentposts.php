@@ -27,7 +27,7 @@ get_header(); ?>
         <?php endif ?>
 			<?php endif ?>
 
-			<h4>Skriven av <i><?php echo get_the_author() ?></i> den <i><?php the_time("Y-m-d H:i"); ?></i></h4>
+			<h4>Skriven <?php the_time("Y-m-d H:i"); ?> av <?php the_author_posts_link(); ?></h4>
 			<br>
 		</div>
 

@@ -10,7 +10,7 @@ get_header(); ?>
 
   <!-- get picture for the displayed user -->
   <?php echo get_avatar($curauth->ID, "500") ?>
-  <h1><?php echo $curauth->display_name." ".$curauth->last_name; ?></h1>
+  <h1><?php echo $curauth->display_name; ?></h1>
   <dl>
       <?php if ( $curauth->show_description == 'on' || is_user_logged_in() ): ?>
       <dt>Profile</dt>

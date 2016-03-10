@@ -19,3 +19,20 @@ function asv_get_the_title($id = 0) {
 
 	return $title;
 }
+
+//Redirects logout to frontpage
+add_action('wp_logout','go_home');
+function go_home(){
+  wp_redirect( home_url() );
+  exit();
+}
+
+//Adds dynamic login/logout to menus
+add_filter('wp_nav_menu_items', 'add_login_logout_link', 10, 2); 
+function add_login_logout_link($items, $args) {         
+	ob_start();         
+	wp_loginout('index.php');         
+	$loginoutlink = ob_get_contents();         
+	ob_end_clean();         
+	$items .= '<li>'. $loginoutlink .'</li>';     return $items; 
+}
