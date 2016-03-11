@@ -30,7 +30,6 @@ function schoolclass(){
     // We only accept changing to theese klasses in this function
     $allowedKlasses = ['yearOne','yearTwo','yearThree','yearFour','yearFive','none'];
     if (!in_array($newKlass, $allowedKlasses)){
-      echo "hehehra";
       return false;
     }
 

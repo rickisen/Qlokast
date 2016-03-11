@@ -35,7 +35,7 @@ function post_type_course_init(){
         'has_archive'          => true,
         'hierarchical'         => false,
         'menu_position'        => null,
-        'taxonomies'           => array('category'),
+        'taxonomies'           => array('klass'),
         'supports'             => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
         'register_metabox_cb'  => 'add_additional_info_metaboxes',
     );
@@ -43,6 +43,20 @@ function post_type_course_init(){
   register_post_type('courses', $args);
 }
 add_action('init','post_type_course_init');
+
+// Klass taxonomy, used for access restriction based on klass
+function create_klass_taxonomy(){
+   register_taxonomy(
+    'klass',
+    array('courses'),
+    array(
+      'label'        => 'Klass',
+      'rewrite'      => array( 'slug' => 'klass' ),
+      'hierarchical' => false
+    )
+  ); 
+}
+add_action('init', 'create_klass_taxonomy');
 
 /* metaboxes ==================== */
 function add_additional_info_metaboxes(){
