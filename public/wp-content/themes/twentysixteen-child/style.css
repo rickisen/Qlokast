@@ -1,13 +1,13 @@
 /*
- Theme Name:     Qlokast Theme (A Twentysixteen Child Theme)
- Description:    A Twentysixteen Child Theme
- Author:         Qlokast Crew		
- Template:       twentysixteen
- Version:        0.0.1
-*/
- 
+Theme Name:     Qlokast Theme (A Twentysixteen Child Theme)
+Description:    A Twentysixteen Child Theme
+Author:         Qlokast Crew		
+Template:       twentysixteen
+Version:        0.0.1
+ */
+
 @import url("../twentysixteen/style.css");
- 
+
 /* =Theme customization starts here
 ------------------------------------------------------- */
 
@@ -38,35 +38,45 @@ hr{
 
 /* Collapsible tree menu */
 #menutree li {
-   list-style: none;          /* all list item li dots invisible */
-         }
+  list-style: none;          /* all list item li dots invisible */
+}
 
-   li .menu_label + input[type=checkbox] {
-      opacity: 0;             /* checkboxes invisible and use no space */
-     }                        /* display: none; is better but fails in ie8 */
+li .menu_label + input[type=checkbox] {
+  opacity: 0;             /* checkboxes invisible and use no space */
+}                        /* display: none; is better but fails in ie8 */
 
-    li .menu_label {
-      cursor: pointer;        /* cursor changes when you mouse over this class */
-    }                         /* could add the many user-select: none; commands here */
+li .menu_label {
+  cursor: pointer;        /* cursor changes when you mouse over this class */
+}                         /* could add the many user-select: none; commands here */
 
-      li .menu_label + input[type=checkbox]:checked + ul > li
-         {
-           display: block;         /* display submenu on click */
-         }
+li .menu_label + input[type=checkbox]:checked + ul > li
+{
+  display: block;         /* display submenu on click */
+}
 
-          li .menu_label + input[type=checkbox]:active + ul > li
-         {
-           display: block;         /* display submenu on click */
-         }
+li .menu_label + input[type=checkbox]:active + ul > li
+{
+  display: block;         /* display submenu on click */
+}
 
-         li .menu_label + input[type=checkbox]:select + ul > li
-         {
-           display: block;         /* display submenu on click */
-         }
+li .menu_label + input[type=checkbox]:select + ul > li
+{
+  display: block;         /* display submenu on click */
+}
+
+ul .lessonAss:before {
+  content:'Uppgifter';
+  position:relative;
+  right:0.8em;
+}
+
+ul .lessonAss {
+  margin-bottom:0px;
+}
 
 .expandmenu{
-	font-size: 18px;
-	font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
   font-family: arial;
 }
 

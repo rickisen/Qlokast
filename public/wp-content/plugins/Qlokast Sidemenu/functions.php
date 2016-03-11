@@ -64,10 +64,11 @@ class Qlokast_Side_menu extends WP_Widget {
 <!--====Courses================-->
 
 <!--Dropdown menu header -->
-	  	<?php $loop = new WP_Query( array( 'post_type' => 'courses' ) );?>
-	  	<?php if ( $loop->have_posts()): ?>
-	    	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-	      		<?php $ID= get_the_ID(); ?>
+	  	<?php $coursesLoop = new WP_Query( array( 'post_type' => 'courses' ) );?>
+	  	<?php if ( $coursesLoop->have_posts()): ?>
+	    	<?php while ( $coursesLoop->have_posts() ) : $coursesLoop->the_post(); ?>
+          <?php if (studentAttends(get_the_ID())): ?>
+            <?php $ID = get_the_ID(); ?>
 	 
 
 		    <li>
@@ -83,50 +84,55 @@ class Qlokast_Side_menu extends WP_Widget {
 		            <input type="checkbox" id="<?php echo the_title().'2' ?>" />
 
 		            <ul>
-		              	<?php $loop2 = new WP_Query( array( 'post_type' => 'lesson', 'meta_key'=> '_course_parent', 'meta_value'=> $ID) ); ?>
-		                	<?php if ($loop2-> have_posts() ) : ?>
-		                  		<?php while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
+		              	<?php $lessonsLoop = new WP_Query( array( 'post_type' => 'lesson', 'meta_key'=> '_course_parent', 'meta_value'=> $ID) ); ?>
+		                	<?php if ($lessonsLoop-> have_posts() ) : ?>
+		                  		<?php while ( $lessonsLoop->have_posts() ) : $lessonsLoop->the_post(); ?>
+                          <?php $LessonID = get_the_ID(); ?>
 				                    <li>
 				                    <a href="<?php the_permalink() ?>"> <?php asv_the_title(); ?></a> 
 				                    </li>
+                            <?php $lessonAssLoop = new WP_Query( array( 'post_type' => 'assignment', 'meta_key'=> '_lesson_course_parent', 'meta_value'=> $LessonID) ); ?>
+                              <?php if ($lessonAssLoop-> have_posts() ) : ?>
+                                <ul class="lessonAss">
+                                  <?php while ( $lessonAssLoop->have_posts() ) : $lessonAssLoop->the_post(); ?>
+                                    <li>
+                                    <a href="<?php the_permalink() ?>"> <?php asv_the_title(); ?></a> 
+                                    </li>
+                                  <?php endwhile; ?>
+                                </ul>
+                              <?php endif; ?>
 		                  		<?php endwhile; ?>
 		              		<?php endif; ?>
 		            </ul>
-
 		          </li>
-		  
 			        <li>
 			            <label for="<?php echo the_title().'3' ?>" class="menu_label">Uppgifter</label>
 			            <input type="checkbox" id="<?php echo the_title().'3' ?>" />
-
 			            <ul>
-			              	<?php $loop3 = new WP_Query( array( 'post_type' => 'assignment', 'meta_key'=> '_lesson_course_parent', 'meta_value'=> $ID)); ?>
-		                	<?php if ($loop3-> have_posts() ) : ?>
-		                  		<?php while ( $loop3->have_posts() ) : $loop3->the_post(); ?>
+			              	<?php $assignmentLoop = new WP_Query( array( 'post_type' => 'assignment', 'meta_key'=> '_lesson_course_parent', 'meta_value'=> $ID)); ?>
+		                	<?php if ($assignmentLoop-> have_posts() ) : ?>
+		                  		<?php while ( $assignmentLoop->have_posts() ) : $assignmentLoop->the_post(); ?>
 				                    <li>
 				                    <a href="<?php the_permalink() ?>"> <?php asv_the_title();?> </a>
 				                    </li>
 		                  		<?php endwhile; ?>
 		              		<?php endif; ?>
 			            </ul>
-
 			        </li>
-
 		        </ul>
-
 		    </li>
+        <?php endif; ?>
 	    <?php endwhile; wp_reset_postdata(); ?>
 	  <?php endif; ?>
-
 	<?php endif ?> <!--if user is logged in -->
 
 	<hr>
 
 <!--==========NEWS==========-->
 				<h2>NYHETER</h2>
-				<?php $loop3 = new WP_Query( array( 'post_type' => 'news')); ?>
-                <?php if ($loop3-> have_posts() ) : ?>
-                  <?php while ( $loop3->have_posts() ) : $loop3->the_post(); ?>
+				<?php $newsLoop = new WP_Query( array( 'post_type' => 'news')); ?>
+                <?php if ($newsLoop-> have_posts() ) : ?>
+                  <?php while ( $newsLoop->have_posts() ) : $newsLoop->the_post(); ?>
                     <li>
                     <a href="<?php the_permalink() ?>"> <?php asv_the_title();?> </a>
                     </li> 
