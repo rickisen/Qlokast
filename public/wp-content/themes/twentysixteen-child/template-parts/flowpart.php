@@ -23,6 +23,7 @@
 
 <?php
 while ( $loop->have_posts() ) : $loop->the_post(); ?>
+<?php if (studentAttends(getCourseParent(get_the_ID())) || !in_array('student', $current_user->roles) ): ?>
   <div> <?php echo get_the_author() ?> : 
 
     <a class="<?php echo "studentReportStatus-".get_post_meta( get_the_ID(), 'status', true );?>" href="<?php the_permalink() ?>"> 
@@ -59,6 +60,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <?php endif; ?>
 
   </div>
+<?php endif; ?>
 <?php endwhile; wp_reset_postdata(); ?>
 
 <br>
