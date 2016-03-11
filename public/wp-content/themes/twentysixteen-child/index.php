@@ -37,7 +37,7 @@ get_header(); ?>
       <?php 
         if ( have_posts() ) {
           /* get all news */
-          $postType = 'news'; $title = 'Nyheter'; 
+          $postType = 'news'; $title = 'Nyheter'; $switch = '1'; 
           include(locate_template('template-parts/flowpart.php'));
 
           if ($role == 'student'){ // show this stuff only for students
