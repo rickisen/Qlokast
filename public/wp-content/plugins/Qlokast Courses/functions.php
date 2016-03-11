@@ -73,30 +73,8 @@ function additional_info_callback(){
   echo '<input type="hidden" name="additional_info_noncename" id="additional_info_noncename" value="'.wp_create_nonce(plugin_basename(__FILE__)).'">';
 
   // get the previous value if it's allready been entered
-  $yearclass = get_post_meta($post->ID,'_yearclass', true);
   $yh_id = get_post_meta($post->ID,'_yh_id', true);
 
-  // The input fields, potentially prefilled with previous data
-  echo '<label for="yearclass">For students of year:</label>';
-  echo '<select name="_yearclass" id="yearclass">';
-
-  // print the previously selected year (if we are editing an allredy exiting course)
-  if ($yearclass > 0 ){
-    echo '<option value="'.$yearclass.'">'.$yearclass.'</option>';
-  } else {
-    echo '<option value="1">1</option>';
-  }
-
-  echo '<option> --- </option>';
-  echo '<option value="All" > All </option>';
-
-  // print year 1 to 4
-  for ($i = 1 ; $i < 5 ; $i++) {
-    echo '<option value="'.$i.'">'.$i.'</option>';
-  }
-  echo '</select>';
-
-  echo '<hr>';
   echo '<label for="yh_id"> This Courses official ID </label>';
   echo '<input type="text" id="yh_id" name="_yh_id" value="'.$yh_id.'"></input>';
 }
@@ -111,12 +89,11 @@ function save_additional_info($post_id, $post){
     return $post->ID;
   }
 
-  // drop if current user cant edit this course 
+  // drop if current user cant edit this course
   if ( !current_user_can('edit_course', $post->ID) ) {
     return $post->ID;
   }
 
-  $events_meta['_yearclass'] = $_POST['_yearclass'];
   $events_meta['_yh_id']     = $_POST['_yh_id'];
 
   foreach($events_meta as $key => $value){
@@ -146,6 +123,7 @@ function save_additional_info($post_id, $post){
 }
 add_action('save_post', 'save_additional_info', 1, 2);
 
+// returns the id of the course a lesson or assignment belongs to
 function getCourseParent($child){
   // if child is a lesson, get that lessons parant. our grandparent
   switch (get_post_type($child)) {
