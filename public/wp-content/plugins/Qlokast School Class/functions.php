@@ -103,7 +103,7 @@ function printStudentTable(){
           </strong>
         </td>
         <td class='name column-name' data-colname="Name"> <?php echo $student->data->display_name ?> </td>
-        <td class='schoolclass column-roles' data-colname="SchoolClass"><?php print_r($student->caps) ?></td>
+        <td class='schoolclass column-roles' data-colname="SchoolClass"><?php echo studentsKlass($student->ID) ?></td>
       </tr>
     <?php
   }
@@ -156,4 +156,25 @@ function studentAttends($post, $kind = true){
   }
 
   return $hasAccess;
+}
+
+function studentsKlass( $id ){
+  $user = new WP_User($id);
+  $ret = '';
+
+  $klassNames = [
+    'yearOne', 
+    'yearTwo', 
+    'yearThree', 
+    'yearFour', 
+    'yearFive' 
+  ];
+
+  foreach ($klassNames as $klass) {
+    if ($user->has_cap($klass)){
+      $ret = $klass ;
+      break;
+    }
+  }
+  return $ret;
 }
