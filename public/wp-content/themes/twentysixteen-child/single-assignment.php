@@ -12,6 +12,18 @@ get_header(); ?>
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
 
+    <?php // klass access controll, should probably be declared in a plugin and called with some hook instead
+      if (in_array('student',$current_user->roles)){ // only applies this to students
+        // this cpt is a child-post of a course or a lesseon, so we need to get get the parent course first, 
+        // so that we inherit whatever klasses the parent course has given access to
+        $parent = getCourseParent(get_the_ID());
+        if (!studentAttends($parent)){
+         echo '<h1> Du har inte fått rättighet att se denna sida ännu </h1></main></div>';
+         die(); // kill all hackers!
+        }
+    }?> 
+
+
     <?php the_post(); ?>
     <div class="assignment">	
       <h1><?php the_title(); ?></h1>

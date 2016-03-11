@@ -10,12 +10,22 @@
 get_header(); ?>
 
 <div class="container">
-    <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 text-center">
-			<div id="primary" class="content-area">
-				<main id="main" class="site-main" role="main">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
-					<?php the_post(); ?>
+        <?php the_post(); ?>
+
+        <?php // klass access controll, should probably be declared in a plugin and called with some hook instead
+          if (in_array('student',$current_user->roles)){ // only applies this to students
+            // this cpt is a child-post of a course, so we need to get get the parents klass first, 
+            // so that we inherit whatever klasses the parent has given access to
+            $parent = getCourseParent(get_the_ID());
+
+            if (!studentAttends($parent)){
+             echo '<h1> Du har inte fått rättighet att se denna sida ännu </h1></main></div>';
+             die(); // kill all hackers!
+            }
+          }?> 
 
           <div class="lesson">	
             <h1><?php the_title(); ?></h1>
@@ -52,10 +62,8 @@ get_header(); ?>
             } 
           ?>
 
-				</main><!-- #main -->
-			</div><!-- #primary -->
-		</div><!--col-->
-	</div><!--row-->
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div><!--container-->
 
 

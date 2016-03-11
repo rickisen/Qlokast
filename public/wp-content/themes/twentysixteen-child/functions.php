@@ -36,3 +36,4 @@ function add_login_logout_link($items, $args) {
 	ob_end_clean();         
 	$items .= '<li>'. $loginoutlink .'</li>';     return $items; 
 }
+

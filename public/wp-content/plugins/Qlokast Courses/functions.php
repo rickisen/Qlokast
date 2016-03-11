@@ -145,3 +145,25 @@ function save_additional_info($post_id, $post){
   }
 }
 add_action('save_post', 'save_additional_info', 1, 2);
+
+function getCourseParent($child){
+  // if child is a lesson, get that lessons parant. our grandparent
+  switch (get_post_type($child)) {
+    case 'lesson':
+      $parent = get_post_meta($child, '_course_parent', true);
+      break;
+    case 'assignment':
+      $parent = get_post_meta($child, '_lesson_course_parent', true);
+      if (get_post_type($parent) == 'lesson') {
+        $parent = get_post_meta($parent, '_course_parent', true);
+      }
+      break;
+    case 'course':
+      $parent = $child;
+      break;
+    default:
+      $parent = false;
+      break;
+  }
+  return $parent;
+}

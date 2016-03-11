@@ -49,7 +49,6 @@ function schoolclass(){
         $student->add_cap($newKlass);
       }
     }
-
   }
 
   printStudentTable();
@@ -132,3 +131,29 @@ function printStudentTable(){
   echo '</form></div>'; // end of wrap
 }
 
+// function to restrict acces to certain posts, based on what 
+// tag it's parents course has, takes a course id as input.
+function studentAttends($post, $kind = true){
+  global $current_user; get_currentuserinfo();
+  $post = get_post($post);
+
+  $hasAccess = false ; //assume guilty students
+
+  //see which klasses are allowed to view this site
+  if (is_array($allowedKlasses = get_the_terms($post->ID, 'klass'))){
+    foreach ($allowedKlasses as $allowedKlass) {
+      if ( $current_user->has_cap($allowedKlass->name)) {
+        $hasAccess = true;
+        break;
+      } else {
+        $hasAccess = false;
+      }
+    }       
+  } elseif ($kind) {
+    // there where no klass-restrictions specified for this course, 
+    // so we default to give all students access then
+    $hasAccess = true;
+  }
+
+  return $hasAccess;
+}

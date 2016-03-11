@@ -13,31 +13,18 @@ get_header(); ?>
     
     <?php the_post(); ?>
 
-<?php // klass access controll, should probably be within a plugin and called with some hook instead
-  if (in_array('student',$current_user->roles)){ // only applies to students
-    $hasAccess = false ; //assume guilty stundets
-    //see which klasses are allowed to view this site
-    if (is_array($allowedKlasses = get_the_terms(get_the_ID(), 'klass'))){
-      foreach ($allowedKlasses as $allowedKlass) {
-        if ( $current_user->has_cap($allowedKlass->name)) {
-          echo "here";
-          $hasAccess = true;
-          break;
-        } else {
-          $hasAccess = false;
+    <?php // klass access controll, should probably be within a plugin and called with some hook instead
+      if (in_array('student',$current_user->roles)){
+        // this cpt is a child-post of a course, so we need to get get the parents klass first, 
+        // so that we inherit whatever klasses the parent has given access to
+        $parent = getCourseParent(get_the_ID());
+
+        if (!studentAttends($parent)){
+          echo '<h1> Du har inte fått rättighet att se denna sida ännu </h1></main></div>';
+          die(); // kill all hackers!
         }
-      }       
-    } else {
-      // there where no klasses specified for this course, 
-      // so we default to give all users access then
-      $hasAccess = true;
-    }
-    if (!$hasAccess) {
-      echo "<h1> Du har inte fått rättighet att se denna kurs ännu </h1></main></div>";
-      die(); // kill all hackers!
-    }
-  }
-  ?> 
+      }
+    ?> 
 
     <div class="course">	
       <h1><?php the_title(); ?></h1>
