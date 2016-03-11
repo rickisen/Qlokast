@@ -67,7 +67,7 @@ class Qlokast_Side_menu extends WP_Widget {
 	  	<?php $coursesLoop = new WP_Query( array( 'post_type' => 'courses' ) );?>
 	  	<?php if ( $coursesLoop->have_posts()): ?>
 	    	<?php while ( $coursesLoop->have_posts() ) : $coursesLoop->the_post(); ?>
-          <?php if (studentAttends(get_the_ID())): ?>
+          <?php if (studentAttends(get_the_ID()) || !in_array('student', $current_user->roles) ): ?>
             <?php $ID = get_the_ID(); ?>
 	 
 
