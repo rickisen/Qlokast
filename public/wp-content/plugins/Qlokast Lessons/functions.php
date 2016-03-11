@@ -35,7 +35,7 @@ function post_type_lesson_init(){
         'has_archive'          => true,
         'hierarchical'         => false,
         'menu_position'        => null,
-        'taxonomies'           => array('category'),
+        'taxonomies'           => array(''),
         'supports'             => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
         'register_metabox_cb'  => 'add_course_parent_metaboxes',
     );

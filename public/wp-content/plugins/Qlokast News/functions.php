@@ -59,7 +59,7 @@ function post_type_news_init(){
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'taxonomies'           => array('category', 'news_tag'),
+        'taxonomies'           => array('news_tag'),
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments')
     );
 	register_post_type('news', $args);
